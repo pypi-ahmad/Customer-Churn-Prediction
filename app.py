@@ -40,8 +40,14 @@ def load_data(filename: str, bytes_data: bytes) -> pd.DataFrame:
     extension = Path(filename).suffix.lower()
     buffer = io.BytesIO(bytes_data)
     if extension == ".xlsx":
-        return pd.read_excel(buffer, engine="openpyxl")
-    return pd.read_csv(buffer)
+        df = pd.read_excel(buffer, engine="openpyxl")
+    else:
+        df = pd.read_csv(buffer)
+
+    object_cols = df.select_dtypes(include=["object"]).columns
+    for col in object_cols:
+        df[col] = df[col].astype(str)
+    return df
 
 
 def ensure_streamlit_config(max_upload_size: int = 1024) -> None:
@@ -105,8 +111,8 @@ def generate_predictions(
 
 def render_eda_section(df: pd.DataFrame) -> None:
     st.subheader("Data Preview")
-    st.dataframe(df.head(), use_container_width=True)
-    st.dataframe(df.describe(include="all"), use_container_width=True)
+    st.dataframe(df.head(), width="stretch")
+    st.dataframe(df.describe(include="all"), width="stretch")
 
     missing_counts = df.isna().sum()
     missing_counts = missing_counts[missing_counts > 0]
@@ -120,7 +126,7 @@ def render_eda_section(df: pd.DataFrame) -> None:
             y="Missing Values",
             title="Missing Values by Column",
         )
-        st.plotly_chart(missing_fig, use_container_width=True)
+        st.plotly_chart(missing_fig, width='stretch')
 
     numeric_df = df.select_dtypes(include=["number"])
     if numeric_df.shape[1] >= 2:
@@ -134,7 +140,7 @@ def render_eda_section(df: pd.DataFrame) -> None:
             zmin=-1,
             zmax=1,
         )
-        st.plotly_chart(heatmap_fig, use_container_width=True)
+        st.plotly_chart(heatmap_fig, width='stretch')
 
     st.subheader("Distribution Plotter")
     column_to_plot = st.selectbox("Select a column", options=df.columns)
@@ -153,7 +159,7 @@ def render_eda_section(df: pd.DataFrame) -> None:
             y="Count",
             title=f"Distribution of {column_to_plot}",
         )
-    st.plotly_chart(dist_fig, use_container_width=True)
+    st.plotly_chart(dist_fig, width='stretch')
 
 
 def render_predictions_section(
@@ -162,7 +168,7 @@ def render_predictions_section(
     selected_models: list[str],
 ) -> None:
     st.subheader("Predictions")
-    st.dataframe(result, use_container_width=True)
+    st.dataframe(result, width="stretch")
 
     if len(selected_models) == 1:
         prediction_column = f"Prediction_{selected_models[0]}"
@@ -184,7 +190,7 @@ def render_predictions_section(
             color="Prediction",
             color_discrete_map={"Churned": "#EF553B", "Retained": "#00CC96"},
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width='stretch')
     else:
         prediction_columns = [f"Prediction_{name}" for name in predictions_map]
         agreement_count = result[prediction_columns].nunique(axis=1).eq(1).sum()
@@ -207,7 +213,7 @@ def render_predictions_section(
             text="Churn Count",
         )
         fig.update_traces(textposition="outside")
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width='stretch')
 
         comparison_rows = []
         for name, preds in predictions_map.items():
@@ -220,7 +226,7 @@ def render_predictions_section(
                 }
             )
         comparison_table = pd.DataFrame(comparison_rows)
-        st.dataframe(comparison_table, use_container_width=True)
+        st.dataframe(comparison_table, width="stretch")
 
 
 def render_evaluation_section(
@@ -281,9 +287,9 @@ def render_evaluation_section(
 
         left, right = st.columns(2)
         with left:
-            st.plotly_chart(cm_fig, use_container_width=True)
+            st.plotly_chart(cm_fig, width='stretch')
         with right:
-            st.dataframe(report_df, use_container_width=True)
+            st.dataframe(report_df, width="stretch")
 
 
 def main() -> None:
