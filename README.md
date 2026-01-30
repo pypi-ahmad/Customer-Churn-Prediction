@@ -1,73 +1,92 @@
-# Customer Churn Prediction Dashboard 🚀
+# Customer Churn Prediction Dashboard 🔮
 
-An interactive Streamlit dashboard for predicting customer churn with multi-model comparison, advanced EDA, and built-in evaluation.
+![Python 3.13](https://img.shields.io/badge/Python-3.13-blue) ![Streamlit](https://img.shields.io/badge/Streamlit-1.53-red) ![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED) ![XGBoost](https://img.shields.io/badge/XGBoost-ML-orange) ![License](https://img.shields.io/badge/License-MIT-green)
 
----
+## Project Overview
 
-## ✨ New Features
+This repository delivers an end-to-end customer churn solution: **Data Ingestion (Excel/CSV)** → **Multi-Model Training** via [train.py](train.py) → **Interactive Dashboard** via [app.py](app.py). The goal is to predict customer attrition with machine learning and present actionable insights through a Streamlit web interface.
 
-- **Multi-Model Factory**: Trains Random Forest, XGBoost, SVM, and Decision Trees simultaneously.
-- **Advanced EDA**: Interactive correlation heatmaps, distribution plots, and data previews.
-- **Excel Support**: Native handling of .xlsx and .csv files (up to 1GB).
-- **Model Comparison**: Side-by-side performance metrics and confusion matrices.
+## Key Features
 
----
+- **Multi-Model Factory**: Trains and compares Random Forest, XGBoost, SVM, and Decision Tree models in [train.py](train.py).
+- **Advanced EDA**: Correlation heatmaps, distribution plotter, and data previews are built into [app.py](app.py).
+- **Robust Evaluation**: Confusion Matrix and Classification Report are generated when labeled data is provided.
+- **Deployment Ready**: Dockerized Streamlit app with large file support (1GB+) via .streamlit config.
 
-## 🧰 Tech Stack
+## Tech Stack
 
-- **Streamlit**
-- **Plotly**
-- **Pandas**
-- **OpenPyXL**
-- **Joblib**
-- **Docker**
+- Python 3.13
+- Streamlit
+- Pandas
+- Plotly
+- OpenPyXL
+- Scikit-learn
+- Imbalanced-learn (SMOTE)
+- XGBoost
+- Joblib
 
----
+## Getting Started (Local)
 
-## 🚀 Quick Start
+### Prerequisites
 
-### Run Locally
+- Python 3.13+
+- Pip
+
+### Step 1: Install dependencies
 
 ```bash
 pip install -r requirements.txt
+```
+
+### Step 2: Train the models
+
+```bash
+python train.py
+```
+
+### Step 3: Run the app
+
+```bash
 streamlit run app.py
 ```
 
-### Run with Docker
+## Getting Started (Docker)
+
+### Step 1: Build the image
 
 ```bash
-docker build -t churn-dashboard .
-docker run -p 8501:8501 churn-dashboard
+docker build -t churn-app .
 ```
 
----
+### Step 2: Run the container
 
-## 🖼️ Screenshots
+```bash
+docker run -p 8501:8501 churn-app
+```
 
-### Dashboard View
-![Dashboard View](docs/images/dashboard-view.png)
+## Project Structure
 
-### Model Evaluation
-![Model Evaluation](docs/images/model-evaluation.png)
+```text
+.
+├─ app.py
+├─ train.py
+├─ BankChurners.csv
+├─ models_bundle.pkl
+├─ Customer Churn Prediction.ipynb
+├─ requirements.txt
+├─ Dockerfile
+├─ LICENSE
+├─ README.md
+└─ .streamlit
+	└─ config.toml
+```
 
----
+## Future Roadmap
 
-## 📄 License
+- Cloud deployment (Azure/AWS/GCP) with automated CI/CD
+- Unit tests for preprocessing and inference
+- Model monitoring and drift detection
+
+## License
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE).
-
-- **Dataset:** Bank customer churn data (BankChurners.csv)
-- **Libraries:** Scikit-Learn, Pandas, Seaborn, Imbalanced-Learn
-- **Tools:** Python 3.13, Jupyter, dtale
-
----
-
-<div align="center">
-
-**Made with ❤️ using Python 3.13+ and modern ML practices**
-
-**⭐ Star this repository if you found it helpful!**
-
-[Back to Top](#-customer-churn-prediction)
-
-</div>
