@@ -132,6 +132,7 @@ def train_flaml(
         task="classification",
         time_budget=time_budget,
         metric="accuracy",
+        estimator_list=["lgbm", "rf", "extra_tree", "lrl1"],
         seed=42,
         verbose=0,
         log_file_name="",
