@@ -15,6 +15,8 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 from xgboost import XGBClassifier
+from flaml import AutoML
+from lazypredict.Supervised import LazyClassifier
 
 
 def configure_logging() -> None:
@@ -117,6 +119,44 @@ def build_model_factory() -> dict[str, Any]:
     }
 
 
+def train_flaml(
+    X_train: np.ndarray,
+    y_train: np.ndarray,
+    time_budget: int = 60,
+) -> AutoML:
+    """Train a FLAML AutoML model."""
+    automl = AutoML()
+    automl.fit(
+        X_train,
+        y_train,
+        task="classification",
+        time_budget=time_budget,
+        metric="accuracy",
+        seed=42,
+        verbose=0,
+        log_file_name="",
+    )
+    logging.info(
+        "FLAML best estimator: %s | best config: %s",
+        automl.best_estimator,
+        automl.best_config,
+    )
+    return automl
+
+
+def run_lazypredict(
+    X_train: np.ndarray,
+    X_test: np.ndarray,
+    y_train: np.ndarray,
+    y_test: np.ndarray,
+) -> pd.DataFrame:
+    """Run LazyPredict to benchmark multiple classifiers."""
+    clf = LazyClassifier(verbose=0, ignore_warnings=True, custom_metric=None)
+    models_df, _ = clf.fit(X_train, X_test, y_train, y_test)
+    logging.info("LazyPredict benchmarked %d models", len(models_df))
+    return models_df
+
+
 def evaluate_models(
     models: dict[str, Any],
     X_test: np.ndarray,
@@ -157,13 +197,16 @@ def save_model_bundle(
     feature_names: list[str],
     metrics: dict[str, dict[str, float]],
     filepath: Path,
+    lazypredict_results: pd.DataFrame | None = None,
 ) -> None:
-    payload = {
+    payload: dict[str, Any] = {
         "models": models,
         "scaler": scaler,
         "feature_names": feature_names,
         "metrics": metrics,
     }
+    if lazypredict_results is not None:
+        payload["lazypredict_results"] = lazypredict_results
     joblib.dump(payload, filepath)
     logging.info("Saved models bundle to %s", filepath.resolve())
 
@@ -183,9 +226,23 @@ def main() -> None:
             model.fit(X_train, y_train)
             logging.info("Trained model: %s", name)
 
+        # Train FLAML AutoML
+        flaml_model = train_flaml(X_train, y_train)
+        models["FLAML AutoML"] = flaml_model
+
         metrics = evaluate_models(models, X_test, y_test)
         log_metrics_table(metrics)
-        save_model_bundle(models, scaler, feature_columns, metrics, bundle_path)
+
+        # Run LazyPredict benchmark
+        try:
+            lazy_results = run_lazypredict(X_train, X_test, y_train, y_test)
+        except Exception as exc:  # noqa: BLE001
+            logging.warning("LazyPredict benchmark failed: %s", exc)
+            lazy_results = None
+
+        save_model_bundle(
+            models, scaler, feature_columns, metrics, bundle_path, lazy_results,
+        )
     except Exception as exc:  # noqa: BLE001
         logging.error("Pipeline failed: %s", exc)
         raise

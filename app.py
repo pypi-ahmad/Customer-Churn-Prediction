@@ -292,6 +292,49 @@ def render_evaluation_section(
             st.dataframe(report_df, width="stretch")
 
 
+def render_lazypredict_section(lazypredict_results: pd.DataFrame | None) -> None:
+    """Display LazyPredict benchmark results."""
+    if lazypredict_results is None:
+        st.info(
+            "LazyPredict benchmark results are not available. "
+            "Re-run train.py to generate them."
+        )
+        return
+
+    st.subheader("LazyPredict — Multi-Model Benchmark")
+    st.caption(
+        "LazyPredict evaluates many classifiers with default hyperparameters "
+        "to provide a quick model comparison."
+    )
+    st.dataframe(lazypredict_results, width="stretch")
+
+    chart_df = lazypredict_results.reset_index()
+    chart_df = chart_df.rename(columns={chart_df.columns[0]: "Model"})
+    metric_cols = [
+        c
+        for c in ("Accuracy", "Balanced Accuracy", "F1 Score", "ROC AUC")
+        if c in chart_df.columns
+    ]
+    if metric_cols:
+        selected_metric = st.selectbox(
+            "Chart metric",
+            options=metric_cols,
+            index=0,
+            key="lazypredict_metric",
+        )
+        sorted_df = chart_df.sort_values(selected_metric, ascending=False).head(20)
+        fig = px.bar(
+            sorted_df,
+            x="Model",
+            y=selected_metric,
+            title=f"Top 20 Models by {selected_metric}",
+            text=selected_metric,
+        )
+        fig.update_traces(texttemplate="%{text:.4f}", textposition="outside")
+        fig.update_layout(xaxis_tickangle=-45)
+        st.plotly_chart(fig, width='stretch')
+
+
 def main() -> None:
     configure_logging()
 
@@ -308,6 +351,7 @@ def main() -> None:
         models = bundle["models"]
         scaler = bundle["scaler"]
         feature_columns = bundle["feature_names"]
+        lazypredict_results = bundle.get("lazypredict_results")
     except KeyError as exc:
         st.error(f"Model bundle is missing a required key: {exc}")
         return
@@ -324,6 +368,14 @@ def main() -> None:
     if not selected_models:
         st.warning("Please select at least one model to continue.")
         return
+
+    if "FLAML AutoML" in selected_models:
+        flaml_model = models.get("FLAML AutoML")
+        if flaml_model is not None and hasattr(flaml_model, "best_estimator"):
+            with st.sidebar.expander("FLAML AutoML Details", expanded=False):
+                st.markdown(f"**Best Estimator:** `{flaml_model.best_estimator}`")
+                if hasattr(flaml_model, "best_config") and flaml_model.best_config:
+                    st.json(flaml_model.best_config)
 
     uploaded_file = st.file_uploader("Upload File", type=["csv", "xlsx"])
     if uploaded_file is None:
@@ -351,8 +403,8 @@ def main() -> None:
         st.error(f"Prediction failed: {exc}")
         return
 
-    predictions_tab, evaluation_tab = st.tabs(
-        ["Predictions", "Model Evaluation"]
+    predictions_tab, evaluation_tab, lazypredict_tab = st.tabs(
+        ["Predictions", "Model Evaluation", "LazyPredict Benchmark"],
     )
 
     with predictions_tab:
@@ -360,6 +412,9 @@ def main() -> None:
 
     with evaluation_tab:
         render_evaluation_section(df, predictions_map, selected_models)
+
+    with lazypredict_tab:
+        render_lazypredict_section(lazypredict_results)
 
 
 if __name__ == "__main__":
