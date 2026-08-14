@@ -177,3 +177,5 @@ The container exposes port `8501` with large file upload support (1 GB).
 ## License
 
 This project is licensed under the GNU General Public License v3.0. See [LICENSE](LICENSE) for details.
+
+<p align="center">Made with ❤️ by Ahmad Mujtaba</p>
