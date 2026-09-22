@@ -1,0 +1,49 @@
+{
+  "projectRoot": "D:\\AI\\Github\\Customer-Churn-Prediction",
+  "batchFiles": [
+    {
+      "path": ".streamlit/config.toml",
+      "language": "toml",
+      "sizeLines": 2,
+      "fileCategory": "config"
+    },
+    {
+      "path": "Customer Churn Prediction.ipynb",
+      "language": "ipynb",
+      "sizeLines": 205,
+      "fileCategory": "code"
+    },
+    {
+      "path": "app.py",
+      "language": "python",
+      "sizeLines": 421,
+      "fileCategory": "code"
+    },
+    {
+      "path": "model.pkl",
+      "language": "pkl",
+      "sizeLines": 30440,
+      "fileCategory": "code"
+    },
+    {
+      "path": "models_bundle.pkl",
+      "language": "pkl",
+      "sizeLines": 58031,
+      "fileCategory": "code"
+    },
+    {
+      "path": "train.py",
+      "language": "python",
+      "sizeLines": 253,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    ".streamlit/config.toml": [],
+    "Customer Churn Prediction.ipynb": [],
+    "app.py": [],
+    "model.pkl": [],
+    "models_bundle.pkl": [],
+    "train.py": []
+  }
+}

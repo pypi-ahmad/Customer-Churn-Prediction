@@ -1,0 +1,20 @@
+{
+  "projectRoot": "D:\\AI\\Github\\Customer-Churn-Prediction",
+  "sourceFilePaths": [
+    ".dockerignore",
+    ".streamlit/config.toml",
+    "BankChurners.csv",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "Customer Churn Prediction.ipynb",
+    "Dockerfile",
+    "README.md",
+    "SECURITY.md",
+    "app.py",
+    "model.pkl",
+    "models_bundle.pkl",
+    "requirements.txt",
+    "train.py"
+  ],
+  "gitCommitHash": "1e362b7d3a992c764f95ac52e020d387b4ff5cdd"
+}

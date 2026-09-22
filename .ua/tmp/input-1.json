@@ -1,0 +1,21 @@
+{
+  "projectRoot": "D:\\AI\\Github\\Customer-Churn-Prediction",
+  "batchFiles": [
+    {
+      "path": ".dockerignore",
+      "language": "unknown",
+      "sizeLines": 6,
+      "fileCategory": "infra"
+    },
+    {
+      "path": "Dockerfile",
+      "language": "dockerfile",
+      "sizeLines": 12,
+      "fileCategory": "infra"
+    }
+  ],
+  "batchImportData": {
+    ".dockerignore": [],
+    "Dockerfile": []
+  }
+}

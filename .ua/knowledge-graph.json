@@ -1,0 +1,757 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "Customer Churn Prediction",
+    "languages": [
+      "Python",
+      "Markdown",
+      "Dockerfile",
+      "TOML",
+      "CSV",
+      "Jupyter Notebook"
+    ],
+    "frameworks": [
+      "Streamlit",
+      "scikit-learn"
+    ],
+    "description": "A Streamlit application and training pipeline for customer churn prediction.",
+    "analyzedAt": "2026-09-22T07:35:50.021Z",
+    "gitCommitHash": "1e362b7d3a992c764f95ac52e020d387b4ff5cdd"
+  },
+  "nodes": [
+    {
+      "id": "service:.dockerignore",
+      "type": "service",
+      "name": ".dockerignore",
+      "filePath": ".dockerignore",
+      "summary": "infra project file (unknown)",
+      "tags": [
+        "infra",
+        "unknown"
+      ]
+    },
+    {
+      "id": "config:.streamlit/config.toml",
+      "type": "config",
+      "name": "config.toml",
+      "filePath": ".streamlit/config.toml",
+      "summary": "config project file (toml)",
+      "tags": [
+        "config",
+        "toml"
+      ]
+    },
+    {
+      "id": "table:BankChurners.csv",
+      "type": "table",
+      "name": "BankChurners.csv",
+      "filePath": "BankChurners.csv",
+      "summary": "data project file (csv)",
+      "tags": [
+        "data",
+        "csv"
+      ]
+    },
+    {
+      "id": "document:CHANGELOG.md",
+      "type": "document",
+      "name": "CHANGELOG.md",
+      "filePath": "CHANGELOG.md",
+      "summary": "docs project file (markdown)",
+      "tags": [
+        "docs",
+        "markdown"
+      ]
+    },
+    {
+      "id": "document:CODE_OF_CONDUCT.md",
+      "type": "document",
+      "name": "CODE_OF_CONDUCT.md",
+      "filePath": "CODE_OF_CONDUCT.md",
+      "summary": "docs project file (markdown)",
+      "tags": [
+        "docs",
+        "markdown"
+      ]
+    },
+    {
+      "id": "file:Customer Churn Prediction.ipynb",
+      "type": "file",
+      "name": "Customer Churn Prediction.ipynb",
+      "filePath": "Customer Churn Prediction.ipynb",
+      "summary": "code project file (ipynb)",
+      "tags": [
+        "code",
+        "ipynb"
+      ]
+    },
+    {
+      "id": "service:Dockerfile",
+      "type": "service",
+      "name": "Dockerfile",
+      "filePath": "Dockerfile",
+      "summary": "infra project file (dockerfile)",
+      "tags": [
+        "infra",
+        "dockerfile"
+      ]
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "docs project file (markdown)",
+      "tags": [
+        "docs",
+        "markdown"
+      ]
+    },
+    {
+      "id": "document:SECURITY.md",
+      "type": "document",
+      "name": "SECURITY.md",
+      "filePath": "SECURITY.md",
+      "summary": "docs project file (markdown)",
+      "tags": [
+        "docs",
+        "markdown"
+      ]
+    },
+    {
+      "id": "file:app.py",
+      "type": "file",
+      "name": "app.py",
+      "filePath": "app.py",
+      "summary": "code project file (python)",
+      "tags": [
+        "code",
+        "python"
+      ]
+    },
+    {
+      "id": "function:app.py:configure_logging",
+      "type": "function",
+      "name": "configure_logging",
+      "filePath": "app.py",
+      "summary": "Function configure_logging in app.py",
+      "tags": [
+        "function",
+        "python"
+      ]
+    },
+    {
+      "id": "function:app.py:load_model_bundle",
+      "type": "function",
+      "name": "load_model_bundle",
+      "filePath": "app.py",
+      "summary": "Function load_model_bundle in app.py",
+      "tags": [
+        "function",
+        "python"
+      ]
+    },
+    {
+      "id": "function:app.py:load_data",
+      "type": "function",
+      "name": "load_data",
+      "filePath": "app.py",
+      "summary": "Function load_data in app.py",
+      "tags": [
+        "function",
+        "python"
+      ]
+    },
+    {
+      "id": "function:app.py:ensure_streamlit_config",
+      "type": "function",
+      "name": "ensure_streamlit_config",
+      "filePath": "app.py",
+      "summary": "Function ensure_streamlit_config in app.py",
+      "tags": [
+        "function",
+        "python"
+      ]
+    },
+    {
+      "id": "function:app.py:preprocess_for_inference",
+      "type": "function",
+      "name": "preprocess_for_inference",
+      "filePath": "app.py",
+      "summary": "Function preprocess_for_inference in app.py",
+      "tags": [
+        "function",
+        "python"
+      ]
+    },
+    {
+      "id": "function:app.py:generate_predictions",
+      "type": "function",
+      "name": "generate_predictions",
+      "filePath": "app.py",
+      "summary": "Function generate_predictions in app.py",
+      "tags": [
+        "function",
+        "python"
+      ]
+    },
+    {
+      "id": "function:app.py:render_eda_section",
+      "type": "function",
+      "name": "render_eda_section",
+      "filePath": "app.py",
+      "summary": "Function render_eda_section in app.py",
+      "tags": [
+        "function",
+        "python"
+      ]
+    },
+    {
+      "id": "function:app.py:render_predictions_section",
+      "type": "function",
+      "name": "render_predictions_section",
+      "filePath": "app.py",
+      "summary": "Function render_predictions_section in app.py",
+      "tags": [
+        "function",
+        "python"
+      ]
+    },
+    {
+      "id": "function:app.py:render_evaluation_section",
+      "type": "function",
+      "name": "render_evaluation_section",
+      "filePath": "app.py",
+      "summary": "Function render_evaluation_section in app.py",
+      "tags": [
+        "function",
+        "python"
+      ]
+    },
+    {
+      "id": "function:app.py:render_lazypredict_section",
+      "type": "function",
+      "name": "render_lazypredict_section",
+      "filePath": "app.py",
+      "summary": "Function render_lazypredict_section in app.py",
+      "tags": [
+        "function",
+        "python"
+      ]
+    },
+    {
+      "id": "function:app.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "app.py",
+      "summary": "Function main in app.py",
+      "tags": [
+        "function",
+        "python"
+      ]
+    },
+    {
+      "id": "file:model.pkl",
+      "type": "file",
+      "name": "model.pkl",
+      "filePath": "model.pkl",
+      "summary": "code project file (pkl)",
+      "tags": [
+        "code",
+        "pkl"
+      ]
+    },
+    {
+      "id": "file:models_bundle.pkl",
+      "type": "file",
+      "name": "models_bundle.pkl",
+      "filePath": "models_bundle.pkl",
+      "summary": "code project file (pkl)",
+      "tags": [
+        "code",
+        "pkl"
+      ]
+    },
+    {
+      "id": "document:requirements.txt",
+      "type": "document",
+      "name": "requirements.txt",
+      "filePath": "requirements.txt",
+      "summary": "docs project file (txt)",
+      "tags": [
+        "docs",
+        "txt"
+      ]
+    },
+    {
+      "id": "file:train.py",
+      "type": "file",
+      "name": "train.py",
+      "filePath": "train.py",
+      "summary": "code project file (python)",
+      "tags": [
+        "code",
+        "python"
+      ]
+    },
+    {
+      "id": "function:train.py:configure_logging",
+      "type": "function",
+      "name": "configure_logging",
+      "filePath": "train.py",
+      "summary": "Function configure_logging in train.py",
+      "tags": [
+        "function",
+        "python"
+      ]
+    },
+    {
+      "id": "function:train.py:load_data",
+      "type": "function",
+      "name": "load_data",
+      "filePath": "train.py",
+      "summary": "Function load_data in train.py",
+      "tags": [
+        "function",
+        "python"
+      ]
+    },
+    {
+      "id": "function:train.py:preprocess_data",
+      "type": "function",
+      "name": "preprocess_data",
+      "filePath": "train.py",
+      "summary": "Function preprocess_data in train.py",
+      "tags": [
+        "function",
+        "python"
+      ]
+    },
+    {
+      "id": "function:train.py:build_model_factory",
+      "type": "function",
+      "name": "build_model_factory",
+      "filePath": "train.py",
+      "summary": "Function build_model_factory in train.py",
+      "tags": [
+        "function",
+        "python"
+      ]
+    },
+    {
+      "id": "function:train.py:train_flaml",
+      "type": "function",
+      "name": "train_flaml",
+      "filePath": "train.py",
+      "summary": "Function train_flaml in train.py",
+      "tags": [
+        "function",
+        "python"
+      ]
+    },
+    {
+      "id": "function:train.py:run_lazypredict",
+      "type": "function",
+      "name": "run_lazypredict",
+      "filePath": "train.py",
+      "summary": "Function run_lazypredict in train.py",
+      "tags": [
+        "function",
+        "python"
+      ]
+    },
+    {
+      "id": "function:train.py:evaluate_models",
+      "type": "function",
+      "name": "evaluate_models",
+      "filePath": "train.py",
+      "summary": "Function evaluate_models in train.py",
+      "tags": [
+        "function",
+        "python"
+      ]
+    },
+    {
+      "id": "function:train.py:log_metrics_table",
+      "type": "function",
+      "name": "log_metrics_table",
+      "filePath": "train.py",
+      "summary": "Function log_metrics_table in train.py",
+      "tags": [
+        "function",
+        "python"
+      ]
+    },
+    {
+      "id": "function:train.py:save_model_bundle",
+      "type": "function",
+      "name": "save_model_bundle",
+      "filePath": "train.py",
+      "summary": "Function save_model_bundle in train.py",
+      "tags": [
+        "function",
+        "python"
+      ]
+    },
+    {
+      "id": "function:train.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "train.py",
+      "summary": "Function main in train.py",
+      "tags": [
+        "function",
+        "python"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:app.py",
+      "target": "function:app.py:configure_logging",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:app.py",
+      "target": "function:app.py:load_model_bundle",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:app.py",
+      "target": "function:app.py:load_data",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:app.py",
+      "target": "function:app.py:ensure_streamlit_config",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:app.py",
+      "target": "function:app.py:preprocess_for_inference",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:app.py",
+      "target": "function:app.py:generate_predictions",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:app.py",
+      "target": "function:app.py:render_eda_section",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:app.py",
+      "target": "function:app.py:render_predictions_section",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:app.py",
+      "target": "function:app.py:render_evaluation_section",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:app.py",
+      "target": "function:app.py:render_lazypredict_section",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:app.py",
+      "target": "function:app.py:main",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "function:app.py:generate_predictions",
+      "target": "function:app.py:preprocess_for_inference",
+      "type": "calls",
+      "weight": 0.8
+    },
+    {
+      "source": "function:app.py:main",
+      "target": "function:app.py:configure_logging",
+      "type": "calls",
+      "weight": 0.8
+    },
+    {
+      "source": "function:app.py:main",
+      "target": "function:app.py:ensure_streamlit_config",
+      "type": "calls",
+      "weight": 0.8
+    },
+    {
+      "source": "function:app.py:main",
+      "target": "function:app.py:load_model_bundle",
+      "type": "calls",
+      "weight": 0.8
+    },
+    {
+      "source": "function:app.py:main",
+      "target": "function:app.py:load_data",
+      "type": "calls",
+      "weight": 0.8
+    },
+    {
+      "source": "function:app.py:main",
+      "target": "function:app.py:render_eda_section",
+      "type": "calls",
+      "weight": 0.8
+    },
+    {
+      "source": "function:app.py:main",
+      "target": "function:app.py:generate_predictions",
+      "type": "calls",
+      "weight": 0.8
+    },
+    {
+      "source": "function:app.py:main",
+      "target": "function:app.py:render_predictions_section",
+      "type": "calls",
+      "weight": 0.8
+    },
+    {
+      "source": "function:app.py:main",
+      "target": "function:app.py:render_evaluation_section",
+      "type": "calls",
+      "weight": 0.8
+    },
+    {
+      "source": "function:app.py:main",
+      "target": "function:app.py:render_lazypredict_section",
+      "type": "calls",
+      "weight": 0.8
+    },
+    {
+      "source": "file:train.py",
+      "target": "function:train.py:configure_logging",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:train.py",
+      "target": "function:train.py:load_data",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:train.py",
+      "target": "function:train.py:preprocess_data",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:train.py",
+      "target": "function:train.py:build_model_factory",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:train.py",
+      "target": "function:train.py:train_flaml",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:train.py",
+      "target": "function:train.py:run_lazypredict",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:train.py",
+      "target": "function:train.py:evaluate_models",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:train.py",
+      "target": "function:train.py:log_metrics_table",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:train.py",
+      "target": "function:train.py:save_model_bundle",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:train.py",
+      "target": "function:train.py:main",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "function:train.py:main",
+      "target": "function:train.py:configure_logging",
+      "type": "calls",
+      "weight": 0.8
+    },
+    {
+      "source": "function:train.py:main",
+      "target": "function:train.py:load_data",
+      "type": "calls",
+      "weight": 0.8
+    },
+    {
+      "source": "function:train.py:main",
+      "target": "function:train.py:preprocess_data",
+      "type": "calls",
+      "weight": 0.8
+    },
+    {
+      "source": "function:train.py:main",
+      "target": "function:train.py:build_model_factory",
+      "type": "calls",
+      "weight": 0.8
+    },
+    {
+      "source": "function:train.py:main",
+      "target": "function:train.py:train_flaml",
+      "type": "calls",
+      "weight": 0.8
+    },
+    {
+      "source": "function:train.py:main",
+      "target": "function:train.py:evaluate_models",
+      "type": "calls",
+      "weight": 0.8
+    },
+    {
+      "source": "function:train.py:main",
+      "target": "function:train.py:log_metrics_table",
+      "type": "calls",
+      "weight": 0.8
+    },
+    {
+      "source": "function:train.py:main",
+      "target": "function:train.py:run_lazypredict",
+      "type": "calls",
+      "weight": 0.8
+    },
+    {
+      "source": "function:train.py:main",
+      "target": "function:train.py:save_model_bundle",
+      "type": "calls",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app.py",
+      "target": "file:models_bundle.pkl",
+      "type": "reads_from",
+      "weight": 0.5
+    },
+    {
+      "source": "file:app.py",
+      "target": "table:BankChurners.csv",
+      "type": "reads_from",
+      "weight": 0.5
+    },
+    {
+      "source": "file:train.py",
+      "target": "table:BankChurners.csv",
+      "type": "reads_from",
+      "weight": 0.5
+    },
+    {
+      "source": "file:train.py",
+      "target": "file:models_bundle.pkl",
+      "type": "reads_from",
+      "weight": 0.5
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:application",
+      "name": "Application",
+      "description": "Streamlit application and runtime code.",
+      "nodeIds": [
+        "file:Customer Churn Prediction.ipynb",
+        "file:app.py",
+        "file:train.py"
+      ]
+    },
+    {
+      "id": "layer:data-models",
+      "name": "Data and Models",
+      "description": "Dataset and serialized model artifacts used by training and inference.",
+      "nodeIds": [
+        "table:BankChurners.csv",
+        "file:model.pkl",
+        "file:models_bundle.pkl"
+      ]
+    },
+    {
+      "id": "layer:documentation",
+      "name": "Documentation",
+      "description": "Project documentation and policy files.",
+      "nodeIds": [
+        "document:CHANGELOG.md",
+        "document:CODE_OF_CONDUCT.md",
+        "document:README.md",
+        "document:SECURITY.md",
+        "document:requirements.txt"
+      ]
+    },
+    {
+      "id": "layer:deployment",
+      "name": "Deployment and Configuration",
+      "description": "Container and application configuration.",
+      "nodeIds": [
+        "service:.dockerignore",
+        "config:.streamlit/config.toml",
+        "service:Dockerfile"
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "Project Overview",
+      "description": "Read the README and project documentation to understand the churn-prediction application.",
+      "nodeIds": [
+        "document:README.md"
+      ]
+    },
+    {
+      "order": 2,
+      "title": "Training Pipeline",
+      "description": "Inspect train.py and the dataset/model artifacts it consumes.",
+      "nodeIds": [
+        "file:train.py",
+        "table:BankChurners.csv",
+        "file:models_bundle.pkl"
+      ]
+    },
+    {
+      "order": 3,
+      "title": "Inference Application",
+      "description": "Follow app.py to see data loading, preprocessing, prediction, and Streamlit rendering.",
+      "nodeIds": [
+        "file:app.py",
+        "file:models_bundle.pkl"
+      ]
+    },
+    {
+      "order": 4,
+      "title": "Deployment Configuration",
+      "description": "Review the Dockerfile and Streamlit configuration for runtime deployment.",
+      "nodeIds": [
+        "service:Dockerfile",
+        "config:.dockerignore",
+        "config:.streamlit/config.toml"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "scriptCompleted": true,
+  "contentDigest": "2fb8bc4ee6402f02ef0bd947f94e8f3402682af793b46ea5319778e0b9cdeaf3",
+  "files": [
+    {
+      "path": ".dockerignore",
+      "language": "unknown",
+      "sizeLines": 6,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".streamlit/config.toml",
+      "language": "toml",
+      "sizeLines": 2,
+      "fileCategory": "config"
+    },
+    {
+      "path": "BankChurners.csv",
+      "language": "csv",
+      "sizeLines": 10128,
+      "fileCategory": "data"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "language": "markdown",
+      "sizeLines": 20,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "language": "markdown",
+      "sizeLines": 38,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "Customer Churn Prediction.ipynb",
+      "language": "ipynb",
+      "sizeLines": 205,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Dockerfile",
+      "language": "dockerfile",
+      "sizeLines": 12,
+      "fileCategory": "infra"
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 181,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "SECURITY.md",
+      "language": "markdown",
+      "sizeLines": 24,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "app.py",
+      "language": "python",
+      "sizeLines": 421,
+      "fileCategory": "code"
+    },
+    {
+      "path": "model.pkl",
+      "language": "pkl",
+      "sizeLines": 30440,
+      "fileCategory": "code"
+    },
+    {
+      "path": "models_bundle.pkl",
+      "language": "pkl",
+      "sizeLines": 58031,
+      "fileCategory": "code"
+    },
+    {
+      "path": "requirements.txt",
+      "language": "txt",
+      "sizeLines": 98,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "train.py",
+      "language": "python",
+      "sizeLines": 253,
+      "fileCategory": "code"
+    }
+  ],
+  "totalFiles": 14,
+  "filteredByIgnore": 0,
+  "estimatedComplexity": "small",
+  "stats": {
+    "filesScanned": 14,
+    "byCategory": {
+      "infra": 2,
+      "config": 1,
+      "data": 1,
+      "docs": 5,
+      "code": 5
+    },
+    "byLanguage": {
+      "unknown": 1,
+      "toml": 1,
+      "csv": 1,
+      "markdown": 4,
+      "ipynb": 1,
+      "dockerfile": 1,
+      "python": 2,
+      "pkl": 2,
+      "txt": 1
+    }
+  }
+}
