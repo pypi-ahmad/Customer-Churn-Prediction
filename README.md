@@ -2,7 +2,7 @@
 
 # Customer Churn Prediction
 
-**End-to-end ML pipeline and interactive dashboard for predicting customer attrition**
+**Machine-learning pipeline and interactive dashboard for customer churn prediction**
 
 ![Python 3.13](https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.53-FF4B4B?logo=streamlit&logoColor=white)
@@ -20,13 +20,13 @@
 
 ## Overview
 
-This project delivers a production-ready customer churn prediction system built on the [BankChurners](BankChurners.csv) dataset. It combines a multi-model training pipeline with an interactive Streamlit dashboard for data exploration, prediction, and model evaluation.
+This project uses the [BankChurners](BankChurners.csv) dataset to train several churn models and serve them through a Streamlit dashboard. The dashboard supports data exploration, prediction, and model evaluation.
 
 **Pipeline**: Data Ingestion → Preprocessing & SMOTE Resampling → Multi-Model Training → Evaluation → Serialized Model Bundle → Interactive Dashboard
 
 ## Models
 
-Five models are trained, evaluated, and served through the dashboard:
+The dashboard serves five trained and evaluated models:
 
 | Model | Type | Highlights |
 |---|---|---|
@@ -34,9 +34,9 @@ Five models are trained, evaluated, and served through the dashboard:
 | **XGBoost** | Ensemble (Boosting) | 200 estimators, learning rate 0.1, depth 6, subsampling 0.9 |
 | **SVM** | Kernel-based | RBF kernel, probability calibration, balanced class weights |
 | **Decision Tree** | Single tree | Balanced class weights, interpretable baseline |
-| **FLAML AutoML** | Automated ML | Microsoft [FLAML](https://microsoft.github.io/FLAML/) — searches across LightGBM, Random Forest, Extra Trees, and Logistic Regression within a 60-second time budget to find the optimal model and hyperparameters |
+| **FLAML AutoML** | Automated ML | Microsoft [FLAML](https://microsoft.github.io/FLAML/) searches LightGBM, Random Forest, Extra Trees, and Logistic Regression within a 60-second time budget to choose a model and its hyperparameters |
 
-Additionally, **[LazyPredict](https://github.com/shankarpandala/lazypredict)** benchmarks ~26 classifiers with default hyperparameters during training to provide a comprehensive model landscape — results are displayed in a dedicated dashboard tab.
+**[LazyPredict](https://github.com/shankarpandala/lazypredict)** also benchmarks about 26 classifiers with default hyperparameters during training. The results appear in a separate dashboard tab.
 
 ### Benchmark Results
 
@@ -92,7 +92,7 @@ Additionally, **[LazyPredict](https://github.com/shankarpandala/lazypredict)** b
 | **Exploratory Data Analysis** | Data preview, descriptive statistics, missing value detection, correlation heatmap, distribution plotter |
 | **Predictions** | Churn/Retained labels per model, churn rate metric, pie chart (single model) or cross-model comparison bar chart (multi-model) with agreement count |
 | **Model Evaluation** | Confusion matrix with TN/FP/FN/TP annotations and full classification report (requires labeled data) |
-| **LazyPredict Benchmark** | Sortable table of ~26 classifiers with interactive bar chart — select from Accuracy, Balanced Accuracy, F1 Score, or ROC AUC |
+| **LazyPredict Benchmark** | Sortable table of about 26 classifiers with an interactive bar chart. Select Accuracy, Balanced Accuracy, F1 Score, or ROC AUC |
 
 ## Getting Started
 
