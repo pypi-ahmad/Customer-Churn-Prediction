@@ -13,6 +13,14 @@ import plotly.figure_factory as ff
 import streamlit as st
 from sklearn.metrics import classification_report, confusion_matrix
 
+from foundation_models import (
+    load_mitra,
+    load_tabfm_from_context,
+    predict_mitra,
+    predict_tabfm,
+    release_cuda,
+)
+
 MODEL_PATH = Path("models_bundle.pkl")
 
 
@@ -31,7 +39,7 @@ def load_model_bundle(path: Path) -> dict[str, Any]:
         )
     bundle = joblib.load(path)
     if not isinstance(bundle, dict):
-        raise ValueError("Invalid model bundle format. Expected a dict payload.")
+        raise TypeError("Invalid model bundle format. Expected a dict payload.")
     return bundle
 
 
@@ -64,7 +72,9 @@ def ensure_streamlit_config(max_upload_size: int = 1024) -> None:
     config_path.write_text(config_contents, encoding="utf-8")
 
 
-def preprocess_for_inference(df: pd.DataFrame, feature_columns: list[str]) -> pd.DataFrame:
+def preprocess_for_inference(
+    df: pd.DataFrame, feature_columns: list[str]
+) -> pd.DataFrame:
     if df.shape[1] < 21:
         raise ValueError(
             "Uploaded dataset must include at least 21 columns to match training data."
@@ -83,21 +93,49 @@ def preprocess_for_inference(df: pd.DataFrame, feature_columns: list[str]) -> pd
     return X
 
 
+def raw_features_for_inference(
+    df: pd.DataFrame,
+    raw_feature_columns: list[str],
+) -> pd.DataFrame:
+    missing = sorted(set(raw_feature_columns) - set(df.columns))
+    if missing:
+        raise ValueError(f"Uploaded dataset is missing columns: {missing}")
+    return df.loc[:, raw_feature_columns].copy()
+
+
 def generate_predictions(
     df: pd.DataFrame,
-    models: dict[str, Any],
-    scaler: Any,
-    feature_columns: list[str],
+    bundle: dict[str, Any],
     selected_models: list[str],
 ) -> tuple[pd.DataFrame, dict[str, pd.Series]]:
-    X = preprocess_for_inference(df, feature_columns)
-    X_scaled = scaler.transform(X)
-
     result = df.copy()
     predictions_map: dict[str, pd.Series] = {}
     for name in selected_models:
-        model = models[name]
-        predictions = model.predict(X_scaled)
+        if name in bundle["models"]:
+            X = preprocess_for_inference(df, bundle["feature_names"])
+            X_scaled = bundle["scaler"].transform(X)
+            predictions = bundle["models"][name].predict(X_scaled)
+        else:
+            raw = raw_features_for_inference(df, bundle["raw_feature_names"])
+            spec = bundle["foundation_models"][name]
+            if spec["type"] == "mitra-v2":
+                predictor = load_mitra(spec["artifact_path"])
+                predictions, _ = predict_mitra(predictor, raw)
+                del predictor
+            elif spec["type"] == "tabfm":
+                classifier = load_tabfm_from_context(
+                    spec["context_path"],
+                    spec["max_num_rows"],
+                )
+                predictions, _ = predict_tabfm(
+                    classifier,
+                    raw,
+                    spec["prediction_chunk_rows"],
+                )
+                del classifier
+            else:
+                raise ValueError(f"Unsupported foundation model type: {spec['type']}")
+            release_cuda()
         series = pd.Series(
             np.where(predictions == 1, "Churned", "Retained"),
             index=df.index,
@@ -126,7 +164,7 @@ def render_eda_section(df: pd.DataFrame) -> None:
             y="Missing Values",
             title="Missing Values by Column",
         )
-        st.plotly_chart(missing_fig, width='stretch')
+        st.plotly_chart(missing_fig, width="stretch")
 
     numeric_df = df.select_dtypes(include=["number"])
     if numeric_df.shape[1] >= 2:
@@ -140,7 +178,7 @@ def render_eda_section(df: pd.DataFrame) -> None:
             zmin=-1,
             zmax=1,
         )
-        st.plotly_chart(heatmap_fig, width='stretch')
+        st.plotly_chart(heatmap_fig, width="stretch")
 
     st.subheader("Distribution Plotter")
     column_to_plot = st.selectbox("Select a column", options=df.columns)
@@ -159,7 +197,7 @@ def render_eda_section(df: pd.DataFrame) -> None:
             y="Count",
             title=f"Distribution of {column_to_plot}",
         )
-    st.plotly_chart(dist_fig, width='stretch')
+    st.plotly_chart(dist_fig, width="stretch")
 
 
 def render_predictions_section(
@@ -190,7 +228,7 @@ def render_predictions_section(
             color="Prediction",
             color_discrete_map={"Churned": "#EF553B", "Retained": "#00CC96"},
         )
-        st.plotly_chart(fig, width='stretch')
+        st.plotly_chart(fig, width="stretch")
     else:
         prediction_columns = [f"Prediction_{name}" for name in predictions_map]
         agreement_count = result[prediction_columns].nunique(axis=1).eq(1).sum()
@@ -213,7 +251,7 @@ def render_predictions_section(
             text="Churn Count",
         )
         fig.update_traces(textposition="outside")
-        st.plotly_chart(fig, width='stretch')
+        st.plotly_chart(fig, width="stretch")
 
         comparison_rows = []
         for name, preds in predictions_map.items():
@@ -275,19 +313,18 @@ def render_evaluation_section(
             zero_division=0,
             output_dict=True,
         )
-        report_df = (
-            pd.DataFrame(report).T
-            .rename(columns={
+        report_df = pd.DataFrame(report).T.rename(
+            columns={
                 "precision": "Precision",
                 "recall": "Recall",
                 "f1-score": "F1-Score",
                 "support": "Support",
-            })
+            }
         )
 
         left, right = st.columns(2)
         with left:
-            st.plotly_chart(cm_fig, width='stretch')
+            st.plotly_chart(cm_fig, width="stretch")
         with right:
             st.dataframe(report_df, width="stretch")
 
@@ -332,7 +369,7 @@ def render_lazypredict_section(lazypredict_results: pd.DataFrame | None) -> None
         )
         fig.update_traces(texttemplate="%{text:.4f}", textposition="outside")
         fig.update_layout(xaxis_tickangle=-45)
-        st.plotly_chart(fig, width='stretch')
+        st.plotly_chart(fig, width="stretch")
 
 
 def main() -> None:
@@ -349,8 +386,6 @@ def main() -> None:
     try:
         bundle = load_model_bundle(MODEL_PATH)
         models = bundle["models"]
-        scaler = bundle["scaler"]
-        feature_columns = bundle["feature_names"]
         lazypredict_results = bundle.get("lazypredict_results")
     except KeyError as exc:
         st.error(f"Model bundle is missing a required key: {exc}")
@@ -359,7 +394,12 @@ def main() -> None:
         st.error(f"Failed to load model bundle: {exc}")
         return
 
-    model_names = list(models.keys())
+    foundation_models = {
+        name: spec
+        for name, spec in bundle.get("foundation_models", {}).items()
+        if Path(spec.get("artifact_path", spec.get("context_path", ""))).exists()
+    }
+    model_names = [*models, *foundation_models]
     selected_models = st.sidebar.multiselect(
         "Select Models",
         options=model_names,
@@ -376,6 +416,11 @@ def main() -> None:
                 st.markdown(f"**Best Estimator:** `{flaml_model.best_estimator}`")
                 if hasattr(flaml_model, "best_config") and flaml_model.best_config:
                     st.json(flaml_model.best_config)
+
+    if "TabFM" in selected_models:
+        st.sidebar.caption(
+            "TabFM weights are licensed for non-commercial research use only."
+        )
 
     uploaded_file = st.file_uploader("Upload File", type=["csv", "xlsx"])
     if uploaded_file is None:
@@ -394,9 +439,7 @@ def main() -> None:
     try:
         result, predictions_map = generate_predictions(
             df,
-            models,
-            scaler,
-            feature_columns,
+            bundle,
             selected_models,
         )
     except Exception as exc:  # noqa: BLE001

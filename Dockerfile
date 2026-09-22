@@ -1,12 +1,13 @@
-FROM python:3.11-slim
+FROM ghcr.io/astral-sh/uv:python3.13-bookworm-slim
 
 WORKDIR /app
 
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+COPY pyproject.toml uv.lock ./
+RUN uv sync --locked --no-dev --extra mitra
 
-COPY app.py train.py models_bundle.pkl .streamlit/config.toml ./
+COPY app.py foundation_models.py models_bundle.pkl .streamlit/config.toml ./
+COPY artifacts/mitra-v2 ./artifacts/mitra-v2
 
 EXPOSE 8501
 
-ENTRYPOINT ["streamlit", "run", "app.py"]
+ENTRYPOINT ["/app/.venv/bin/streamlit", "run", "app.py"]

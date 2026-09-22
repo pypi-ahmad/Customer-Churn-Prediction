@@ -1,0 +1,541 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "1e362b7d3a992c764f95ac52e020d387b4ff5cdd",
+  "generatedAt": "2026-09-22T07:35:56.517Z",
+  "files": {
+    ".dockerignore": {
+      "filePath": ".dockerignore",
+      "contentHash": "ad061e521ca8873b793ba5182e89788e426b3ea78a2bf088fa71d3a44c4e6ed6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 7,
+      "hasStructuralAnalysis": false
+    },
+    ".streamlit/config.toml": {
+      "filePath": ".streamlit/config.toml",
+      "contentHash": "79a505f48479ebfe7021888d816a9b14c9d8ce9ec42dfd82fc7fdb63c326596c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 3,
+      "hasStructuralAnalysis": true
+    },
+    "BankChurners.csv": {
+      "filePath": "BankChurners.csv",
+      "contentHash": "8a9e35dbc076fb0c9a7b922c4a632996a56527e90831a3841c611a162cb7cd02",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 10129,
+      "hasStructuralAnalysis": false
+    },
+    "CHANGELOG.md": {
+      "filePath": "CHANGELOG.md",
+      "contentHash": "dd9ff491c41dbc0333363db631c263b8aa50da054d89b66ae67e2bb1baa6731e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 21,
+      "hasStructuralAnalysis": true
+    },
+    "CODE_OF_CONDUCT.md": {
+      "filePath": "CODE_OF_CONDUCT.md",
+      "contentHash": "f06c7cfd36fef835b6cd63e61dd62c9d85fbe7e11aaabd357d18a933e375e426",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 39,
+      "hasStructuralAnalysis": true
+    },
+    "Customer Churn Prediction.ipynb": {
+      "filePath": "Customer Churn Prediction.ipynb",
+      "contentHash": "dceaf6895ee297d12cb0154e15aa18fbdb7ff8525d460cf2e0fe3c89ebfb9cc8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 206,
+      "hasStructuralAnalysis": false
+    },
+    "Dockerfile": {
+      "filePath": "Dockerfile",
+      "contentHash": "5d3db2c91fb6d67c0179d5d858884b905d910ac7eec31f0e3fac3d8f1da4a77a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 13,
+      "hasStructuralAnalysis": true
+    },
+    "README.md": {
+      "filePath": "README.md",
+      "contentHash": "766552072b771a7f91d018e4595d39d9b16f9a97a6d2e4d24b2473a4c7faac6f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 182,
+      "hasStructuralAnalysis": true
+    },
+    "SECURITY.md": {
+      "filePath": "SECURITY.md",
+      "contentHash": "5f5817696041950c546dd062ac26f41a9216fa023c1a1c3199eee79157595c40",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 25,
+      "hasStructuralAnalysis": true
+    },
+    "app.py": {
+      "filePath": "app.py",
+      "contentHash": "047d7f690a6c5ad508265a705ccf4212f90faf2598857dda096ace5b572af6f0",
+      "functions": [
+        {
+          "name": "configure_logging",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "load_model_bundle",
+          "params": [
+            "path"
+          ],
+          "returnType": "dict[str, Any]",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "load_data",
+          "params": [
+            "filename",
+            "bytes_data"
+          ],
+          "returnType": "pd.DataFrame",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "ensure_streamlit_config",
+          "params": [
+            "max_upload_size"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "preprocess_for_inference",
+          "params": [
+            "df",
+            "feature_columns"
+          ],
+          "returnType": "pd.DataFrame",
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "generate_predictions",
+          "params": [
+            "df",
+            "models",
+            "scaler",
+            "feature_columns",
+            "selected_models"
+          ],
+          "returnType": "tuple[pd.DataFrame, dict[str, pd.Series]]",
+          "exported": true,
+          "lineCount": 24
+        },
+        {
+          "name": "render_eda_section",
+          "params": [
+            "df"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 51
+        },
+        {
+          "name": "render_predictions_section",
+          "params": [
+            "result",
+            "predictions_map",
+            "selected_models"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 65
+        },
+        {
+          "name": "render_evaluation_section",
+          "params": [
+            "df",
+            "predictions_map",
+            "selected_models"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 61
+        },
+        {
+          "name": "render_lazypredict_section",
+          "params": [
+            "lazypredict_results"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 41
+        },
+        {
+          "name": "main",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 80
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "io",
+          "specifiers": [
+            "io"
+          ]
+        },
+        {
+          "source": "logging",
+          "specifiers": [
+            "logging"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any"
+          ]
+        },
+        {
+          "source": "joblib",
+          "specifiers": [
+            "joblib"
+          ]
+        },
+        {
+          "source": "numpy",
+          "specifiers": [
+            "np"
+          ]
+        },
+        {
+          "source": "pandas",
+          "specifiers": [
+            "pd"
+          ]
+        },
+        {
+          "source": "plotly.express",
+          "specifiers": [
+            "px"
+          ]
+        },
+        {
+          "source": "plotly.figure_factory",
+          "specifiers": [
+            "ff"
+          ]
+        },
+        {
+          "source": "streamlit",
+          "specifiers": [
+            "st"
+          ]
+        },
+        {
+          "source": "sklearn.metrics",
+          "specifiers": [
+            "classification_report",
+            "confusion_matrix"
+          ]
+        }
+      ],
+      "exports": [
+        "configure_logging",
+        "load_model_bundle",
+        "load_data",
+        "ensure_streamlit_config",
+        "preprocess_for_inference",
+        "generate_predictions",
+        "render_eda_section",
+        "render_predictions_section",
+        "render_evaluation_section",
+        "render_lazypredict_section",
+        "main"
+      ],
+      "totalLines": 422,
+      "hasStructuralAnalysis": true
+    },
+    "model.pkl": {
+      "filePath": "model.pkl",
+      "contentHash": "6a3c3095fa23d527eefa05dde69d8e09247475eb982c8074cdf6010fd1251fd9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 30441,
+      "hasStructuralAnalysis": false
+    },
+    "models_bundle.pkl": {
+      "filePath": "models_bundle.pkl",
+      "contentHash": "8de1fff3de662fe84c42b8ff816d113fafd67acb50a442292564e5a1365e697e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 58032,
+      "hasStructuralAnalysis": false
+    },
+    "requirements.txt": {
+      "filePath": "requirements.txt",
+      "contentHash": "0782f99f12bd8a7b08ee77d3691b9f727975818e42f7a477d78b15512f938737",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 99,
+      "hasStructuralAnalysis": false
+    },
+    "train.py": {
+      "filePath": "train.py",
+      "contentHash": "62f2eb87f2712ae484582860c7eb56ece18b056c02e78966ac5cb53d81f8e093",
+      "functions": [
+        {
+          "name": "configure_logging",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "load_data",
+          "params": [
+            "filepath"
+          ],
+          "returnType": "pd.DataFrame",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "preprocess_data",
+          "params": [
+            "df"
+          ],
+          "returnType": "tuple[\r\n    np.ndarray,\r\n    np.ndarray,\r\n    np.ndarray,\r\n    np.ndarray,\r\n    StandardScaler,\r\n    list[str],\r\n]",
+          "exported": true,
+          "lineCount": 48
+        },
+        {
+          "name": "build_model_factory",
+          "params": [],
+          "returnType": "dict[str, Any]",
+          "exported": true,
+          "lineCount": 28
+        },
+        {
+          "name": "train_flaml",
+          "params": [
+            "X_train",
+            "y_train",
+            "time_budget"
+          ],
+          "returnType": "AutoML",
+          "exported": true,
+          "lineCount": 24
+        },
+        {
+          "name": "run_lazypredict",
+          "params": [
+            "X_train",
+            "X_test",
+            "y_train",
+            "y_test"
+          ],
+          "returnType": "pd.DataFrame",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "evaluate_models",
+          "params": [
+            "models",
+            "X_test",
+            "y_test"
+          ],
+          "returnType": "dict[str, dict[str, float]]",
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "log_metrics_table",
+          "params": [
+            "metrics"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "save_model_bundle",
+          "params": [
+            "models",
+            "scaler",
+            "feature_names",
+            "metrics",
+            "filepath",
+            "lazypredict_results"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "main",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 35
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "logging",
+          "specifiers": [
+            "logging"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any"
+          ]
+        },
+        {
+          "source": "joblib",
+          "specifiers": [
+            "joblib"
+          ]
+        },
+        {
+          "source": "numpy",
+          "specifiers": [
+            "np"
+          ]
+        },
+        {
+          "source": "pandas",
+          "specifiers": [
+            "pd"
+          ]
+        },
+        {
+          "source": "imblearn.over_sampling",
+          "specifiers": [
+            "SMOTE"
+          ]
+        },
+        {
+          "source": "sklearn.ensemble",
+          "specifiers": [
+            "RandomForestClassifier"
+          ]
+        },
+        {
+          "source": "sklearn.metrics",
+          "specifiers": [
+            "accuracy_score",
+            "f1_score",
+            "precision_score",
+            "recall_score"
+          ]
+        },
+        {
+          "source": "sklearn.model_selection",
+          "specifiers": [
+            "train_test_split"
+          ]
+        },
+        {
+          "source": "sklearn.preprocessing",
+          "specifiers": [
+            "StandardScaler"
+          ]
+        },
+        {
+          "source": "sklearn.svm",
+          "specifiers": [
+            "SVC"
+          ]
+        },
+        {
+          "source": "sklearn.tree",
+          "specifiers": [
+            "DecisionTreeClassifier"
+          ]
+        },
+        {
+          "source": "xgboost",
+          "specifiers": [
+            "XGBClassifier"
+          ]
+        },
+        {
+          "source": "flaml",
+          "specifiers": [
+            "AutoML"
+          ]
+        },
+        {
+          "source": "lazypredict.Supervised",
+          "specifiers": [
+            "LazyClassifier"
+          ]
+        }
+      ],
+      "exports": [
+        "configure_logging",
+        "load_data",
+        "preprocess_data",
+        "build_model_factory",
+        "train_flaml",
+        "run_lazypredict",
+        "evaluate_models",
+        "log_metrics_table",
+        "save_model_bundle",
+        "main"
+      ],
+      "totalLines": 254,
+      "hasStructuralAnalysis": true
+    }
+  }
+}

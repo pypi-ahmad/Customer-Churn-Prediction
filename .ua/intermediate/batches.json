@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "louvain",
+  "totalFiles": 14,
+  "totalBatches": 3,
+  "exportsByPath": {
+    "Customer Churn Prediction.ipynb": [],
+    "app.py": [
+      "configure_logging",
+      "load_model_bundle",
+      "load_data",
+      "ensure_streamlit_config",
+      "preprocess_for_inference",
+      "generate_predictions",
+      "render_eda_section",
+      "render_predictions_section",
+      "render_evaluation_section",
+      "render_lazypredict_section",
+      "main"
+    ],
+    "model.pkl": [],
+    "models_bundle.pkl": [],
+    "train.py": [
+      "configure_logging",
+      "load_data",
+      "preprocess_data",
+      "build_model_factory",
+      "train_flaml",
+      "run_lazypredict",
+      "evaluate_models",
+      "log_metrics_table",
+      "save_model_bundle",
+      "main"
+    ]
+  },
+  "batches": [
+    {
+      "batchIndex": 1,
+      "files": [
+        {
+          "path": ".dockerignore",
+          "language": "unknown",
+          "sizeLines": 6,
+          "fileCategory": "infra"
+        },
+        {
+          "path": "Dockerfile",
+          "language": "dockerfile",
+          "sizeLines": 12,
+          "fileCategory": "infra"
+        }
+      ],
+      "batchImportData": {
+        ".dockerignore": [],
+        "Dockerfile": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 2,
+      "files": [
+        {
+          "path": "BankChurners.csv",
+          "language": "csv",
+          "sizeLines": 10128,
+          "fileCategory": "data"
+        },
+        {
+          "path": "CHANGELOG.md",
+          "language": "markdown",
+          "sizeLines": 20,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "CODE_OF_CONDUCT.md",
+          "language": "markdown",
+          "sizeLines": 38,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "README.md",
+          "language": "markdown",
+          "sizeLines": 181,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "SECURITY.md",
+          "language": "markdown",
+          "sizeLines": 24,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "requirements.txt",
+          "language": "txt",
+          "sizeLines": 98,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "BankChurners.csv": [],
+        "CHANGELOG.md": [],
+        "CODE_OF_CONDUCT.md": [],
+        "README.md": [],
+        "SECURITY.md": [],
+        "requirements.txt": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 3,
+      "files": [
+        {
+          "path": ".streamlit/config.toml",
+          "language": "toml",
+          "sizeLines": 2,
+          "fileCategory": "config"
+        },
+        {
+          "path": "Customer Churn Prediction.ipynb",
+          "language": "ipynb",
+          "sizeLines": 205,
+          "fileCategory": "code"
+        },
+        {
+          "path": "app.py",
+          "language": "python",
+          "sizeLines": 421,
+          "fileCategory": "code"
+        },
+        {
+          "path": "model.pkl",
+          "language": "pkl",
+          "sizeLines": 30440,
+          "fileCategory": "code"
+        },
+        {
+          "path": "models_bundle.pkl",
+          "language": "pkl",
+          "sizeLines": 58031,
+          "fileCategory": "code"
+        },
+        {
+          "path": "train.py",
+          "language": "python",
+          "sizeLines": 253,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        ".streamlit/config.toml": [],
+        "Customer Churn Prediction.ipynb": [],
+        "app.py": [],
+        "model.pkl": [],
+        "models_bundle.pkl": [],
+        "train.py": []
+      },
+      "neighborMap": {}
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "projectRoot": "D:\\AI\\Github\\Customer-Churn-Prediction",
+  "batchFiles": [
+    {
+      "path": "BankChurners.csv",
+      "language": "csv",
+      "sizeLines": 10128,
+      "fileCategory": "data"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "language": "markdown",
+      "sizeLines": 20,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "language": "markdown",
+      "sizeLines": 38,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 181,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "SECURITY.md",
+      "language": "markdown",
+      "sizeLines": 24,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "requirements.txt",
+      "language": "txt",
+      "sizeLines": 98,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "BankChurners.csv": [],
+    "CHANGELOG.md": [],
+    "CODE_OF_CONDUCT.md": [],
+    "README.md": [],
+    "SECURITY.md": [],
+    "requirements.txt": []
+  }
+}

@@ -1,10 +1,10 @@
-# Code of Conduct
+# Code of conduct
 
-## Our Pledge
+## Our pledge
 
 Everyone should be able to participate in this project without harassment.
 
-## Our Standards
+## Our standards
 
 Examples of positive behavior include:
 
@@ -18,9 +18,9 @@ Unacceptable behavior includes:
 - Trolling, insulting, or derogatory comments
 - Publishing private information without permission
 
-## Enforcement Responsibilities
+## Enforcement responsibilities
 
-Project maintainers clarify and enforce these standards.
+Project maintainers interpret and enforce these standards.
 
 ## Scope
 
