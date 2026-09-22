@@ -2,11 +2,11 @@
 
 ## Supported Versions
 
-Security fixes are applied to the default branch and recent actively maintained updates.
+Security fixes are applied to the default branch and to recent actively maintained updates.
 
 ## Reporting a Vulnerability
 
-Please report potential vulnerabilities through GitHub Issues in this repository.
+Report potential vulnerabilities through GitHub Issues in this repository.
 
 When reporting, include:
 
@@ -16,9 +16,9 @@ When reporting, include:
 - Suggested remediation, if available
 
 Avoid posting exploit details that could put users at risk. Maintainers may request
-additional details privately through GitHub as needed.
+additional details privately through GitHub.
 
 ## Response Process
 
 Maintainers will triage reports, assess severity, and communicate remediation status
-through issue updates and release/change notes when fixes are available.
+through issue updates and release or change notes when fixes are available.
