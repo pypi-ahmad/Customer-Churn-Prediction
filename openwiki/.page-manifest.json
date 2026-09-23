@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "pages": {
+    "/openwiki/architecture/inference-and-foundation-models.md": {
+      "pageVersion": "sha256:685f31f34ee8540cbfee139154f80ea1a61e854869b4472b4498a1e2cd7a7a45",
+      "completedBy": "codex",
+      "completedRunId": "bea5ffde-5982-4be6-bf56-3cf39c8999e4",
+      "gitHead": "5ac0a262824ad1661f6fe5da07c68e03a48bd3c6",
+      "sourceFingerprint": "sha256:29a93bec7fc731fe083b5d92264d545ca2c83a8a5095361b5fa82132a7473b90"
+    },
+    "/openwiki/architecture/model-bundle.md": {
+      "pageVersion": "sha256:e8a9da2bea2be03769b2fc56cb96166aef07705d8eeb769d8530a30affb0b7ae",
+      "completedBy": "codex",
+      "completedRunId": "bea5ffde-5982-4be6-bf56-3cf39c8999e4",
+      "gitHead": "5ac0a262824ad1661f6fe5da07c68e03a48bd3c6",
+      "sourceFingerprint": "sha256:29a93bec7fc731fe083b5d92264d545ca2c83a8a5095361b5fa82132a7473b90"
+    },
+    "/openwiki/architecture/system-overview.md": {
+      "pageVersion": "sha256:ec4de571488db1273c14836f4dbad2f1de1fa13097f1bdedb1264367221e1855",
+      "completedBy": "codex",
+      "completedRunId": "bea5ffde-5982-4be6-bf56-3cf39c8999e4",
+      "gitHead": "5ac0a262824ad1661f6fe5da07c68e03a48bd3c6",
+      "sourceFingerprint": "sha256:29a93bec7fc731fe083b5d92264d545ca2c83a8a5095361b5fa82132a7473b90"
+    },
+    "/openwiki/architecture/training-pipeline.md": {
+      "pageVersion": "sha256:3c00c37a801675057a7b6c828178fd35dfac65c3e0957104b0c1c63c6aabc108",
+      "completedBy": "codex",
+      "completedRunId": "bea5ffde-5982-4be6-bf56-3cf39c8999e4",
+      "gitHead": "5ac0a262824ad1661f6fe5da07c68e03a48bd3c6",
+      "sourceFingerprint": "sha256:29a93bec7fc731fe083b5d92264d545ca2c83a8a5095361b5fa82132a7473b90"
+    },
+    "/openwiki/operations/local-and-container.md": {
+      "pageVersion": "sha256:fc2c730d25dc02b565b7dcfcf707b45979f47d45db7313159bf19150393dec06",
+      "completedBy": "codex",
+      "completedRunId": "bea5ffde-5982-4be6-bf56-3cf39c8999e4",
+      "gitHead": "5ac0a262824ad1661f6fe5da07c68e03a48bd3c6",
+      "sourceFingerprint": "sha256:29a93bec7fc731fe083b5d92264d545ca2c83a8a5095361b5fa82132a7473b90"
+    },
+    "/openwiki/quickstart.md": {
+      "pageVersion": "sha256:ea2f790443c68fb96667debfb0c618398f2deda1a4b45b85afa97d1f96ad0ea6",
+      "completedBy": "codex",
+      "completedRunId": "bea5ffde-5982-4be6-bf56-3cf39c8999e4",
+      "gitHead": "5ac0a262824ad1661f6fe5da07c68e03a48bd3c6",
+      "sourceFingerprint": "sha256:29a93bec7fc731fe083b5d92264d545ca2c83a8a5095361b5fa82132a7473b90"
+    },
+    "/openwiki/testing/pipeline-contracts.md": {
+      "pageVersion": "sha256:57646c2850efc989efca842608f4cb4d8ee8acc10b362eedbc0c9002d250f631",
+      "completedBy": "codex",
+      "completedRunId": "bea5ffde-5982-4be6-bf56-3cf39c8999e4",
+      "gitHead": "5ac0a262824ad1661f6fe5da07c68e03a48bd3c6",
+      "sourceFingerprint": "sha256:29a93bec7fc731fe083b5d92264d545ca2c83a8a5095361b5fa82132a7473b90"
+    }
+  }
+}

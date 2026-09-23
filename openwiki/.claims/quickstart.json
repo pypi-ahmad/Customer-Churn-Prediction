@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:ea2f790443c68fb96667debfb0c618398f2deda1a4b45b85afa97d1f96ad0ea6",
+  "claims": [
+    {
+      "id": "claim_73aeb8fee3fa46ffa2b3f73e1b0cb3eb",
+      "statement": "The documented setup uses Python 3.13 and uv, synchronizes the base environment with uv sync, and defaults the dataset path to BankChurners.csv.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L100-L116",
+          "version": "repo-lines-v1:sha256:02f566694e4ae8a8aee7e7a3834682b96cc997ec39f933b6c048603ee67cf2b9:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM0MTc3ZDdiYTRlZGZkZjUwMGY2YTE5ZWQ4ZjU1NTUzNmM4YmFkODQ4NWM2YTU1ZDI5YTVkZDU5ZjdjOGZiNzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYzU2OGVhZGRjYzQ4NDAyNmYxZTMyYWYyMmM3NWYzODUzNjJjZjJjNWMxZGQ5NjhjMDU5MmY1NzE5NTgzMzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFiMTQ5ODJhZDk2ZGZmZjk5NGRmZTQzYzFjYzlhNTNiMThiMTVjNGIwYWFiNGU2Y2IyZmQwNWU3NmU0MjUyMDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRkMTA2ZmE0MjJkMDE5MzNkMWU3NThlNmIyYTUzZGVjZGM3MjBkYjhlZTU1MDlhYWEwYjhmY2FmNjg2NjkzZWYifQ"
+        },
+        {
+          "resource": "repo://pyproject.toml#L1-L5",
+          "version": "repo-lines-v1:sha256:40614f7f2774f12a88d6f99411e83fc65c392291907a05705559cb68273c9393:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjU5N2Q5NzNkNDk4YWMxOGIwZjRhN2FmZDA0N2RiNGQwMmYwNjJhNjM5M2UzOGEzYjkxNmZiZTA4YzcxOGE2OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmZiNTcxMDc5YzJjMzRhNjJiMWMwMDYyZjZiMzg5YWQ2NmIxNDVmMWRhNjUyZWRmMjRkNzQ0N2Q1MzYzZGEyZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzJmZWVmYTQ2MDY3YzdlNmQ3MGQwODcyMWY3NGUyMmEwZDIyYjM1ODZiZTJhNWZkYzZlYjk2MDkzYWY3NWYyNSJ9"
+        },
+        {
+          "resource": "repo://train.py#L172-L180",
+          "version": "repo-lines-v1:sha256:ac2e07fd898f089115ca5e31db9b6441da05ae691e96f5bd014ac680f5d74815:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiM2JhMTU0NjA5ODAyN2JkZjYwNGQ5YjA5OTkzZGVmZGVjYWEyZWE4ZDQzNzZhNzBjYTE0NWM2MjdhNzZiZDAxMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODAwZDg5NTYyMmIxYTU5MTk2NjlmMzg4MDliZDBmYzEzNjU4ZTczZjE0NmI4MTY1ZDNmOTgwY2E3YWVhOWQzNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTkzN2ZiMDc4YzI4MWE3Yjk0M2FlM2E3MTZiY2M2M2NiNGVlZDZkY2JjYTc1NmQ1NzY4M2IxY2UyMDg4NTM2NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZGY5MWU1YmIyZjY2ZGZhYmQ2ZTNhMGU5NDE5MzRjODFkNGYzOGU3ZDc2OWMxMDc5ODQ1YmY5YzI2MGQ1Mjg4YSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_3babc1ce31d143c593510833c4fad10a",
+      "statement": "The developer guide documents uv run pytest -q as the regression-suite command.",
+      "evidence": [
+        {
+          "resource": "repo://docs/developer-guide.md#L34-L40",
+          "version": "repo-lines-v1:sha256:2076d88b9e0f3f824bab6f3a9f3d3d711d1f597e1d6f1f41f006488711e1ab63:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjI5NzhkMDg1MmMyZGVhYWIyYWE1YTM4NWUyMjZiMjkwMjkwZDM2NGNhZmE0MzU4MzI1YWU3NTBiZDIzNjRjYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2VjNTY4ZWFkZGNjNDg0MDI2ZjFlMzJhZjIyYzc1ZjM4NTM2MmNmMmM1YzFkZDk2OGMwNTkyZjU3MTk1ODMzMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTBhNjY0ZDRiMjFiYjA1OTM0YzVmMTY3Yjc2YTMzZjFiYjg4ZjQxYmYxZmRjNDAyOTZhOGNhNDYxYmZkN2ZmMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTdlZGM2NjE1YmQyY2YzMDQzNzhlZjBkOGM3ZGI0YzVhMTUwZGExMTkzZDg1NDgxMzI1N2RhNWFiMWRmZjQ2ZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_04518c44141f4f319ba45437b1812145",
+      "statement": "The default training command is uv run python train.py, and the documented Streamlit command is uv run streamlit run app.py at localhost port 8501.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L124-L162",
+          "version": "repo-lines-v1:sha256:af5a034482c52380e9cc10ea05bda667268e589ba16ddfddafa7549e06580852:eyJzZWxlY3RlZExpbmVDb3VudCI6MzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAwNTRjYzhkMGUwMzcwZmExOTQzNWQ2MTk0MTI4YjZkZDljYmFjNTllYTkxNmNiM2E4YTMyODkwZjhhMTNlYzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY5NzkxMzYzYWZjNzUxMWVkNzBmMGZmMmY2NmZiMTlkOTFjZDJlNzNhMGRhN2I1MzBiMjFlMzk3NWY0NmMyMTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNlNTZmN2M0NjcxYWU0MzUxNTFkYWE3NmVhZjAyYWRmNTNmZjEzMWM1Y2UwNjA4ZjJmN2Q3NWM0N2YxYzgxOTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjlkMGZkMjk3OThmOTQyN2ZlYzNmNGZlYWZhZTY3MTA1ODYwMTNiY2JlNGEwOTNjMTYxZWJjMjEyZWI0Y2RiYTYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_cc4e8f28384d49b0bc3b0c1590a09f83",
+      "statement": "Training writes models_bundle.pkl, and the dashboard loads that bundle before model selection and prediction.",
+      "evidence": [
+        {
+          "resource": "repo://app.py#L35-L43",
+          "version": "repo-lines-v1:sha256:09cd5014b85af2d81a217d6efdcd150978b80ea53f8f50185db4c46e0f91401e:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmI2MDU2ZDE1Mzk2YzE0ZjgyYmRlMTY2MTY5YjU0MjRiMmViMGE1MDYzOGZkNmU4Zjg3NjVjNzg2MDAzMTQxNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDRjMDIzODQ0Nzc3ZDU2NDVhNGVkMzUwYjMyNzRiZDk2NWU3NmM4MjI5NGM4MGM1MDRlZGE4NmIwM2YyYTQ4NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDBhOTQwZjgwZmJjYTc4MTYyMTFhYzIyYzE2MTljNGVlMmIxMTgyZTkyZDVlODM3MGQ5ZDUyOTE0Nzk1OWI1ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWVjODJjZTk3OTY1YmQ0MjhhOGI0MjI5MGRjYTlhMGE4MjJlNjg4ZjlhZTIyYTM0N2U2YjFlNzY5NDExODc1NiJ9"
+        },
+        {
+          "resource": "repo://app.py#L375-L407",
+          "version": "repo-lines-v1:sha256:dbc742c2efb108635e5975d48cab95de753674eeaf9f6eb2088986a58f39cabc:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU3NTg1M2VjNmExYzc1ZjdmYjc1M2I5ODQ0NTc4NDgyMmFjZThjMDZiOGU1MjQ2MWJhZDk4MWI0Njk1NzY0MmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM5MjIwNGM2NWY1MDJkYzE2NDU0YjYyNDA4NTZhOWFiN2FkZTAwM2E4ZTlmODYzMzNlYzBiN2M5ZTQwOTQ5MWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM1ZWQ4MmE2MzYyODgxZDVmZDk2NGU5OThhZmRmZjkyZGQxOWMzY2Q2NTQ2NWJhM2Y1NzliYzgxMGVhNDk2OTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI3ZTBiYTAxZDhmYTg2YzdhODg0NzJkOWJhZDgxYjIyNGE4MThjYTVlYWY2YTc1MmFmNWU3OWQwMmZiNTZiMzMifQ"
+        },
+        {
+          "resource": "repo://train.py#L322-L335",
+          "version": "repo-lines-v1:sha256:4b997505bdfaa62553b981bbd07430acfe5102316b0868e6e3e1ca51dfc9b5be:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBmMDFlOTQ3ZTEzNDdlMjM3ZDAzYjNlMWJiNWU1OTRhZTkwZDMxM2E1OTZmMzIyMWYyN2E4Y2NhMGM2NDMzZWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJkNmUwZTMzOTZkMGJmNDVjZTQ3NGQzMzIxMWU0NzUyOGJjNTEwMWJiZDNiMDliMzA0MmFiYmU4MDQ2Y2NkMjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkzYjMxNGVjZWRkY2Q4OGM4Y2E3YzkwMTM5NjA1MTc5MDVkMmJhNjk0MTE5MmU3ZTdmZTE1YmUzYWU1ODViMTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5ZjdmN2FhMTYzMDU2N2MxYjVlNjY0NGUyMWNiZWM4M2E0MzkzM2RjNWIwZGEwZDkwY2Q1M2JhNDhlOTEwZDIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_49d916c87daf40e385efa603129c8b20",
+      "statement": "Mitra-v2 and TabFM can be selected through optional extras and require a CUDA GPU; TabFM weights are restricted to non-commercial research use.",
+      "evidence": [
+        {
+          "resource": "repo://app.py#L420-L423",
+          "version": "repo-lines-v1:sha256:0415ff267d013448b93e0b15a25fb0c0982aae840b89df88759351ae17593155:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTY3OWFhZTIzZGZlYmQ5MTkyYWQ5ZDI5ZWQxYjA3OThjYjJlNDg1NzdhYWQyYTRmM2QzMDhjZTkxMTVhOTcxYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmE5ZjhjMmJjN2ExNDFhMDIyYWYzZmViOGFiNTAwOGVjMjU3NTdlZjI0YWNkMDQ5ZjUwODlhNzRiN2M5YWU4MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTdmNTczMTY4MmEzMjJlMTE3OWQ0NmYyZDE0MmZkNjE1ZDFmM2Q0Yjc3MzNjMmEwZTJjY2MwYzMzNTRjOGUyNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDJjZDhlMDg2YjE2MTcxNTkxODMxZWQ2N2M3ZGVhYzgwMjMxZDhmOTIwM2ZkZmE4NDExM2VjMWJkM2RhZDFhZSJ9"
+        },
+        {
+          "resource": "repo://docs/training-and-evaluation.md#L3-L13",
+          "version": "repo-lines-v1:sha256:c3483dbb09c59097b15c8b549dfef558c3a46cd41ff453fecf58672d37d371e6:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVhZDQ0MmJiZWZiYjE2MjFhNDgwYjk4YzAxOWMyY2FhMWVlYjE1MDYzYmYxYjlmZjNiZGRiZmFhMTE2YTI1YWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRhMDg4MWJhZTc1NzQwNzgxNDI4ZWQ4YmM2ODllY2NhN2Q5ZTZmMjRiZTZkOGI5OGJhZTRmZTdmNGQ2MTVjMDYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjoyLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM2YWFmY2I2M2Y0YzYzYmFmYmJiOGVkMTM5YTJhMTgzYzcyZDdkMTU4OTc5ODhlMGEwZmNjN2I1ODhmMjhiNzciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFhM2Q5ZGM5ZWQzYTczODc1ZjU1ZGZmNzdkNWY5OGU2OTBiMDYyOTM2YWNlMDQyMDg3NDkzOWY1MWI4NWUwNmYifQ"
+        },
+        {
+          "resource": "repo://foundation_models.py#L21-L26",
+          "version": "repo-lines-v1:sha256:577e5a085db37e21e97301a55c233f20a69d7d1bb72dd1d6fc999cdbee8d3212:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWNmODJjOWE1NzdlNTUyYjcxNjU2NTBhMGQ0OTI3NjJmZDU5YzNjOWJlYjI5ZTcyZWVkNjM4MTMxNDNjYzNjMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDA4YmRmNjZjNGQ3MDFjZGM2MjEzNDA5YTFlNzgzN2M4YzM3NWU0MTBkNGNkNzVhNTIyM2QyMzEzMDE2YzY0YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjBkNTcyNzIxY2EwMWJiOGJmYWFmMzhiMWJjMzk5MjM1YzNjMmNiMGYwOGQ3ZGY4ODVlMTJiY2ViNDBjZDEwZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTlhNWIyODQzMGZlNGMzMWQzZDg3OWVhZTcwNzRiZmViMDA0OWE5ZTlkNDVjZDM0NGU0N2E0MDNlZmI0MGJiMiJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-23T14:05:53.012Z"
+  }
+}

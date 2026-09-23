@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:e8a9da2bea2be03769b2fc56cb96166aef07705d8eeb769d8530a30affb0b7ae",
+  "claims": [
+    {
+      "id": "claim_3e42f95fc5d046658e8cac9135a50f44",
+      "statement": "Training writes a schema-version-2 Joblib dictionary containing estimator/model descriptors, preprocessing metadata, label mapping, metrics, timings, and optional LazyPredict results.",
+      "evidence": [
+        {
+          "resource": "repo://docs/model-bundle-reference.md#L7-L20",
+          "version": "repo-lines-v1:sha256:01d19e45f5b2ca80190ed5ce462bbafae12635a4369f6b2b8a9d399ba9c263f1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA3MTgwOWM2YmQ4MTQ0NWYzYTk3NTg3NWFjZDQ5YzczNTJhZjZiMTUwZTdhMjY1ZWI4NWEzOTVjY2UzYTZkYjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY0ODZkMzUxNWRlNWIwYThkNzlkYjEzNjlhYzRlMGY1YTYwZjhiMGNlNjA2ZGY1NGRhZTFkZjBkM2Y4ZmZjZmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE2NTU4ZTM5NWY1NWJkODU5YTU1MjA5ZTJlYzcxMmJhMGU3MjYyYzRiNWViOGM5M2IxYTZmZjdhOTg1ZjFhZjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJlNWY3YzYxOTdiNDNlN2I1OGJhZDgxZjM0MmU3NzljNGE3N2E4NTE4OTBjYjEzNWI1MGUyNTczYjJjNmQ0OTcifQ"
+        },
+        {
+          "resource": "repo://train.py#L322-L335",
+          "version": "repo-lines-v1:sha256:4b997505bdfaa62553b981bbd07430acfe5102316b0868e6e3e1ca51dfc9b5be:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBmMDFlOTQ3ZTEzNDdlMjM3ZDAzYjNlMWJiNWU1OTRhZTkwZDMxM2E1OTZmMzIyMWYyN2E4Y2NhMGM2NDMzZWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJkNmUwZTMzOTZkMGJmNDVjZTQ3NGQzMzIxMWU0NzUyOGJjNTEwMWJiZDNiMDliMzA0MmFiYmU4MDQ2Y2NkMjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkzYjMxNGVjZWRkY2Q4OGM4Y2E3YzkwMTM5NjA1MTc5MDVkMmJhNjk0MTE5MmU3ZTdmZTE1YmUzYWU1ODViMTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5ZjdmN2FhMTYzMDU2N2MxYjVlNjY0NGUyMWNiZWM4M2E0MzkzM2RjNWIwZGEwZDkwY2Q1M2JhNDhlOTEwZDIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3a52027e460144439e8ed43d087f4e7e",
+      "statement": "Foundation-model state is stored outside the bundle: Mitra-v2 uses an AutoGluon artifact path, while TabFM stores its raw training context in a separate Joblib file and records its inference settings in the bundle descriptor.",
+      "evidence": [
+        {
+          "resource": "repo://docs/training-and-evaluation.md#L85-L93",
+          "version": "repo-lines-v1:sha256:60c582a34327ae6ddb45af2fefa1ba0c12cb7860600ff096e76a4789e05ffafa:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmY5ZDE0ODI0ZWQ0OTNhZWEyYzcxMzc2ZjFkNTJkNTc0OThjYzg0ZWY1OWZmZjg1MzE1ZTMwZDI5ODBhZTMyYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWZiMWNmZTNiOTMyMTJmMGMzMTkzNGUyZjM1NjgzYzdhZDU5ODcxMDNkNzI1MDc0ZGIzOWIyYzNiYjIwMjM5ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTEwNGY1NzllYzZjMjE4MDM2NzkzZGY1YjBhMDAyMGE5NmFlZmFhYmJkMDM0YWRhOGZlZWVkNzMzNDljNzc1MyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://train.py#L251-L319",
+          "version": "repo-lines-v1:sha256:e14373aa8130adab8b62289f96fc9b4527667a85f1e366a1cdba430a29e90c98:eyJzZWxlY3RlZExpbmVDb3VudCI6NjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI0MGFjNmRjNGY4OTNkMzJmODJiZDFjYjEwMmM0ODQ2NzMwZmZhNTZkMzQ3YjViOTRlMjE3YTBmNzZkZTNmNzIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgyNTFiZmFiY2ZiNmQ4OWZkOWY0ZTNiN2JjNGExNzRmZDkwYzk5ODE4NmU0ZmRlMmM4ZmEzNGU2ZDVjMjkzYWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY1YTFjODJmMjYxNGQxNTA1ODQxM2I2ZTY3NTBjYzA3Zjc5Nzc5MGUzZDNkODUwNWRkMWMzN2M3MWYxYmE1NTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE5YTgyZDQ4NGI4OWQyMzZmNTc5MDhkZDdjOTE0OTA5ZjYxMjI3YTUyMmNjNWRmNDNmNjMzMjM5NzgxYjU0NDIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_355652b57084448db3def4591ad6aa0a",
+      "statement": "The dashboard loads models_bundle.pkl with Joblib and requires a dictionary payload.",
+      "evidence": [
+        {
+          "resource": "repo://app.py#L24-L43",
+          "version": "repo-lines-v1:sha256:fce1f48d5195855a623dc72cf8b9d026b456882c1704e4c3a62fd64c92af04ae:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgzN2JiYjc2YzlhMGNjOTQxOWJkNzE1YjRhYTExNDg2MmJjM2I3ZjMwYzQ1ZjY0NThiNzYxNDc1MDhjZTA0N2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ0YzAyMzg0NDc3N2Q1NjQ1YTRlZDM1MGIzMjc0YmQ5NjVlNzZjODIyOTRjODBjNTA0ZWRhODZiMDNmMmE0ODciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkwMjE4MDc1OTk0NjZlNzEzMmI0YjJhODRmMzJhNzgxZGJlMjkxNzFmOTUwNzFiZmY2MTU1MTIxNzc0MTNkZjMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVlYzgyY2U5Nzk2NWJkNDI4YThiNDIyOTBkY2E5YTBhODIyZTY4OGY5YWUyMmEzNDdlNmIxZTc2OTQxMTg3NTYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_51b90fcb83f14e3ab92ecab1503820ab",
+      "statement": "A foundation model appears in the dashboard only if its referenced artifact or context path exists.",
+      "evidence": [
+        {
+          "resource": "repo://app.py#L397-L407",
+          "version": "repo-lines-v1:sha256:6cf7cb103f3ff889a474279a3e5ab7fdd398c5c213dce90fbca129380d5a2505:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3MDRkOWZjMmI2MzlkNWIzYzY2YWM0MWI4NmQxOWExNmUzNTQzOTYzMmMxMzIxMWYwOGUwZDljYjZiMWEyYjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM5MjIwNGM2NWY1MDJkYzE2NDU0YjYyNDA4NTZhOWFiN2FkZTAwM2E4ZTlmODYzMzNlYzBiN2M5ZTQwOTQ5MWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg5ZWYwMTY3MmQ3MWE4MDczZjUxZDZkZjEzZGQyMTU0N2U1MjcwYmZlOTcxOWZkMzE1ZjVjZjY5YTA5NjI5N2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI3ZTBiYTAxZDhmYTg2YzdhODg0NzJkOWJhZDgxYjIyNGE4MThjYTVlYWY2YTc1MmFmNWU3OWQwMmZiNTZiMzMifQ"
+        },
+        {
+          "resource": "repo://docs/model-bundle-reference.md#L55-L60",
+          "version": "repo-lines-v1:sha256:30f3fd0e650ab5c106e02aad897959eb445783f2ec2a6950306ef413a6adb7a0:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzlmODA0NmI0NWZhYzRjNDUxMWU4OGQ2NTZmYzJkMDRhYTViMWM1NDA1ZDIzZmJkNmU3MzAxMDZiNDlmMTRhMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTU1NzAyZTllZDUyMjc2YTIzM2VkYjg2NmRkYWY2MzFlNWI3MzY0YzFmYjc4YzgzYTcwNWM4NWY1NzE3NjE2ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTEzNzg0ODEzN2FkYjQyY2RiM2NiNWRjYThjMGMwZTY3ZDU3ODk5ZGUyMGRjNmM0ODY2NTUzZDViZGFiNDY5NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjQzNDNjZWYzMDFmMzU0ZGI5MDIwOGM0YTFmNmNmYmIzNjE2NDU5MTc2YTg1YWQ3YzMyMWFmZmRkNjM5OWMzMiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_68f7822d909f4c91ac83dbf4c043f5fe",
+      "statement": "The bundle reference warns that Joblib payloads must come from a trusted source and says consumers should reject unknown schema versions rather than guessing.",
+      "evidence": [
+        {
+          "resource": "repo://docs/model-bundle-reference.md#L3-L6",
+          "version": "repo-lines-v1:sha256:f340fb91b361a0db27d2c11b4bc2c8a6f220c5969d9607afe220807552d4556f:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzhkNTY3M2ZhYTIxYWZkZmVmNmVlNzY0ZjFmMmY5ZDVjZTQyYjM4MDNhMDlmNmIwMWFlM2RiZTlmOTZiOGM3MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjIsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTg5MDcwZTIyYzVkMTJiZWU1N2E4NjE3NDhhMjU4YmQ0YTE0ZDg4ZmE4MmVjMzE3YTY0Y2FlM2ZhNzE3MTNiMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2E3MTczMTlkNTM2ZjEyODIzMzZlMzc0Zjg0ZjViNDA3MmU5MTM1YWQ3NmRmMGE0MjNmYzM2N2RkN2MwODJmNyJ9"
+        },
+        {
+          "resource": "repo://docs/model-bundle-reference.md#L55-L60",
+          "version": "repo-lines-v1:sha256:30f3fd0e650ab5c106e02aad897959eb445783f2ec2a6950306ef413a6adb7a0:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzlmODA0NmI0NWZhYzRjNDUxMWU4OGQ2NTZmYzJkMDRhYTViMWM1NDA1ZDIzZmJkNmU3MzAxMDZiNDlmMTRhMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTU1NzAyZTllZDUyMjc2YTIzM2VkYjg2NmRkYWY2MzFlNWI3MzY0YzFmYjc4YzgzYTcwNWM4NWY1NzE3NjE2ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTEzNzg0ODEzN2FkYjQyY2RiM2NiNWRjYThjMGMwZTY3ZDU3ODk5ZGUyMGRjNmM0ODY2NTUzZDViZGFiNDY5NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjQzNDNjZWYzMDFmMzU0ZGI5MDIwOGM0YTFmNmNmYmIzNjE2NDU5MTc2YTg1YWQ3YzMyMWFmZmRkNjM5OWMzMiJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-23T14:05:53.012Z"
+  }
+}

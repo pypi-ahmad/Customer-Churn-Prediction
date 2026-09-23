@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:ec4de571488db1273c14836f4dbad2f1de1fa13097f1bdedb1264367221e1855",
+  "claims": [
+    {
+      "id": "claim_bb1052dde0294a9e8e698da07fc00449",
+      "statement": "The repository maps Existing Customer to 0 and Attrited Customer to 1 for its binary churn target.",
+      "evidence": [
+        {
+          "resource": "repo://tests/test_pipeline.py#L11-L20",
+          "version": "repo-lines-v1:sha256:2e3bcb21cf654dbc6f2b3470d3841ed6c75f7492a290f3b1c4624bf74d6a6f9e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIwN2VmMTc0YjIzYTlmMTNjMGQ5NDNhNmVmZmIyMTNmZjExM2I1YTE4Zjg3NGU0N2FiNzdmMmY5NTNlODc5N2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAzZjA1YWQ2MzljMDc4NzgwMzI2OGU4ZmI3YmU4ODAxOTdkNzVjYjMyYTMxOWNhNWJmM2IwMjljYjIzOTlkODkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBmZjU2OTJmZjkyMzIyYmUxNDU4M2FhNmEwMWYxZWY2OTI5NmJjOTUzYzZmMDg5NzYwZThjNWExNTdkMGJkNDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIyZjlkN2EzNzU5YjZiZjcxNjAwOTczNDNiZjhhNmNiZDlhZDM3ZDU2MzMwODYwZTZlNzkzMTcxNDlhYTkzMTMifQ"
+        },
+        {
+          "resource": "repo://train.py#L42-L60",
+          "version": "repo-lines-v1:sha256:30b8fd74d57d4747957ac2aa0cac905753900672e737684799a8ac07c55dbf92:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI0OTJhZDU4OGZlZWM3MjI0YTU4YmU0MmNmNGZjZGU0MjgyOWY0NDQ1ZWNlYTQ3MmFhZWQ5YmNmMjBhYjIxNDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU0ZWZjMjhiMDllMDYwZTI0NWIzOTc4ODAwZDc4ZTQ1ODIxNzk0MGUzODc0Yzc2YTljZjNlNDA1OTk2N2VjZjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImEyZGQ3ODQyNjA5OGUzMzY3YWFlMDY2NzdjYTRlYTkzNzc4YTZkNGU2ZDZjMWZkNjY4ZmM0NzkwMzlmNTVkMTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE5MzE2M2ZiNGQyNjViOWEzOTVkN2QyZDc1NWExMmU2OWQ4YThhNTYxM2EzMzcwYmFmNmM4Mjg1MTc4NGE0NGMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_80de79b554e54ffb89ad0eb8d7f18a27",
+      "statement": "Training selects feature columns at positions 2 through 20 and makes a stratified 80/20 split with random seed 42.",
+      "evidence": [
+        {
+          "resource": "repo://docs/architecture.md#L39-L43",
+          "version": "repo-lines-v1:sha256:e2a22eff705219e85bdab69f9f5bcc474b349be4ebf7d0bb88b5d85fc40320ea:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTdmYTlhODE2MmM2NDRkYjliYmUxOTMxODZhZTdhOTUyOWY0Y2YzMWM1ODA0ODY3NGU2ZmIwNDM4MzhiNDNiNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjZhODk3ZTMzNDE1Y2Y5MzkwZDc0OWRhMjRjNWRlYmE4ZDg0MDEwYzdjMzliMTdmZmNhMDE4NmQxYjk4ZmM1ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2Q1ZTRjNDM0ZDQ5YTg1NGFiZDk5MDcyZjBmOGIxY2UyODliNzI5YThkYTQ1Y2FjNDk2OTJmODEyN2EzZTBmMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDJlZGVkNzZjMjkzMWEzY2EzYTFlMzVkOGRhOTY1MWYwNDYwOThiYzAyNjZhMDkzYmJjN2EyZmRlNTc0YmI4ZCJ9"
+        },
+        {
+          "resource": "repo://train.py#L63-L72",
+          "version": "repo-lines-v1:sha256:9edf1b1340ac01bc243d145b4aab2a6eeee44bea9752a2be57df625bf8014443:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJjNzFlNmE1YmM0MjI3MzYyZWE0YzVhZTNhN2Y2MjlkN2QzZDFjZTgyOTAxMmM3YTE1YzZkNTI1MjY2MzFiZDQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM5MjIwNGM2NWY1MDJkYzE2NDU0YjYyNDA4NTZhOWFiN2FkZTAwM2E4ZTlmODYzMzNlYzBiN2M5ZTQwOTQ5MWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjIxNmNkZDkyYTkyYjQ5OWM1YzkyOWQ0NzdlZGNmZjkyODA1MzY1MGY2YWMzNTZmNTk0MzUxNmFjZDVlZmYxZGIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVjMDMzNmQzMGI3NjM0N2RmMTk5N2I2MTZmNDYwNzUwZGJjODhmYTI3YmIwOWUzYzM1YmRkOGNkNWRiMjZjNzQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_bff3bd5c44dc42ad8d369b1b667eef9c",
+      "statement": "The classical/FLAML path uses encoded, SMOTE-resampled and scaled training data, while Mitra-v2 and TabFM use the raw feature split.",
+      "evidence": [
+        {
+          "resource": "repo://docs/architecture.md#L62-L69",
+          "version": "repo-lines-v1:sha256:39e0011215537a176b5cbde59fbd702a915b2e3e4354aeb2ca2417999685ec87:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjBkN2RmODI5NmE3MWEyZDhkNDAwZjAyY2FiM2IyYmQ5OGUyY2RjZWZmZTE2OWI3YTM4MzI1YWQ3OWNhNDc1MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjY3NzI2MDM3YjMwNGYyMTg3NWFmNWE1NTRiNDc1MjRlOTJmNDg5ZjQ4ODVhNDY2MjhjNWJkODliNDMwNzgwMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzQ3YzFiNmE4YzNhYmZhNzgxODYxOTQ4MGYwOTRhYjRkNTE3ZmNjN2VhMDY3N2M2ZWM5NGIyMjliMjBjOTc5MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjdhZTMwZjVmYjFkMzNiN2ZjNzFhZTY0YjViZDhiMjcwN2Q4NzA1YzliM2JhZTk4M2E3ZjVlZjYxNmFhZGRkYyJ9"
+        },
+        {
+          "resource": "repo://train.py#L212-L245",
+          "version": "repo-lines-v1:sha256:9a1e727365e52a0e76c8a68a795fd2a33d8ef70e5baee2011f2f0c4e62787883:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJiNTQxYmZhOTFlNTcxMmQ3NWRhZDg2ZDlhYzUyMTdkODc2MjhkMDZjYjEyYTA0MmJhYmNmYjE4MGM1NTNhMTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgyNTFiZmFiY2ZiNmQ4OWZkOWY0ZTNiN2JjNGExNzRmZDkwYzk5ODE4NmU0ZmRlMmM4ZmEzNGU2ZDVjMjkzYWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBlYzU5NTdjZTYyZGE4M2ZhOWJhNmFmNjAwOGEwODU4OTQzMzc0OGQ5MzQwZjU1ZjQ4ZjNkNTQ0ZDE5ZTVlM2UiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM1ZWZlNTVkNTNkZjlkYWQ1OTk4MGUxYjQzMGFjN2JmNmU0ZDkyMDY4ZDJiMjVlYWJhYzc1YWI4N2QwYjAxYmQifQ"
+        },
+        {
+          "resource": "repo://train.py#L251-L303",
+          "version": "repo-lines-v1:sha256:092369330f51eabb16610cd503522a26a075247b5ac80c72cb6fda2608800c93:eyJzZWxlY3RlZExpbmVDb3VudCI6NTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI0MGFjNmRjNGY4OTNkMzJmODJiZDFjYjEwMmM0ODQ2NzMwZmZhNTZkMzQ3YjViOTRlMjE3YTBmNzZkZTNmNzIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYxY2Y1YTI0NDAwNmY4OGM0ZWRiZThkMTRjYjUxOGU1YWZhM2JiOWY2MTEzZmI3YzU4ZTE3YjFlMjhiMjkwZTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY1YTFjODJmMjYxNGQxNTA1ODQxM2I2ZTY3NTBjYzA3Zjc5Nzc5MGUzZDNkODUwNWRkMWMzN2M3MWYxYmE1NTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJmZDQ0YTM4Yzk4MTVkNTAxMTQwODg4NGQ1ZjcyOWI3ZDczNmJiM2E0MzgzNTM5OGVlMTU4MDRlMGU1ZGM0YTMifQ"
+        },
+        {
+          "resource": "repo://train.py#L74-L98",
+          "version": "repo-lines-v1:sha256:9b76849b172c2b6b44760c8108d6f0932d70c5702d59368ae1185d067f6815c6:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU0OGMyNWM3MmVhM2JlZjkyZDdlMTA2OGMxMDE0OWY5OTQ4MDc2MTYwMmJmMDQ1MTYxYWM5Y2NhYWZkYTg5ZWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE0MTlhNmRjYzA0ZTIxM2EzYzdhNzdhNDU2YjAxZTc2ZDFlZjc4Y2QwMGJiZWMxZDhmODE0NThmZTkzZWRjNTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg4OTczOGMxN2VkZTMwMzAyZGExYmQ1ZGM5MGVjN2E2Y2Q4MWMyNTNkMDgzMTljZjk3YmViNzMxZjVlNzEyMTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBjMTU0N2U5MTUxYjRlZDgzNGE4YmI5MjMyN2Q4ZjQzYmUwZTk1MWQ2MGU2NzVlMzI5ODc0YmVkYmRhNWUwMzQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4bbe4547241b49f6bc2856e11b1beb68",
+      "statement": "Enabled model groups are evaluated against the shared test partition and their metrics and timings are written into the schema-v2 bundle.",
+      "evidence": [
+        {
+          "resource": "repo://train.py#L212-L245",
+          "version": "repo-lines-v1:sha256:9a1e727365e52a0e76c8a68a795fd2a33d8ef70e5baee2011f2f0c4e62787883:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJiNTQxYmZhOTFlNTcxMmQ3NWRhZDg2ZDlhYzUyMTdkODc2MjhkMDZjYjEyYTA0MmJhYmNmYjE4MGM1NTNhMTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgyNTFiZmFiY2ZiNmQ4OWZkOWY0ZTNiN2JjNGExNzRmZDkwYzk5ODE4NmU0ZmRlMmM4ZmEzNGU2ZDVjMjkzYWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBlYzU5NTdjZTYyZGE4M2ZhOWJhNmFmNjAwOGEwODU4OTQzMzc0OGQ5MzQwZjU1ZjQ4ZjNkNTQ0ZDE5ZTVlM2UiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM1ZWZlNTVkNTNkZjlkYWQ1OTk4MGUxYjQzMGFjN2JmNmU0ZDkyMDY4ZDJiMjVlYWJhYzc1YWI4N2QwYjAxYmQifQ"
+        },
+        {
+          "resource": "repo://train.py#L265-L320",
+          "version": "repo-lines-v1:sha256:0eb3d573cf4419e1641000190ed9b295b869ae59cd2e5f00556da6f411187b90:eyJzZWxlY3RlZExpbmVDb3VudCI6NTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlNDQ3N2Q3YzJlNjVkZWQ5YmIxZmQwZDg1MzI5YzRiYzhiMTI0MWM3ODUxZmE2OTFmYmU2OTlkOTQzMTU1ZGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBhYzg0NjAwMDYwMjQ0NDYwMjQ4MzJiYzRmN2NmMDNiYThhMWY2ODMwZDc0ZTFhNmY5MGU5MWRiZDI3ZmM5YWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQzYWRkNDcxMDEyYTc4MTEwN2UyOWI1YWU4NjViNGRlZjA4NGM4MGNiMWQ2MjQyMTg5YzkxZDdhNDg5MTJhNTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZkZGFhMDM5NGExYTA4Zjk4ZTQyOTYzY2ViYmJhMjhhM2MwNWI5ODIzYzAzZGE5NTM0ZDMyZGQ2MmQ1MTQxOTAifQ"
+        },
+        {
+          "resource": "repo://train.py#L322-L335",
+          "version": "repo-lines-v1:sha256:4b997505bdfaa62553b981bbd07430acfe5102316b0868e6e3e1ca51dfc9b5be:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBmMDFlOTQ3ZTEzNDdlMjM3ZDAzYjNlMWJiNWU1OTRhZTkwZDMxM2E1OTZmMzIyMWYyN2E4Y2NhMGM2NDMzZWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJkNmUwZTMzOTZkMGJmNDVjZTQ3NGQzMzIxMWU0NzUyOGJjNTEwMWJiZDNiMDliMzA0MmFiYmU4MDQ2Y2NkMjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkzYjMxNGVjZWRkY2Q4OGM4Y2E3YzkwMTM5NjA1MTc5MDVkMmJhNjk0MTE5MmU3ZTdmZTE1YmUzYWU1ODViMTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5ZjdmN2FhMTYzMDU2N2MxYjVlNjY0NGUyMWNiZWM4M2E0MzkzM2RjNWIwZGEwZDkwY2Q1M2JhNDhlOTEwZDIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0480309f25944a7e958dd5579ad3b6ea",
+      "statement": "The Streamlit dashboard loads the model bundle, accepts CSV or XLSX uploads, and sends selected models through prediction and result-rendering paths.",
+      "evidence": [
+        {
+          "resource": "repo://app.py#L375-L407",
+          "version": "repo-lines-v1:sha256:dbc742c2efb108635e5975d48cab95de753674eeaf9f6eb2088986a58f39cabc:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU3NTg1M2VjNmExYzc1ZjdmYjc1M2I5ODQ0NTc4NDgyMmFjZThjMDZiOGU1MjQ2MWJhZDk4MWI0Njk1NzY0MmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM5MjIwNGM2NWY1MDJkYzE2NDU0YjYyNDA4NTZhOWFiN2FkZTAwM2E4ZTlmODYzMzNlYzBiN2M5ZTQwOTQ5MWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM1ZWQ4MmE2MzYyODgxZDVmZDk2NGU5OThhZmRmZjkyZGQxOWMzY2Q2NTQ2NWJhM2Y1NzliYzgxMGVhNDk2OTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI3ZTBiYTAxZDhmYTg2YzdhODg0NzJkOWJhZDgxYjIyNGE4MThjYTVlYWY2YTc1MmFmNWU3OWQwMmZiNTZiMzMifQ"
+        },
+        {
+          "resource": "repo://app.py#L425-L457",
+          "version": "repo-lines-v1:sha256:6ef5a9773683b33b98804d868cacb5a81d0aa85fe243891582540603b494f69b:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUwNzAwZTEzMTdhM2FlZjRlNzhlYTIwNDQzZDE0YWY2Y2FjZDA5MGQ5Yjk2NWZkNjIzYzUwZDYwODBkZDQxNTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc1MTg4OTgwNjU1ZmUxZDc0N2Y1MGI0ZDVjNjdmNTgyNGM1MWE5M2I1MzdjN2Y3YWRmMjVmNTNjM2IyMjM1Y2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg4NTIzYWIwZTNjMzRiMWUzOGJmZGFhY2U3NzY2NmY3ZmNlMDg1MDI5NGRmNTUxYWE2NDE0NTA1YzczNDU1OTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg1ZmU1MTQ5Y2E2OGZhMDYyYjhiNDU2ZTViMjZiODNmMzIyZmMzNWRkYTQ1NDg5ZTM0MjNmNTE5YTYwM2M3MWYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1c898dd270fc4a4898eb5d86d7ad022c",
+      "statement": "The repository describes its evaluation as a single holdout benchmark that does not include cross-validation or predict production performance.",
+      "evidence": [
+        {
+          "resource": "repo://docs/architecture.md#L71-L77",
+          "version": "repo-lines-v1:sha256:dafc55892a133ce5e476a75003e0e94668f88a94767a5176ea0f8acef458ede1:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjJhMzRjZmNiNzg0OGNkNTIxMmQ0MGFjNjFkNzNlNmUyYmM3NTNhN2VlYjk1OTc2MWVhOGE3MDMwNTg4MmI0MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYmEyNzA1NDc3MmJiODNiODAyYWI1MjgxZGI3Y2IwNmVlMWMwNmQ2NGMyMTEwZWU1Yzk0NGIwYmZhM2UxMTIwYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDg3Mjg4YThmZDYzYzk5NGVjNDc0YjI3ZGQ5ODJjOWIxYzNkYmNhZGQ2NmViYzA1YmNhYzA1ZmM2YzYxN2MzNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_d9453261aace4fc08e1582926ca6afef",
+      "statement": "The current pipeline tests cover positive target encoding, unknown-label rejection, target and identifier exclusion from features, positive-class metrics, and missing raw inference columns.",
+      "evidence": [
+        {
+          "resource": "repo://tests/test_pipeline.py#L11-L48",
+          "version": "repo-lines-v1:sha256:9ffd9966d599b836ca4057dbcf9f1d2747d6b4b08cd00f85fbf6d558a2fab606:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIwN2VmMTc0YjIzYTlmMTNjMGQ5NDNhNmVmZmIyMTNmZjExM2I1YTE4Zjg3NGU0N2FiNzdmMmY5NTNlODc5N2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNiYWFlOTk3N2ZiYTVkYjk0YmJkOWI5YjAzOTA0ODRjZTU4MjIwZDdkNWY1ZjdjYTEwODIzN2ViNTFlYzMxNzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBmZjU2OTJmZjkyMzIyYmUxNDU4M2FhNmEwMWYxZWY2OTI5NmJjOTUzYzZmMDg5NzYwZThjNWExNTdkMGJkNDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-23T14:05:53.012Z"
+  }
+}

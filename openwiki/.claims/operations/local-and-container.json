@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:fc2c730d25dc02b565b7dcfcf707b45979f47d45db7313159bf19150393dec06",
+  "claims": [
+    {
+      "id": "claim_d74111ed60b544a79a5c6a691a1a57ce",
+      "statement": "The repository documents Python 3.13 and uv as its baseline setup, using uv sync for the base environment.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L100-L116",
+          "version": "repo-lines-v1:sha256:02f566694e4ae8a8aee7e7a3834682b96cc997ec39f933b6c048603ee67cf2b9:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM0MTc3ZDdiYTRlZGZkZjUwMGY2YTE5ZWQ4ZjU1NTUzNmM4YmFkODQ4NWM2YTU1ZDI5YTVkZDU5ZjdjOGZiNzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlYzU2OGVhZGRjYzQ4NDAyNmYxZTMyYWYyMmM3NWYzODUzNjJjZjJjNWMxZGQ5NjhjMDU5MmY1NzE5NTgzMzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFiMTQ5ODJhZDk2ZGZmZjk5NGRmZTQzYzFjYzlhNTNiMThiMTVjNGIwYWFiNGU2Y2IyZmQwNWU3NmU0MjUyMDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRkMTA2ZmE0MjJkMDE5MzNkMWU3NThlNmIyYTUzZGVjZGM3MjBkYjhlZTU1MDlhYWEwYjhmY2FmNjg2NjkzZWYifQ"
+        },
+        {
+          "resource": "repo://pyproject.toml#L1-L5",
+          "version": "repo-lines-v1:sha256:40614f7f2774f12a88d6f99411e83fc65c392291907a05705559cb68273c9393:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjU5N2Q5NzNkNDk4YWMxOGIwZjRhN2FmZDA0N2RiNGQwMmYwNjJhNjM5M2UzOGEzYjkxNmZiZTA4YzcxOGE2OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmZiNTcxMDc5YzJjMzRhNjJiMWMwMDYyZjZiMzg5YWQ2NmIxNDVmMWRhNjUyZWRmMjRkNzQ0N2Q1MzYzZGEyZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzJmZWVmYTQ2MDY3YzdlNmQ3MGQwODcyMWY3NGUyMmEwZDIyYjM1ODZiZTJhNWZkYzZlYjk2MDkzYWY3NWYyNSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_2794b8485f39478b824a6ea7eccb0386",
+      "statement": "The classical pipeline, tests, and most dashboard development do not require a GPU, while the foundation-model extras require CUDA-capable hardware.",
+      "evidence": [
+        {
+          "resource": "repo://docs/developer-guide.md#L3-L10",
+          "version": "repo-lines-v1:sha256:b50431ae82385b1e621ae0dd1b8c8bb8b96638b41961474a3f1c6a0b7b873b24:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTI3ZTJlNTk0ZTdhZDk1OGFlOWI5NmM3NWVjMDZhY2E5OWY0NmQ1MTI3YzVhOGVmZTRhNWQ5MDgxYWFmYjlkMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzQwM2E1YWY0N2NjOWY3MTI0NGVmNTFmODcyYjM0NzU5ZTFhODYzMzcxMDk5M2I0N2ViZjI0YmEyMTZjNDk4YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjIsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTI5MzYyNjU5MDI2ZjJkMjRjZmYyM2FiMjVhMjZlNzcxM2RiYTQ3NGMxOTA0MGM3NjJiOTlkYzA2ODUxMjAzMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjJjMjdhMTBmOGIwZDg1YWFkZmNkYTI3OGMxMGFhNzJiNmNkNTVjYjQ0YWZhNjRkN2FiZjhjNjQ5ZjU2NzAwYiJ9"
+        },
+        {
+          "resource": "repo://docs/training-and-evaluation.md#L3-L13",
+          "version": "repo-lines-v1:sha256:c3483dbb09c59097b15c8b549dfef558c3a46cd41ff453fecf58672d37d371e6:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVhZDQ0MmJiZWZiYjE2MjFhNDgwYjk4YzAxOWMyY2FhMWVlYjE1MDYzYmYxYjlmZjNiZGRiZmFhMTE2YTI1YWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRhMDg4MWJhZTc1NzQwNzgxNDI4ZWQ4YmM2ODllY2NhN2Q5ZTZmMjRiZTZkOGI5OGJhZTRmZTdmNGQ2MTVjMDYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjoyLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM2YWFmY2I2M2Y0YzYzYmFmYmJiOGVkMTM5YTJhMTgzYzcyZDdkMTU4OTc5ODhlMGEwZmNjN2I1ODhmMjhiNzciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFhM2Q5ZGM5ZWQzYTczODc1ZjU1ZGZmNzdkNWY5OGU2OTBiMDYyOTM2YWNlMDQyMDg3NDkzOWY1MWI4NWUwNmYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5af0a0670bd44c489029b638051dae85",
+      "statement": "Mitra and TabFM are installed through optional dependency extras, and pyproject.toml pins PyTorch and configures the CUDA 13.2 package index.",
+      "evidence": [
+        {
+          "resource": "repo://docs/developer-guide.md#L20-L32",
+          "version": "repo-lines-v1:sha256:ea235792102b90b8fb127fb80b3c9586b26676c0756cb0f60e1a511ba4d667e7:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ3MzM0NGY2NDkyZjRkOGM0MzRiYmEyNTEyMTAxNTc5OTEzZjY1MzVmZTZlNjQ3M2I5NDc5MDgyYjUzM2YzNGIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjljZGZiMmQ0YjM1NDA3ZDkzYTQ1MmQ3ZDU5OTM4NTlmYzIyNGJjZTg1ZThiYzIzYTJlNTBiN2JhYzllZjI1YWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYzZmIzMmQ2OTkwZTk0NThmYTFkMTY5MjFiYjJmMGMyZDdmMGNjYTk3ZDhjNDJmMWIzOGQ3ZTk1NzkxNTc2ZjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZlZWYyOGE4ZTE5NTQ5OWQyNGZkNDY2M2E4YzZmODJkZjg0ZjJmMTJhMzY5MmRiMGFkNGNlYTQ3NTRmMWI5MjgifQ"
+        },
+        {
+          "resource": "repo://pyproject.toml#L106-L126",
+          "version": "repo-lines-v1:sha256:603e51b9e0c14c36aebe7628d177cfec5a55eae8f921f4ef73400e6e1574c65c:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEyMGI4ZDUzYWM1ZTM3NmI4YmZlNmMzZWUwOTQ4MmNkNTk1ZDlmZTkyNmRhYzk1NmQyZjEyZTBiMWYwMzUwMmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNhNTY5NDdjMmJlZGU5MjcxMjQ2ODk4ZDhmMTljYzNmMWRlNjJkOWRjM2Y5MDcwOTJhZDUzYzA3ODQ4ZWZiMjgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU3MGVkMGM4ZjZlMDQ5YTE3NzUzMzBlYjQ0MDEwMDU4MDRhZDE0OGMzYWI4MDAwZWY1OTMwZWIzMzk1NzUzYmEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE0OWVhZTljYjkwMjJlNDQyNjNkNjk5Mjc2ODNkY2JkOGM1N2IzNDE3N2JlY2U1MWFjYzYwMzNmMjg2YmZlNWIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_20aeed3fbbad43c3af336afe207f967a",
+      "statement": "The documented local flow trains with uv run python train.py and launches the dashboard with uv run streamlit run app.py at localhost port 8501.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L124-L162",
+          "version": "repo-lines-v1:sha256:af5a034482c52380e9cc10ea05bda667268e589ba16ddfddafa7549e06580852:eyJzZWxlY3RlZExpbmVDb3VudCI6MzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAwNTRjYzhkMGUwMzcwZmExOTQzNWQ2MTk0MTI4YjZkZDljYmFjNTllYTkxNmNiM2E4YTMyODkwZjhhMTNlYzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY5NzkxMzYzYWZjNzUxMWVkNzBmMGZmMmY2NmZiMTlkOTFjZDJlNzNhMGRhN2I1MzBiMjFlMzk3NWY0NmMyMTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNlNTZmN2M0NjcxYWU0MzUxNTFkYWE3NmVhZjAyYWRmNTNmZjEzMWM1Y2UwNjA4ZjJmN2Q3NWM0N2YxYzgxOTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjlkMGZkMjk3OThmOTQyN2ZlYzNmNGZlYWZhZTY3MTA1ODYwMTNiY2JlNGEwOTNjMTYxZWJjMjEyZWI0Y2RiYTYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_15f6f80c121649d0b964aaf6de570a5a",
+      "statement": "The Dockerfile uses Python 3.13, installs the Mitra extra with a locked uv sync, copies the model bundle and Mitra artifact, exposes port 8501, and starts Streamlit.",
+      "evidence": [
+        {
+          "resource": "repo://Dockerfile#L1-L13",
+          "version": "repo-lines-v1:sha256:65b5ed0b67cee7108f99c875aaa83e4984fff273edba8eacfa7da40f65e7004b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEwMjFkYzY4ODU2YmJkNjg2NTc0N2E1ZjVkYzQ5MjAzMTBkYWQ3MzdiZDdhNDM4MGEzMmI4ZjRhMzQ2ZWY0NTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImEyOTliODlmZWYwNzk5MDhiNGY1ZTgxNzNlMGE2ZDdiYmQ1ZjdkNDhlMjc0ZThlMmIwMGQxZjI3YWRkMTYwM2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ef2b736f1b9a49e68fbe8afa1efc8fe7",
+      "statement": "The documented Docker launch requires NVIDIA GPU passthrough and a completed Mitra artifact with a schema-v2 bundle; the Docker image does not include TabFM.",
+      "evidence": [
+        {
+          "resource": "repo://Dockerfile#L5-L13",
+          "version": "repo-lines-v1:sha256:4dec8697b6522b0fb173db5a94cca516c4f91129204dfc9358cbc0b0f4d37f3a:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGUwYmUwZDVjMDhmNWFlNGNhM2JlOGI5ZmJmNTkwMTg1MWVhNjNhNjRlNjkzMDA1NTQ4M2YxZmQxNmRiNTc0NiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTI5OWI4OWZlZjA3OTkwOGI0ZjVlODE3M2UwYTZkN2JiZDVmN2Q0OGUyNzRlOGUyYjAwZDFmMjdhZGQxNjAzZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmFiMWIzMzFiNWNhODk0YTNjNGVhYzU2NjU2MTg0ZjVkMTQxYjZiOTZhMGM1YjNlMjRlZGM2Zjg1N2M4NDYxYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://README.md#L164-L176",
+          "version": "repo-lines-v1:sha256:1186f31a0a70bc26c9a1d524ee5927665b66c5af6a8c6137e31cd8f81d036155:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZmOGY1Njg2ZDdkNGQwOTQ3N2IzOWY4MzFkMzM2NTI5NGUzYTQ0ODQwZTJlZTU3OGM1NWE1YzlmYTgwODAyN2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRkODE0ZWE4ODE4N2UyYWU0N2ZlMWQxOGFmYmI4YTc4YzY2ZmM4NjY4MzQxOTgxYTZlOGExZTkxZmViMWY1YjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRmNTY2ZjA1YTYxYTk1YjM0Y2MyMzZmZmYyMmRjZmNiYzgyMTA0M2NiM2JhNzM2ODYxNjI5MjMyYWE4MGMyYWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk0MjAyNGUwOTY3NTI5YTM5NWQ2MTY0NThjMDRkOGRiNDM3ZDI0Nzk4ZDQ3MTA2MGU5ZTU3NzQ0ODM4NWZhMzAifQ"
+        },
+        {
+          "resource": "repo://docs/deployment-runbook.md#L49-L78",
+          "version": "repo-lines-v1:sha256:10d539b4a87a4b387af1b0cc65bc970eeadf9df63d5f544c8072ab10e09589d5:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZmOGZiYmM1MzVlZDg5NTgyZDc5MDdlNTEzYjEyMjE5YzBkMmMyZmM2YmY4OGEzMTM0MjI0OGEzNmVlYzZjNWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA1YzkxZTg4YTY2ZTY2NmZkN2E4MmUzYjg5MTdmMGJhZTc4NDQ3ZmE2ZGFhOTdiZGZhYmFjNDBhODNhODI4N2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNmMWIzNTcxZDVlZTg0ODRkYmFhZGM3MDU4ZTU2MWQ5MzI5ZmJmYzliNGM5NGE2ZWMzMTlkZGVlZjgxMmY0MzUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBjNjk1M2FlMmMyYzVmZDMzMTc4ODg5N2IyNDU5NGI5MDA4OThhYThmYWQ4NjFiZTFkY2FhOGI4YzRhMDVkZTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_315f3f8d329047e1ada3dcb7b6c3f4b4",
+      "statement": "The developer guide states that the unit suite does not run GPU training, so passing it alone does not validate foundation-model end-to-end execution.",
+      "evidence": [
+        {
+          "resource": "repo://docs/developer-guide.md#L71-L81",
+          "version": "repo-lines-v1:sha256:26c4c76788a12b6fdb7efd0c8f0cc063e48ac62172f8b44ad031416ec53b2b2a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMwNGY2MGJiODcxYzRiMjA4Y2FiZGFmZjRkZDgzMzY1NjA0ZjQwNzJiMWFhYjJkODE1NzcwMmVlOTQ0MGQ3ZTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlhMDcwNWI5NWQwODhkNTI2YWMyZDJkYjUyYmVmZWEwNDE3M2VjMzZlOTJmNGNmZGMzMjQzODU5ODVhMmQ3MDkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVlMDFjNTA1MWJhYTllZDYxYWUzMWZhMzk3M2E0YWI3MTc4M2RkMzdiNTdmYjRiNWE3ZTdiZmQxZWZjZDhiOTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-23T14:05:53.012Z"
+  }
+}

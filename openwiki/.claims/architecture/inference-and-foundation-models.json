@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:685f31f34ee8540cbfee139154f80ea1a61e854869b4472b4498a1e2cd7a7a45",
+  "claims": [
+    {
+      "id": "claim_1d6d7fc9bc214d3fa08f041ac55bf008",
+      "statement": "The Streamlit dashboard accepts CSV and XLSX uploads, loading CSV with pandas and XLSX with openpyxl.",
+      "evidence": [
+        {
+          "resource": "repo://app.py#L425-L433",
+          "version": "repo-lines-v1:sha256:1efb5e7800a3c41f9c196c1aa29470723b9e93941bdd9afa052f2655d2dbe960:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTA3MDBlMTMxN2EzYWVmNGU3OGVhMjA0NDNkMTRhZjZjYWNkMDkwZDliOTY1ZmQ2MjNjNTBkNjA4MGRkNDE1MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjRjZjI1YTUxNTM1YTBmNjY0N2ViNTJkZmUxZjc4NzdkMjExMjQyZjM3NGY0ZjMwODFmNTVkOWJmYmIzOWU5MiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODg1MjNhYjBlM2MzNGIxZTM4YmZkYWFjZTc3NjY2ZjdmY2UwODUwMjk0ZGY1NTFhYTY0MTQ1MDVjNzM0NTU5OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzVjM2MxYzM1Yjg2ODYzYTZjMWVlZTM4MWVhYTBlNWMxZTczMTlmOGJiYjc0ZjQ2NjUzNzM4NGNlZmFlY2M4NyJ9"
+        },
+        {
+          "resource": "repo://app.py#L46-L58",
+          "version": "repo-lines-v1:sha256:6e314d9fda5a62296ebb5f1edd343c42b4e3acf15fbfa0655bfdaca47fc38df5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJhZDRlN2EyMWJiYWU2YWM1NjA1ZWJmN2Y5NTMxMGJkYmNmZGRlY2UzZGU0ZWFmNWU4NzZiNTkxNWU1OWI5NDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImEzZGQ0NTUxZTZjMGJkYzY4YTNhNDVkOTI4N2FlYWIwOGQ3ZDBiNzRlNzFmNGFlZWQ3MjUyOTYzM2Y0YmIyMzUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjcyZjcyOGIyYWJhNjFiZWVhZjhkMGU0MDQ2OWM5MDU0NTBmNDBmNjE0OWRjYTc5MDkwNTRjNmMzZmZiYjIxNzIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM0YTFlODdlZTNmMzEzNzA2MzhjZTVkNDBiYjYzZTU4ODgzMTI4ZGZiZjY4MWJlNWQyN2Y1YTY3ZTkxNDVlYmMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0a4ae3abe89347d2a20ed52adb30ef2a",
+      "statement": "The classical inference path selects positional feature columns 2 through 20, one-hot encodes categorical columns, fills missing values with zero, reindexes to the bundle feature schema, and applies the stored scaler.",
+      "evidence": [
+        {
+          "resource": "repo://app.py#L113-L117",
+          "version": "repo-lines-v1:sha256:89ddfe4264d5e8fa71cdaaf44198df4695948f90f223679ae60c9492c5117dd4:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWYwZWYwMThiOTExZTZmMTgwNWU5YWVjZDJjNWU4OTMwZjhmOTZmMjFiMDM1ZjE0MTE1ZTI5ZTdiZTE2M2UwOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWZjNTlhOGZmZjVjMzVhNjgwNmNmMjNkZWMwZjkyMTBhZjdlNGMwMGI1YjA0MGIyNmM0ZjEyOGQ3OTNmMzg2MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjkzZWUyMzE5ZDMwYzViZDBjYzAxZWEwYWExMDY3ZTU4MGUxNWI3Yzk5Y2EwMDY5MWQyMGZhNDBkOWMzODMyMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTUzNjk3MWEzNDg3NmQ5ZTk1Y2E5Y2NiNmU5ZWZhMGFmYjlmZjJlM2NmZjA1YWVhNjIwYjIwMGE0MjUzNGI1NSJ9"
+        },
+        {
+          "resource": "repo://app.py#L75-L93",
+          "version": "repo-lines-v1:sha256:61031a098b18ed5c6af1c9ac149e0cef604ad81c62ac0e6be64a3a5b5b6e8547:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRiYmYzZDU1Y2VkN2FiNzg0OTg4MThkNDUzMjhhNTc3OWQ1NmRiMDU1ZDcxMzkxMWRjM2IwMmE2ZTMzNjc0MjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBiZWRiMjFjMTMwOTE2MDQwOWRhMDg5ODg0YjdjNTE4MmJhZjA5MTNlNzFlNzEzNTA0NWQ3YTA2ODhkYTY1MTgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ4MTI4OTk0OTEzNDU5YTY5YjEwODZlN2I5N2ZjNDA4ODJiYzJmY2U0NjNkNzY1MzUwNTUwZjVjMDg1YzczZTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNjZmI0NTE5MDAwMDM5NGRlODlkMGQ4MjFhNTM5NjFkNmE2NmI3ZjYwNGI4Y2RmMDhhZmVjMGM2ZDAxMmFmMmQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_570b9c0a7813418f8602e7aa0f92249d",
+      "statement": "Foundation-model inference selects raw feature columns by name and raises an error when expected columns are missing.",
+      "evidence": [
+        {
+          "resource": "repo://app.py#L118-L120",
+          "version": "repo-lines-v1:sha256:5536971a34876d9e95ca9ccb6e9efa0afb9ff2e3cff05aea620b200a42534b55:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjA5NWVmMDdmNmViNmUwOThlNmE4NDliZTVjOTM4MzM5N2Y0MTEzZTk1YjllNzA3OWZkNGU4YmM1NDc4MDE1MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWIyZmU4MzY5OGRlYjIyM2RmNzI4NWNlYTA5ZGI0MWZlN2M2NmE0ZmMxZGRjMTRlYzkxMzU2MmNlMGU1OWJiMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTUxMzUzOGNjZWJmOWYwODM2MTZkOGNkYTYzZGFjZWZiMzk1MTkyOGM3NjMxY2ZjNDc2MGI3MDQxMTY0YTcxNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMmJmYjgwOTM2OGZmYzZmODIxMmZiNGJhODZkMjI4MmE3ZWRmMjJiMDA0MWM3ZjdlYTgzZDE0ZjU2NjM3ZTJjZiJ9"
+        },
+        {
+          "resource": "repo://app.py#L96-L103",
+          "version": "repo-lines-v1:sha256:aa64ace3b5c58f4b2630e76dc1e48f817334ff30faf63055d88a4b22f08baadf:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDMzY2ZhY2ZhYTJmYzA3MjEwZmE1OTBmMjk3NDg5YWM4Y2Q2Yzg5ZmQ1MzgzOGJlYmRkYmY2NDBjYThkMDE2OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTZhNGUyNzA0YjZhYjJjNzhkNjQxMGUzNDUxNTRjZGI0OWUyZjQ3ZjNlMzQzZTQ0MWRjYWE0Njk1NDMzZDEwYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWVkOGY3MTc0M2U1OTM3YmNhMzE5ZjQ3M2RjZjcwM2MxOWQyZDBjOTc5YWQ0ZGVhZjYxNWFjYjNhOWY3ZjZiOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2I2MmNhNjM3MDI5OTlmYmU4OWM4Zjc1YmYwYzk0YzhhNTU1Y2QzOWJkMzczZThhOWY0Yzk5ZWJjMjVhMmU1YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_9c15a32e311b4683853bd357039d6df5",
+      "statement": "The dashboard exposes a foundation model only when its referenced artifact or context path exists.",
+      "evidence": [
+        {
+          "resource": "repo://app.py#L397-L407",
+          "version": "repo-lines-v1:sha256:6cf7cb103f3ff889a474279a3e5ab7fdd398c5c213dce90fbca129380d5a2505:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3MDRkOWZjMmI2MzlkNWIzYzY2YWM0MWI4NmQxOWExNmUzNTQzOTYzMmMxMzIxMWYwOGUwZDljYjZiMWEyYjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM5MjIwNGM2NWY1MDJkYzE2NDU0YjYyNDA4NTZhOWFiN2FkZTAwM2E4ZTlmODYzMzNlYzBiN2M5ZTQwOTQ5MWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg5ZWYwMTY3MmQ3MWE4MDczZjUxZDZkZjEzZGQyMTU0N2U1MjcwYmZlOTcxOWZkMzE1ZjVjZjY5YTA5NjI5N2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI3ZTBiYTAxZDhmYTg2YzdhODg0NzJkOWJhZDgxYjIyNGE4MThjYTVlYWY2YTc1MmFmNWU3OWQwMmZiNTZiMzMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2d6e066f979e47a78f66e0e5d5478437",
+      "statement": "Mitra-v2 and TabFM require CUDA, and the dashboard deletes each loaded predictor/classifier and calls CUDA cleanup after its prediction.",
+      "evidence": [
+        {
+          "resource": "repo://app.py#L118-L138",
+          "version": "repo-lines-v1:sha256:8f0d686338c2094db4037e034d74b58ce03e685150cd3743bbd6d65d66ecd240:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIwOTVlZjA3ZjZlYjZlMDk4ZTZhODQ5YmU1YzkzODMzOTdmNDExM2U5NWI5ZTcwNzlmZDRlOGJjNTQ3ODAxNTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRjYmRiMjZmOTE0MDk5NzIxODY5MmE1OWQ4NzcxNzJlMTllNmJkZDU3NjU3M2NlMDI2MzAzYjJlOThlNzg5OGYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE1MTM1MzhjY2ViZjlmMDgzNjE2ZDhjZGE2M2RhY2VmYjM5NTE5MjhjNzYzMWNmYzQ3NjBiNzA0MTE2NGE3MTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc1MTgyNWQ2YWE3NjA0ZWYzNDRiOTQ1ZGMyYTdiNDM0OTk4NmNiOThkNjNmNDZjNTkxNTRjYjFkMmRhYTcyZjIifQ"
+        },
+        {
+          "resource": "repo://foundation_models.py#L21-L32",
+          "version": "repo-lines-v1:sha256:072238120f7e129032aa8ef91730c256483e82b67bd424d0f267c9d3e8025fcb:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFjZjgyYzlhNTc3ZTU1MmI3MTY1NjUwYTBkNDkyNzYyZmQ1OWMzYzliZWIyOWU3MmVlZDYzODEzMTQzY2MzYzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBkMjA5MjhiY2FjMDZhNzU2MDk1NjAwYjc0MzRlNTYyZGI4ZDllMzQ5OThjMTY0OGMwNTI1MmNlYTk1MzAzNTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIwZDU3MjcyMWNhMDFiYjhiZmFhZjM4YjFiYzM5OTIzNWMzYzJjYjBmMDhkN2RmODg1ZTEyYmNlYjQwY2QxMGYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU2Zjc0OWRjNTE3MzVjNTNjZWYyNDkwN2UzNDYyODdhMDJmOTA1YTg1Y2EyNTA3ZDY3MjJlMzBiMDFjMjViODQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_cdbd09e3530a470f88f93df6218c8878",
+      "statement": "TabFM is restricted to non-commercial research use, and the repository's Docker deployment excludes TabFM when its context artifact is absent.",
+      "evidence": [
+        {
+          "resource": "repo://app.py#L420-L423",
+          "version": "repo-lines-v1:sha256:0415ff267d013448b93e0b15a25fb0c0982aae840b89df88759351ae17593155:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTY3OWFhZTIzZGZlYmQ5MTkyYWQ5ZDI5ZWQxYjA3OThjYjJlNDg1NzdhYWQyYTRmM2QzMDhjZTkxMTVhOTcxYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmE5ZjhjMmJjN2ExNDFhMDIyYWYzZmViOGFiNTAwOGVjMjU3NTdlZjI0YWNkMDQ5ZjUwODlhNzRiN2M5YWU4MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTdmNTczMTY4MmEzMjJlMTE3OWQ0NmYyZDE0MmZkNjE1ZDFmM2Q0Yjc3MzNjMmEwZTJjY2MwYzMzNTRjOGUyNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDJjZDhlMDg2YjE2MTcxNTkxODMxZWQ2N2M3ZGVhYzgwMjMxZDhmOTIwM2ZkZmE4NDExM2VjMWJkM2RhZDFhZSJ9"
+        },
+        {
+          "resource": "repo://docs/architecture.md#L54-L58",
+          "version": "repo-lines-v1:sha256:f95fb34a82e7f6c2c6a6b4ffc5bdba9818d53e298344e57bc1fe6fe14c860d85:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDE0YWZhY2M2Mjc4NDVjZDk3ZGUzMTNhNzk1NjI4MTNjNjc1NzBhNTc3MmExNjFjODc0MWY1ZWU4ZjVmOGQ0MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDYyNjZkYmJiMTVjYTQ0ZTIyMzNiMDMzYmU4MDhkYzU1ZTZhNGVhZDZiZDY3MGNjMTk0MWFmZTUyZTU5N2YwOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGEzMDAzZDAzYTE2YmExNDQ5YmI4NzNhZDQ3NjdlYmYxZGZiOWY3MDI2ZmE1NzJhMjExYjFjYTc3ZTIxMDdkNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzQ3YzFiNmE4YzNhYmZhNzgxODYxOTQ4MGYwOTRhYjRkNTE3ZmNjN2VhMDY3N2M2ZWM5NGIyMjliMjBjOTc5MCJ9"
+        },
+        {
+          "resource": "repo://docs/architecture.md#L62-L77",
+          "version": "repo-lines-v1:sha256:01daf3adf92f71a5b6b39b8bf6faa377170062fb9e3ba9400a665b9f53a2feca:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIwZDdkZjgyOTZhNzFhMmQ4ZDQwMGYwMmNhYjNiMmJkOThlMmNkY2VmZmUxNjliN2EzODMyNWFkNzljYTQ3NTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJhMjcwNTQ3NzJiYjgzYjgwMmFiNTI4MWRiN2NiMDZlZTFjMDZkNjRjMjExMGVlNWM5NDRiMGJmYTNlMTEyMGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM0N2MxYjZhOGMzYWJmYTc4MTg2MTk0ODBmMDk0YWI0ZDUxN2ZjYzdlYTA2NzdjNmVjOTRiMjI5YjIwYzk3OTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-23T14:05:53.012Z"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:3c00c37a801675057a7b6c828178fd35dfac65c3e0957104b0c1c63c6aabc108",
+  "claims": [
+    {
+      "id": "claim_812f022cd5e9467795d475109a7a0531",
+      "statement": "Training accepts the classical, mitra-v2, and tabfm model groups and defaults to classical; the optional foundation-model groups require their optional dependency extra and CUDA.",
+      "evidence": [
+        {
+          "resource": "repo://docs/training-and-evaluation.md#L3-L13",
+          "version": "repo-lines-v1:sha256:c3483dbb09c59097b15c8b549dfef558c3a46cd41ff453fecf58672d37d371e6:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVhZDQ0MmJiZWZiYjE2MjFhNDgwYjk4YzAxOWMyY2FhMWVlYjE1MDYzYmYxYjlmZjNiZGRiZmFhMTE2YTI1YWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRhMDg4MWJhZTc1NzQwNzgxNDI4ZWQ4YmM2ODllY2NhN2Q5ZTZmMjRiZTZkOGI5OGJhZTRmZTdmNGQ2MTVjMDYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjoyLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM2YWFmY2I2M2Y0YzYzYmFmYmJiOGVkMTM5YTJhMTgzYzcyZDdkMTU4OTc5ODhlMGEwZmNjN2I1ODhmMjhiNzciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFhM2Q5ZGM5ZWQzYTczODc1ZjU1ZGZmNzdkNWY5OGU2OTBiMDYyOTM2YWNlMDQyMDg3NDkzOWY1MWI4NWUwNmYifQ"
+        },
+        {
+          "resource": "repo://train.py#L172-L194",
+          "version": "repo-lines-v1:sha256:e5818a86240e0a50aaad355cec6abd586c47f56b7b4b8e455827f4df4e0e6570:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNiYTE1NDYwOTgwMjdiZGY2MDRkOWIwOTk5M2RlZmRlY2FhMmVhOGQ0Mzc2YTcwY2ExNDVjNjI3YTc2YmQwMTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBiZGZjMTBmYzJjOGM1MDdjNDA4NTU0MTExNTNkYjdjMDIxOWMwODQ3N2E4NDUwMTdlZGFhYjEyYjExYjBkNjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU5MzdmYjA3OGMyODFhN2I5NDNhZTNhNzE2YmNjNjNjYjRlZWQ2ZGNiY2E3NTZkNTc2ODNiMWNlMjA4ODUzNjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZlMGRkODcyMmI5YjA0N2JlODI4NzA0YzJiNmE5YzYxMGViMGE0ZDdiM2FjMDYyMmU3YzkzM2EyYjkwYzgzOTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_000c1d72e28b4b128ed5ae0cbfdd4a8b",
+      "statement": "The pipeline rejects unknown or missing target labels, maps Attrited Customer to 1, selects columns 2 through 20 as features, and makes a stratified 80/20 split with seed 42.",
+      "evidence": [
+        {
+          "resource": "repo://tests/test_pipeline.py#L11-L31",
+          "version": "repo-lines-v1:sha256:80c85fd56589b9aa88511203bcb501e8025af8448048f33fa2a2b7b93fe7bbf3:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIwN2VmMTc0YjIzYTlmMTNjMGQ5NDNhNmVmZmIyMTNmZjExM2I1YTE4Zjg3NGU0N2FiNzdmMmY5NTNlODc5N2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlYzZkNWYxODRhNzNiODFhM2NlNThiMDFmOWQ4ZDhmYmZlYWYxZjhlNmFiZTRjMTJkMjdjYWRhY2IzZGU3MGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBmZjU2OTJmZjkyMzIyYmUxNDU4M2FhNmEwMWYxZWY2OTI5NmJjOTUzYzZmMDg5NzYwZThjNWExNTdkMGJkNDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU5ZmRlOTgxODA0NDI5MjIwNzM4MjEzNjhlMDBiZGM3NzE0ZmFiNmM3ZDE2ZDFmZDlmYmI2YzllODc3MWYwODkifQ"
+        },
+        {
+          "resource": "repo://train.py#L42-L72",
+          "version": "repo-lines-v1:sha256:c45f49ec3c06712b56b739314f6abeefc96156ad0b16a5cd2baadbe361f07327:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI0OTJhZDU4OGZlZWM3MjI0YTU4YmU0MmNmNGZjZGU0MjgyOWY0NDQ1ZWNlYTQ3MmFhZWQ5YmNmMjBhYjIxNDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM5MjIwNGM2NWY1MDJkYzE2NDU0YjYyNDA4NTZhOWFiN2FkZTAwM2E4ZTlmODYzMzNlYzBiN2M5ZTQwOTQ5MWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImEyZGQ3ODQyNjA5OGUzMzY3YWFlMDY2NzdjYTRlYTkzNzc4YTZkNGU2ZDZjMWZkNjY4ZmM0NzkwMzlmNTVkMTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVjMDMzNmQzMGI3NjM0N2RmMTk5N2I2MTZmNDYwNzUwZGJjODhmYTI3YmIwOWUzYzM1YmRkOGNkNWRiMjZjNzQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_85c754ee7f4747c28c7a5cc5309e7d79",
+      "statement": "The classical path one-hot encodes features, applies SMOTE only to training data, fits StandardScaler on that resampled partition, and transforms the untouched test partition.",
+      "evidence": [
+        {
+          "resource": "repo://train.py#L74-L98",
+          "version": "repo-lines-v1:sha256:9b76849b172c2b6b44760c8108d6f0932d70c5702d59368ae1185d067f6815c6:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU0OGMyNWM3MmVhM2JlZjkyZDdlMTA2OGMxMDE0OWY5OTQ4MDc2MTYwMmJmMDQ1MTYxYWM5Y2NhYWZkYTg5ZWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE0MTlhNmRjYzA0ZTIxM2EzYzdhNzdhNDU2YjAxZTc2ZDFlZjc4Y2QwMGJiZWMxZDhmODE0NThmZTkzZWRjNTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg4OTczOGMxN2VkZTMwMzAyZGExYmQ1ZGM5MGVjN2E2Y2Q4MWMyNTNkMDgzMTljZjk3YmViNzMxZjVlNzEyMTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBjMTU0N2U5MTUxYjRlZDgzNGE4YmI5MjMyN2Q4ZjQzYmUwZTk1MWQ2MGU2NzVlMzI5ODc0YmVkYmRhNWUwMzQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c736ff6058a14b468af6aa5bdef017a7",
+      "statement": "Mitra-v2 and TabFM are trained from raw mixed-type feature partitions rather than the classical SMOTE/scaling path.",
+      "evidence": [
+        {
+          "resource": "repo://docs/architecture.md#L62-L69",
+          "version": "repo-lines-v1:sha256:39e0011215537a176b5cbde59fbd702a915b2e3e4354aeb2ca2417999685ec87:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjBkN2RmODI5NmE3MWEyZDhkNDAwZjAyY2FiM2IyYmQ5OGUyY2RjZWZmZTE2OWI3YTM4MzI1YWQ3OWNhNDc1MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjY3NzI2MDM3YjMwNGYyMTg3NWFmNWE1NTRiNDc1MjRlOTJmNDg5ZjQ4ODVhNDY2MjhjNWJkODliNDMwNzgwMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzQ3YzFiNmE4YzNhYmZhNzgxODYxOTQ4MGYwOTRhYjRkNTE3ZmNjN2VhMDY3N2M2ZWM5NGIyMjliMjBjOTc5MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjdhZTMwZjVmYjFkMzNiN2ZjNzFhZTY0YjViZDhiMjcwN2Q4NzA1YzliM2JhZTk4M2E3ZjVlZjYxNmFhZGRkYyJ9"
+        },
+        {
+          "resource": "repo://train.py#L251-L303",
+          "version": "repo-lines-v1:sha256:092369330f51eabb16610cd503522a26a075247b5ac80c72cb6fda2608800c93:eyJzZWxlY3RlZExpbmVDb3VudCI6NTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI0MGFjNmRjNGY4OTNkMzJmODJiZDFjYjEwMmM0ODQ2NzMwZmZhNTZkMzQ3YjViOTRlMjE3YTBmNzZkZTNmNzIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYxY2Y1YTI0NDAwNmY4OGM0ZWRiZThkMTRjYjUxOGU1YWZhM2JiOWY2MTEzZmI3YzU4ZTE3YjFlMjhiMjkwZTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY1YTFjODJmMjYxNGQxNTA1ODQxM2I2ZTY3NTBjYzA3Zjc5Nzc5MGUzZDNkODUwNWRkMWMzN2M3MWYxYmE1NTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJmZDQ0YTM4Yzk4MTVkNTAxMTQwODg4NGQ1ZjcyOWI3ZDczNmJiM2E0MzgzNTM5OGVlMTU4MDRlMGU1ZGM0YTMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6636ed98b7034bce82835021f65f9849",
+      "statement": "The training guide documents TabFM retries with smaller prediction chunks and then smaller context sizes after CUDA out-of-memory errors.",
+      "evidence": [
+        {
+          "resource": "repo://docs/training-and-evaluation.md#L40-L43",
+          "version": "repo-lines-v1:sha256:43714006cb57f8aab9b27e8644ea6842d24f52b4f7d38064eae671bfdbf6a599:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTdhMmQ0YjQ5NzBiYjFlNTVhNjJjNjI0MzE0ZTJjYmZkMWI1NjIxODk0YzZkZTVhYTMxNTFjYWM4MjQ4MGRhYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2ViNzAyNTc1OTNkYTA2ZjY4MmEzZGRkYTU0YTlkMjYwZDRmYzUxNGY2NDUyMzdmNWNhNzRiMDhmOGRhNjFhNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjk0Mjg3ODg4OTNlNTlmZjhmN2Q0ZDUyZTg0ODAyYWU2OTM1MTJkMGE3YmUxNjc3YjI0OTNhYzg1NWVhMDVkYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjViNjBmYWY0MTJmMzJmMDFlNGFiZGFkY2QxMDViZGY1YTA4NGVjZWE1MmMwOThlODk4MTk4ZWY0OTJlZDk4ZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_5e43a4f9f704492d80f7aa3929e292a6",
+      "statement": "Enabled models are evaluated on the shared test set with accuracy, ROC AUC, F1, precision, and recall; a LazyPredict failure is logged without aborting the training flow.",
+      "evidence": [
+        {
+          "resource": "repo://train.py#L153-L169",
+          "version": "repo-lines-v1:sha256:fb316ca91e51d62abee0f7f6eaa460ae99618a14bda90334c42b0ddfd7fec3a8:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQyYmE3ZDIxZGMxY2ZmMGNlYTEzMTJiZDZiNTkzN2JkYjY5NTYyMzEzODA5MTM3NzY2Y2JmNDQxNmFkYWQ2ZjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE0MTlhNmRjYzA0ZTIxM2EzYzdhNzdhNDU2YjAxZTc2ZDFlZjc4Y2QwMGJiZWMxZDhmODE0NThmZTkzZWRjNTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNjN2ZmZmE5NzJmNTFkMjUyMDQxMDAzNTgzODY2MjUxMzczMmM4OTZhYWY0OTIzNWRjNGEzN2Q5OTQ1N2U0ZDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQxNWQ5OGNiOGFhN2E4ODBmOTMyZjk2N2M2ZDdmMWRlOTExNWY1MWM1YTU1YzIxZWUxODY5MWQwN2Q0MzJkMmYifQ"
+        },
+        {
+          "resource": "repo://train.py#L212-L249",
+          "version": "repo-lines-v1:sha256:02a92d4bccbf6d7c3ae03efaffbd6c23fcb282dc6f29961f718812311b54b250:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJiNTQxYmZhOTFlNTcxMmQ3NWRhZDg2ZDlhYzUyMTdkODc2MjhkMDZjYjEyYTA0MmJhYmNmYjE4MGM1NTNhMTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZjNjIwOWE2Y2I2NWQ3OTg0NDFiN2ZiMGYyNDVjMDJiMTA2NGMxZTdlNWE2MDAxMTg5NzFlZGM5MjcxMzBmZDEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBlYzU5NTdjZTYyZGE4M2ZhOWJhNmFmNjAwOGEwODU4OTQzMzc0OGQ5MzQwZjU1ZjQ4ZjNkNTQ0ZDE5ZTVlM2UiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBlY2U3NTJlM2U1MjY1MjJhN2RkNWY5ZmIwZGIwYmIzMTk3YzY2YTk3NTFiYTU2ZWUyNDlhNjg4MGJkYzVjMjkifQ"
+        },
+        {
+          "resource": "repo://train.py#L265-L320",
+          "version": "repo-lines-v1:sha256:0eb3d573cf4419e1641000190ed9b295b869ae59cd2e5f00556da6f411187b90:eyJzZWxlY3RlZExpbmVDb3VudCI6NTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlNDQ3N2Q3YzJlNjVkZWQ5YmIxZmQwZDg1MzI5YzRiYzhiMTI0MWM3ODUxZmE2OTFmYmU2OTlkOTQzMTU1ZGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBhYzg0NjAwMDYwMjQ0NDYwMjQ4MzJiYzRmN2NmMDNiYThhMWY2ODMwZDc0ZTFhNmY5MGU5MWRiZDI3ZmM5YWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQzYWRkNDcxMDEyYTc4MTEwN2UyOWI1YWU4NjViNGRlZjA4NGM4MGNiMWQ2MjQyMTg5YzkxZDdhNDg5MTJhNTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZkZGFhMDM5NGExYTA4Zjk4ZTQyOTYzY2ViYmJhMjhhM2MwNWI5ODIzYzAzZGE5NTM0ZDMyZGQ2MmQ1MTQxOTAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f45e41d836904fe2896328dd05850c7e",
+      "statement": "The schema-v2 output bundle contains model descriptors and evaluation/preprocessing data, while the Mitra predictor and TabFM raw training context are stored separately.",
+      "evidence": [
+        {
+          "resource": "repo://docs/training-and-evaluation.md#L85-L93",
+          "version": "repo-lines-v1:sha256:60c582a34327ae6ddb45af2fefa1ba0c12cb7860600ff096e76a4789e05ffafa:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmY5ZDE0ODI0ZWQ0OTNhZWEyYzcxMzc2ZjFkNTJkNTc0OThjYzg0ZWY1OWZmZjg1MzE1ZTMwZDI5ODBhZTMyYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWZiMWNmZTNiOTMyMTJmMGMzMTkzNGUyZjM1NjgzYzdhZDU5ODcxMDNkNzI1MDc0ZGIzOWIyYzNiYjIwMjM5ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTEwNGY1NzllYzZjMjE4MDM2NzkzZGY1YjBhMDAyMGE5NmFlZmFhYmJkMDM0YWRhOGZlZWVkNzMzNDljNzc1MyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://train.py#L276-L335",
+          "version": "repo-lines-v1:sha256:c4d2d98aa4c7b1a7ed26d4d3bc994eb44198f48b5ef095e4dca4a34168436b06:eyJzZWxlY3RlZExpbmVDb3VudCI6NjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI5Nzc5ODhlYWFkZGQxYTk2YWJlMmYyMDRkNmQwYTdhMjgzYTgxMDlhOTdiMGUyNTVjMjMyMmM5M2EwZTk1MWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJkNmUwZTMzOTZkMGJmNDVjZTQ3NGQzMzIxMWU0NzUyOGJjNTEwMWJiZDNiMDliMzA0MmFiYmU4MDQ2Y2NkMjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE1OTYxYzYxNTI1MmZiYjYzNDg5NmQ5MjY1ZTcxYjJhZmYyNDIxZTFiNzc1MTlmNDdkMTU3ODU4NzgyNDNkMDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5ZjdmN2FhMTYzMDU2N2MxYjVlNjY0NGUyMWNiZWM4M2E0MzkzM2RjNWIwZGEwZDkwY2Q1M2JhNDhlOTEwZDIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_cc56790754754eb798558e859c54fd02",
+      "statement": "Current tests assert the target mapping and unknown-label rejection, target/identifier exclusion, positive-class metrics, and missing-column validation for raw inference features.",
+      "evidence": [
+        {
+          "resource": "repo://tests/test_pipeline.py#L11-L48",
+          "version": "repo-lines-v1:sha256:9ffd9966d599b836ca4057dbcf9f1d2747d6b4b08cd00f85fbf6d558a2fab606:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIwN2VmMTc0YjIzYTlmMTNjMGQ5NDNhNmVmZmIyMTNmZjExM2I1YTE4Zjg3NGU0N2FiNzdmMmY5NTNlODc5N2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNiYWFlOTk3N2ZiYTVkYjk0YmJkOWI5YjAzOTA0ODRjZTU4MjIwZDdkNWY1ZjdjYTEwODIzN2ViNTFlYzMxNzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBmZjU2OTJmZjkyMzIyYmUxNDU4M2FhNmEwMWYxZWY2OTI5NmJjOTUzYzZmMDg5NzYwZThjNWExNTdkMGJkNDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-23T14:05:53.012Z"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:57646c2850efc989efca842608f4cb4d8ee8acc10b362eedbc0c9002d250f631",
+  "claims": [
+    {
+      "id": "claim_c9133d8e10ba42d3acd3c506e5649a81",
+      "statement": "The pipeline tests assert customer target encoding direction and rejection of unknown target labels.",
+      "evidence": [
+        {
+          "resource": "repo://tests/test_pipeline.py#L11-L20",
+          "version": "repo-lines-v1:sha256:2e3bcb21cf654dbc6f2b3470d3841ed6c75f7492a290f3b1c4624bf74d6a6f9e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIwN2VmMTc0YjIzYTlmMTNjMGQ5NDNhNmVmZmIyMTNmZjExM2I1YTE4Zjg3NGU0N2FiNzdmMmY5NTNlODc5N2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAzZjA1YWQ2MzljMDc4NzgwMzI2OGU4ZmI3YmU4ODAxOTdkNzVjYjMyYTMxOWNhNWJmM2IwMjljYjIzOTlkODkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBmZjU2OTJmZjkyMzIyYmUxNDU4M2FhNmEwMWYxZWY2OTI5NmJjOTUzYzZmMDg5NzYwZThjNWExNTdkMGJkNDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIyZjlkN2EzNzU5YjZiZjcxNjAwOTczNDNiZjhhNmNiZDlhZDM3ZDU2MzMwODYwZTZlNzkzMTcxNDlhYTkzMTMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_bd281198a8ff44ae95537456c9647310",
+      "statement": "The feature-selection test asserts the raw feature list equals source columns 2 through 20 and excludes Attrition_Flag and CLIENTNUM.",
+      "evidence": [
+        {
+          "resource": "repo://tests/test_pipeline.py#L23-L31",
+          "version": "repo-lines-v1:sha256:f00ac10e16d8f61557f6964d3b37392a7b9a4c08e7a903a4057c8ae83c9c8e6e:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzY2MWVmZjdmYzE5MGI0ZGVjYzA1ZTk4NmI1MTFkYTZkZjU2MGQwY2JmODBjMWY0MjBhMzZjYjVkYTc0MDMzMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWVjNmQ1ZjE4NGE3M2I4MWEzY2U1OGIwMWY5ZDhkOGZiZmVhZjFmOGU2YWJlNGMxMmQyN2NhZGFjYjNkZTcwYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmUyMzczZmQ1YzNlNjM3NmY3MTZjYzEyMWIxZjdmYWJmMzQzMzhiN2QwZGIyMTA3NDExM2ZmMmJmMDM3YTJhMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTlmZGU5ODE4MDQ0MjkyMjA3MzgyMTM2OGUwMGJkYzc3MTRmYWI2YzdkMTZkMWZkOWZiYjZjOWU4NzcxZjA4OSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_22b6e98de1eb40dc8e851cb9cf1a116f",
+      "statement": "The metric test pins recall, precision, and ROC AUC values for an example where class 1 is churn.",
+      "evidence": [
+        {
+          "resource": "repo://tests/test_pipeline.py#L34-L43",
+          "version": "repo-lines-v1:sha256:62566ca7f0fa591971ee0ac264b9ab18fe365d34b61ec7da5681a39625a3c190:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk0NWI5Njc5YzhhNGZmOWM1YWY0MjkxMDZmYzg1NDc5MjE4NGEzNGZjZmExNTQ5NDg4ZTAxZGQ5NTg4YmRhZWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFmNWE1NWE5MDRkNjI3NDIwZTZmMDEyZmNhMzY4MDhjMzA1OGVhZjZhODkxNDE5NTViN2VmNjg0MzQ4MzJkMTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImViN2NlZWE3NDQ4N2MxYmViMTY4MDc1OTk4MjMyY2E2MjdhZTdhZmI5Y2Y3YmQ2MDMzY2IyMDAxYmFjYjZlOTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFiZWFjZDkzNzFkZDZjYjZlYWIzOWE2MTcwNzk4MjAwYzU1N2M5N2MwZGFmMjY2MDc4NzI0NjcyMzM2MTQ1MWYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ba15a7cbb8504efdb0d5ec522eaf5cce",
+      "statement": "The raw-inference test asserts that a ValueError is raised when an expected feature column is missing.",
+      "evidence": [
+        {
+          "resource": "repo://tests/test_pipeline.py#L46-L48",
+          "version": "repo-lines-v1:sha256:dfb3e8be1456e7d18e488c96e197da0876007f675ac129c06a977214f2602aab:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGY1NmE3ZGJmMWRiY2U5ZGVmZmQxODliZjllMTY1Y2EzNmQ3OTQyYTRkYzI4MzdhNGM5Mjg1MGYzMWU2N2QzMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2JhYWU5OTc3ZmJhNWRiOTRiYmQ5YjliMDM5MDQ4NGNlNTgyMjBkN2Q1ZjVmN2NhMTA4MjM3ZWI1MWVjMzE3MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNGFkMzQxM2Q5ZWNlMDk1ZDQxYjVhYjAxNGY0NGYzMTk0MDViNDZiYzFlYjdmZWQ4NDYwZTE1OTZjMzQxNzZmNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_bd122337b7e84c79a782b00a9e8faf57",
+      "statement": "The developer guide states that the unit suite does not run GPU training; these tests are not end-to-end validation of the optional foundation-model integrations.",
+      "evidence": [
+        {
+          "resource": "repo://docs/developer-guide.md#L71-L81",
+          "version": "repo-lines-v1:sha256:26c4c76788a12b6fdb7efd0c8f0cc063e48ac62172f8b44ad031416ec53b2b2a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMwNGY2MGJiODcxYzRiMjA4Y2FiZGFmZjRkZDgzMzY1NjA0ZjQwNzJiMWFhYjJkODE1NzcwMmVlOTQ0MGQ3ZTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlhMDcwNWI5NWQwODhkNTI2YWMyZDJkYjUyYmVmZWEwNDE3M2VjMzZlOTJmNGNmZGMzMjQzODU5ODVhMmQ3MDkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVlMDFjNTA1MWJhYTllZDYxYWUzMWZhMzk3M2E0YWI3MTc4M2RkMzdiNTdmYjRiNWE3ZTdiZmQxZWZjZDhiOTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-23T14:05:53.012Z"
+  }
+}
