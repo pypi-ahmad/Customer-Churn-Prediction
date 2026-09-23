@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Customer churn training and serving architecture",
+    "output": "architecture.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/pypi-ahmad/Customer-Churn-Prediction.git",
+      "revision": "5ac0a262824ad1661f6fe5da07c68e03a48bd3c6"
+    }
+  },
+  "components": [
+    { "id": "source", "type": "external", "label": "BankChurners.csv", "sublabel": "19 feature columns", "pos": [40, 300], "size": [150, 70], "sources": [{ "path": "docs/architecture.md", "line": 41 }] },
+    { "id": "split", "type": "backend", "label": "Stratified split", "sublabel": "80/20 · seed 42", "pos": [220, 300], "size": [170, 70], "sources": [{ "path": "docs/architecture.md", "line": 43 }] },
+    { "id": "classical", "type": "backend", "label": "Classical + FLAML", "sublabel": "One-hot · SMOTE · scale", "pos": [430, 150], "size": [190, 70], "sources": [{ "path": "docs/architecture.md", "line": 18 }] },
+    { "id": "foundation", "type": "cloud", "label": "Foundation models", "sublabel": "Mitra-v2 + TabFM · GPU", "pos": [430, 430], "size": [190, 70], "sources": [{ "path": "docs/architecture.md", "line": 47 }] },
+    { "id": "evaluate", "type": "backend", "label": "Shared evaluation", "sublabel": "Untouched test holdout", "pos": [660, 300], "size": [190, 70], "sources": [{ "path": "docs/architecture.md", "line": 75 }] },
+    { "id": "state", "type": "database", "label": "Persisted model state", "sublabel": "models_bundle.pkl + artifacts/", "pos": [890, 150], "size": [210, 70], "sources": [{ "path": "docs/architecture.md", "line": 68 }] },
+    { "id": "app", "type": "frontend", "label": "Streamlit dashboard", "sublabel": "Batch predictions", "pos": [1160, 300], "size": [190, 70], "sources": [{ "path": "docs/architecture.md", "line": 56 }] }
+  ],
+  "connections": [
+    { "id": "source-split", "from": "source", "to": "split", "label": "load + label encode", "variant": "emphasis", "labelDy": -30 },
+    { "id": "split-classical", "from": "split", "to": "classical", "label": "train partition", "fromSide": "right", "toSide": "left", "labelDy": -100 },
+    { "id": "split-foundation", "from": "split", "to": "foundation", "label": "raw mixed-type data", "fromSide": "right", "toSide": "left", "labelDy": 24 },
+    { "id": "classical-evaluate", "from": "classical", "to": "evaluate", "label": "predictions", "fromSide": "right", "toSide": "left" },
+    { "id": "foundation-evaluate", "from": "foundation", "to": "evaluate", "label": "predictions", "fromSide": "right", "toSide": "left" },
+    { "id": "evaluate-state", "from": "evaluate", "to": "state", "label": "metrics + timings", "fromSide": "top", "toSide": "bottom" },
+    { "id": "foundation-state", "from": "foundation", "to": "state", "label": "Mitra + TabFM artifacts", "variant": "dashed", "fromSide": "right", "toSide": "bottom" },
+    { "id": "state-app", "from": "state", "to": "app", "label": "load when present" }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "Training boundary", "items": ["Resampling and scaling fit only on the training partition", "Every model uses the same untouched test partition"] },
+    { "dot": "emerald", "title": "Serving boundary", "items": ["app.py validates CSV/XLSX uploads and routes model-specific preprocessing", "Foundation models appear only when their artifact path exists"] },
+    { "dot": "rose", "title": "GPU and licensing boundary", "items": ["Mitra-v2 and TabFM load sequentially on an 8 GB GPU", "TabFM pretrained weights are local-only non-commercial research"] }
+  ]
+}
