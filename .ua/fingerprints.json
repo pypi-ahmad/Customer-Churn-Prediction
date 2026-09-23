@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "gitCommitHash": "1e362b7d3a992c764f95ac52e020d387b4ff5cdd",
-  "generatedAt": "2026-09-22T07:35:56.517Z",
+  "gitCommitHash": "5ac0a262824ad1661f6fe5da07c68e03a48bd3c6",
+  "generatedAt": "2026-09-23T14:04:26.319Z",
   "files": {
     ".dockerignore": {
       "filePath": ".dockerignore",
@@ -13,6 +13,16 @@
       "totalLines": 7,
       "hasStructuralAnalysis": false
     },
+    ".python-version": {
+      "filePath": ".python-version",
+      "contentHash": "a7b9da5e355ce2ea4508cc53756849f44c960d87a38e5a76d0c734d7512c5371",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
     ".streamlit/config.toml": {
       "filePath": ".streamlit/config.toml",
       "contentHash": "79a505f48479ebfe7021888d816a9b14c9d8ce9ec42dfd82fc7fdb63c326596c",
@@ -21,6 +31,183 @@
       "imports": [],
       "exports": [],
       "totalLines": 3,
+      "hasStructuralAnalysis": true
+    },
+    ".ua/.understandignore": {
+      "filePath": ".ua/.understandignore",
+      "contentHash": "ca4aead922b8606b00889c947ef9cd56a35a8b6750e4b58483604a7ac0d12d24",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 60,
+      "hasStructuralAnalysis": false
+    },
+    ".ua/fingerprints.json": {
+      "filePath": ".ua/fingerprints.json",
+      "contentHash": "c01f25d971118b26d42ee0d23b55f36ca635e566436c27de49f97cd3d2bdd738",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 541,
+      "hasStructuralAnalysis": true
+    },
+    ".ua/intermediate/batch-1.json": {
+      "filePath": ".ua/intermediate/batch-1.json",
+      "contentHash": "72105463ff849cefd90b1fddf3b44a0b456c714c99672f42f861eab7d2e609db",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 41,
+      "hasStructuralAnalysis": true
+    },
+    ".ua/intermediate/batch-2.json": {
+      "filePath": ".ua/intermediate/batch-2.json",
+      "contentHash": "5b58b3a62c9336722a92160c4c727626c6fda2dd04268e942bf4afccc540c691",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 70,
+      "hasStructuralAnalysis": true
+    },
+    ".ua/intermediate/batch-3.json": {
+      "filePath": ".ua/intermediate/batch-3.json",
+      "contentHash": "1da7c907728d56bbb047b827b6e535ecf63d1347e7487a52b359bb7e5c522d4e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 60,
+      "hasStructuralAnalysis": true
+    },
+    ".ua/intermediate/batches.json": {
+      "filePath": ".ua/intermediate/batches.json",
+      "contentHash": "181760f60c4fff34a005c1fb8dcd57a735c45c65cadf2d4c7cc8341521b3098b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 506,
+      "hasStructuralAnalysis": true
+    },
+    ".ua/intermediate/fingerprint-input.json": {
+      "filePath": ".ua/intermediate/fingerprint-input.json",
+      "contentHash": "3d68b299267dd128b7665c60efe78ce36e5a77687f7ec858bcde6624c3759927",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 59,
+      "hasStructuralAnalysis": true
+    },
+    ".ua/intermediate/scan-result.json": {
+      "filePath": ".ua/intermediate/scan-result.json",
+      "contentHash": "867af9487e1febcbbb5ecbc948b9ddf87904efff2e19fa2e3f5f5032486fddfc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 351,
+      "hasStructuralAnalysis": true
+    },
+    ".ua/knowledge-graph.json": {
+      "filePath": ".ua/knowledge-graph.json",
+      "contentHash": "6d4c97d26fe00d2fe15ddaeeff0452a5533601514b83c87eeb9c7bf608d4b06d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2437,
+      "hasStructuralAnalysis": true
+    },
+    ".ua/meta.json": {
+      "filePath": ".ua/meta.json",
+      "contentHash": "17a601db5966b68cce4ee9e7e93d06dc2142c54aa2d0e1cc8a0616d98600ae52",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 6,
+      "hasStructuralAnalysis": true
+    },
+    ".ua/tmp/build-graph.mjs": {
+      "filePath": ".ua/tmp/build-graph.mjs",
+      "contentHash": "411dc74cefeb36f25682995330d886dd853a75bdd9821ace3ab5c49e34344661",
+      "functions": [
+        {
+          "name": "typeFor",
+          "params": [
+            "f",
+            "c"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "add",
+          "params": [
+            "n"
+          ],
+          "exported": false,
+          "lineCount": 1
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:fs",
+          "specifiers": [
+            "fs"
+          ]
+        },
+        {
+          "source": "node:path",
+          "specifiers": [
+            "path"
+          ]
+        },
+        {
+          "source": "node:child_process",
+          "specifiers": [
+            "execFileSync"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 18,
+      "hasStructuralAnalysis": true
+    },
+    ".ua/tmp/input-1.json": {
+      "filePath": ".ua/tmp/input-1.json",
+      "contentHash": "5b02084cc08b1cca54bb94821df8b74cb270dc78b714936e1fe8f42c2d22dfe7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 22,
+      "hasStructuralAnalysis": true
+    },
+    ".ua/tmp/input-2.json": {
+      "filePath": ".ua/tmp/input-2.json",
+      "contentHash": "69e28558d60abb91777a33d9904a14d14a9791d16e0cf3f11da57c4df5df65a2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 50,
+      "hasStructuralAnalysis": true
+    },
+    ".ua/tmp/input-3.json": {
+      "filePath": ".ua/tmp/input-3.json",
+      "contentHash": "2f5199c2ae783d4799f6b82cbbfa44fbe93966fd31fcd03e948f754bfa93cfdf",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 50,
       "hasStructuralAnalysis": true
     },
     "BankChurners.csv": {
@@ -35,17 +222,17 @@
     },
     "CHANGELOG.md": {
       "filePath": "CHANGELOG.md",
-      "contentHash": "dd9ff491c41dbc0333363db631c263b8aa50da054d89b66ae67e2bb1baa6731e",
+      "contentHash": "f15a88d3c16b365aa3ee8a120370087f1fe429448fb151e04fd366b77f53efd7",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 21,
+      "totalLines": 36,
       "hasStructuralAnalysis": true
     },
     "CODE_OF_CONDUCT.md": {
       "filePath": "CODE_OF_CONDUCT.md",
-      "contentHash": "f06c7cfd36fef835b6cd63e61dd62c9d85fbe7e11aaabd357d18a933e375e426",
+      "contentHash": "2d0490c8ccb13a684c4102a60906d24421ccbb2950abb9d87ce1dc3a3763b20d",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -65,27 +252,27 @@
     },
     "Dockerfile": {
       "filePath": "Dockerfile",
-      "contentHash": "5d3db2c91fb6d67c0179d5d858884b905d910ac7eec31f0e3fac3d8f1da4a77a",
+      "contentHash": "65b5ed0b67cee7108f99c875aaa83e4984fff273edba8eacfa7da40f65e7004b",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 13,
+      "totalLines": 14,
       "hasStructuralAnalysis": true
     },
     "README.md": {
       "filePath": "README.md",
-      "contentHash": "766552072b771a7f91d018e4595d39d9b16f9a97a6d2e4d24b2473a4c7faac6f",
+      "contentHash": "fec8e02a6c49d3001e03b4da40bbe184a89ea438f8c698f4f95f743949f1b660",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 182,
+      "totalLines": 224,
       "hasStructuralAnalysis": true
     },
     "SECURITY.md": {
       "filePath": "SECURITY.md",
-      "contentHash": "5f5817696041950c546dd062ac26f41a9216fa023c1a1c3199eee79157595c40",
+      "contentHash": "b915b0c78f11296d648e311c7ea275956390bb6cd91a69b8275205c76c95df1f",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -95,7 +282,7 @@
     },
     "app.py": {
       "filePath": "app.py",
-      "contentHash": "047d7f690a6c5ad508265a705ccf4212f90faf2598857dda096ace5b572af6f0",
+      "contentHash": "66dd21cb38fe0817b29bbda61e2f1c408ef4844832bd8963103480407647fba3",
       "functions": [
         {
           "name": "configure_logging",
@@ -140,20 +327,28 @@
           ],
           "returnType": "pd.DataFrame",
           "exported": true,
-          "lineCount": 17
+          "lineCount": 19
+        },
+        {
+          "name": "raw_features_for_inference",
+          "params": [
+            "df",
+            "raw_feature_columns"
+          ],
+          "returnType": "pd.DataFrame",
+          "exported": true,
+          "lineCount": 8
         },
         {
           "name": "generate_predictions",
           "params": [
             "df",
-            "models",
-            "scaler",
-            "feature_columns",
+            "bundle",
             "selected_models"
           ],
           "returnType": "tuple[pd.DataFrame, dict[str, pd.Series]]",
           "exported": true,
-          "lineCount": 24
+          "lineCount": 42
         },
         {
           "name": "render_eda_section",
@@ -184,7 +379,7 @@
           ],
           "returnType": "None",
           "exported": true,
-          "lineCount": 61
+          "lineCount": 60
         },
         {
           "name": "render_lazypredict_section",
@@ -200,7 +395,7 @@
           "params": [],
           "returnType": "None",
           "exported": true,
-          "lineCount": 80
+          "lineCount": 86
         }
       ],
       "classes": [],
@@ -271,6 +466,16 @@
             "classification_report",
             "confusion_matrix"
           ]
+        },
+        {
+          "source": "foundation_models",
+          "specifiers": [
+            "load_mitra",
+            "load_tabfm_from_context",
+            "predict_mitra",
+            "predict_tabfm",
+            "release_cuda"
+          ]
         }
       ],
       "exports": [
@@ -279,6 +484,7 @@
         "load_data",
         "ensure_streamlit_config",
         "preprocess_for_inference",
+        "raw_features_for_inference",
         "generate_predictions",
         "render_eda_section",
         "render_predictions_section",
@@ -286,7 +492,406 @@
         "render_lazypredict_section",
         "main"
       ],
-      "totalLines": 422,
+      "totalLines": 465,
+      "hasStructuralAnalysis": true
+    },
+    "docs/README.md": {
+      "filePath": "docs/README.md",
+      "contentHash": "ad3fa398eb0c5080fff963b04c64aae3552b4d064f1af9470302492726b71f89",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 14,
+      "hasStructuralAnalysis": true
+    },
+    "docs/architecture.archify.json": {
+      "filePath": "docs/architecture.archify.json",
+      "contentHash": "1c87f13f4eb6c807de62138f90891459ae2b9d648555cb6ecc2e5181124f9d66",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 38,
+      "hasStructuralAnalysis": true
+    },
+    "docs/architecture.html": {
+      "filePath": "docs/architecture.html",
+      "contentHash": "9b65edd5c355d19e8c1815cb914fe3a3eea2f5c304d17f5ac5d63d068afd2ddf",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 14815,
+      "hasStructuralAnalysis": false
+    },
+    "docs/architecture.md": {
+      "filePath": "docs/architecture.md",
+      "contentHash": "98089db3cdb7b352880377ef63e328057ccb4b8b67a51b39e7e67a15c46bc6cc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 78,
+      "hasStructuralAnalysis": true
+    },
+    "docs/architecture.visual-check.html": {
+      "filePath": "docs/architecture.visual-check.html",
+      "contentHash": "64b03769aeb415a63eb0658f111092662ed9e97490cb32680887ce699afb2eb1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 33,
+      "hasStructuralAnalysis": false
+    },
+    "docs/architecture.visual-check.json": {
+      "filePath": "docs/architecture.visual-check.json",
+      "contentHash": "489b1e12ab5296433f9ca2dd5469885ba54ab8ffa07daf2e305f41a02c49873f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 548,
+      "hasStructuralAnalysis": true
+    },
+    "docs/deployment-runbook.md": {
+      "filePath": "docs/deployment-runbook.md",
+      "contentHash": "92722379cde1428b8eacc1a907497cd648f0911a669c103602d7b8e83c49e5b1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 147,
+      "hasStructuralAnalysis": true
+    },
+    "docs/developer-guide.md": {
+      "filePath": "docs/developer-guide.md",
+      "contentHash": "7befe869b95f914bd7e076f47640be3ead0f77223ddc2b75b1de6968fb1991c6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 82,
+      "hasStructuralAnalysis": true
+    },
+    "docs/model-bundle-reference.md": {
+      "filePath": "docs/model-bundle-reference.md",
+      "contentHash": "cbcee8988dcdf8a0260ba6e7c138673079820469ee9583f2175ca73d169f6088",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 68,
+      "hasStructuralAnalysis": true
+    },
+    "docs/training-and-evaluation.md": {
+      "filePath": "docs/training-and-evaluation.md",
+      "contentHash": "5bbfa305da5b0eef855aa92c52e1a912bef5f4df5fd3df2c731cc1d02adcdbf7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 94,
+      "hasStructuralAnalysis": true
+    },
+    "foundation_models.py": {
+      "filePath": "foundation_models.py",
+      "contentHash": "1176251807768a8872a2ec087bb31f33e93e7c0f55ff6dbc0a7a9063b8b5dde4",
+      "functions": [
+        {
+          "name": "require_cuda",
+          "params": [],
+          "returnType": "Any",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "release_cuda",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "train_mitra",
+          "params": [
+            "X_train",
+            "y_train",
+            "artifact_path",
+            "time_limit"
+          ],
+          "returnType": "tuple[Any, float]",
+          "exported": true,
+          "lineCount": 43
+        },
+        {
+          "name": "load_mitra",
+          "params": [
+            "artifact_path"
+          ],
+          "returnType": "Any",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "predict_mitra",
+          "params": [
+            "predictor",
+            "X"
+          ],
+          "returnType": "tuple[np.ndarray, np.ndarray]",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "download_tabfm_checkpoint",
+          "params": [],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "build_tabfm_classifier",
+          "params": [
+            "X_train",
+            "y_train",
+            "max_num_rows"
+          ],
+          "returnType": "Any",
+          "exported": true,
+          "lineCount": 27
+        },
+        {
+          "name": "predict_tabfm",
+          "params": [
+            "classifier",
+            "X",
+            "chunk_size"
+          ],
+          "returnType": "tuple[np.ndarray, np.ndarray]",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "fit_and_predict_tabfm",
+          "params": [
+            "X_train",
+            "y_train",
+            "X_test",
+            "requested_context_rows"
+          ],
+          "returnType": "tuple[Any, np.ndarray, np.ndarray, dict[str, int], float, float]",
+          "exported": true,
+          "lineCount": 52
+        },
+        {
+          "name": "save_tabfm_context",
+          "params": [
+            "path",
+            "X_train",
+            "y_train"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "load_tabfm_from_context",
+          "params": [
+            "path",
+            "max_num_rows"
+          ],
+          "returnType": "Any",
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "gc",
+          "specifiers": [
+            "gc"
+          ]
+        },
+        {
+          "source": "logging",
+          "specifiers": [
+            "logging"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "time",
+          "specifiers": [
+            "perf_counter"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any"
+          ]
+        },
+        {
+          "source": "joblib",
+          "specifiers": [
+            "joblib"
+          ]
+        },
+        {
+          "source": "numpy",
+          "specifiers": [
+            "np"
+          ]
+        },
+        {
+          "source": "pandas",
+          "specifiers": [
+            "pd"
+          ]
+        }
+      ],
+      "exports": [
+        "require_cuda",
+        "release_cuda",
+        "train_mitra",
+        "load_mitra",
+        "predict_mitra",
+        "download_tabfm_checkpoint",
+        "build_tabfm_classifier",
+        "predict_tabfm",
+        "fit_and_predict_tabfm",
+        "save_tabfm_context",
+        "load_tabfm_from_context"
+      ],
+      "totalLines": 223,
+      "hasStructuralAnalysis": true
+    },
+    "graphify-out/.graphify_analysis.json": {
+      "filePath": "graphify-out/.graphify_analysis.json",
+      "contentHash": "9b57b884df6bb1a39015a4d3d41ab21d92205ce30565fc49b4e7a1bca98095b5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 273,
+      "hasStructuralAnalysis": true
+    },
+    "graphify-out/.graphify_root": {
+      "filePath": "graphify-out/.graphify_root",
+      "contentHash": "5c42ee286056648f9be6288bc231d1cc586ec8ea3178e1b7dab1d91feb578d81",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    "graphify-out/GRAPH_REPORT.md": {
+      "filePath": "graphify-out/GRAPH_REPORT.md",
+      "contentHash": "969feee4841dde78ebc914b1325806ba77a3cfec4b966fa8bda58b1adadddd97",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 97,
+      "hasStructuralAnalysis": true
+    },
+    "graphify-out/cache/ast/v0.9.64-s4/08e2e0e1aa97517036074d8db370c54aa6a25ca85142575d3cc30fa0a78b5f4f.json": {
+      "filePath": "graphify-out/cache/ast/v0.9.64-s4/08e2e0e1aa97517036074d8db370c54aa6a25ca85142575d3cc30fa0a78b5f4f.json",
+      "contentHash": "725500165e8b22105c2835eb06c6866afcb2571847ddb87fc59228d1703e4d14",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "graphify-out/cache/ast/v0.9.64-s4/137ef02f0bf7b103811db5ae980c6b43ed404e5eb08dae248c1db1b5dc698b98.json": {
+      "filePath": "graphify-out/cache/ast/v0.9.64-s4/137ef02f0bf7b103811db5ae980c6b43ed404e5eb08dae248c1db1b5dc698b98.json",
+      "contentHash": "8ff1b2bc6f371b394ec6e035fffac146c6c97ae05f6a635775c0f44ebdaae286",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "graphify-out/cache/ast/v0.9.64-s4/5d8887344de18bb38577f5233e741139ef919d57dd96cb585a04a200b3e57f42.json": {
+      "filePath": "graphify-out/cache/ast/v0.9.64-s4/5d8887344de18bb38577f5233e741139ef919d57dd96cb585a04a200b3e57f42.json",
+      "contentHash": "93fc05000ec752df7ee6af365165bace601e7b3e4439ef2ef511349a4814028a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "graphify-out/cache/ast/v0.9.64-s4/93374b704e19d09327aa2f2c280ed24710236ac1bd7a6c9ae40584a0b65c2a36.json": {
+      "filePath": "graphify-out/cache/ast/v0.9.64-s4/93374b704e19d09327aa2f2c280ed24710236ac1bd7a6c9ae40584a0b65c2a36.json",
+      "contentHash": "01e68ecb27500d8dcbdc88c4983623902ce7e2667d5d51a50cf96580800ed23c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "graphify-out/cache/ast/v0.9.64-s4/a88a8d4c9d14ccf781818dd592a872151b90bedbbfebec8f8857adddd08f76ee.json": {
+      "filePath": "graphify-out/cache/ast/v0.9.64-s4/a88a8d4c9d14ccf781818dd592a872151b90bedbbfebec8f8857adddd08f76ee.json",
+      "contentHash": "4eb0dc1a8f283581aafe48da53032814bb5696429aa27421b1e53a6f9db74c12",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "graphify-out/cache/stat-index.json": {
+      "filePath": "graphify-out/cache/stat-index.json",
+      "contentHash": "bc021ae83706a378d801e70d025e05f328c4a20610c9115acd67a5beab9a99b7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "graphify-out/graph.html": {
+      "filePath": "graphify-out/graph.html",
+      "contentHash": "14d8ec59139396805621fb49b05705afb6760d58f95a7e0488707119edd7dc7e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 345,
+      "hasStructuralAnalysis": false
+    },
+    "graphify-out/graph.json": {
+      "filePath": "graphify-out/graph.json",
+      "contentHash": "f847267f6e1c17d05f7383ef83aabe69f87e168126ab83b102640fa28129fa1e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 3771,
+      "hasStructuralAnalysis": true
+    },
+    "graphify-out/manifest.json": {
+      "filePath": "graphify-out/manifest.json",
+      "contentHash": "da4c7d90066d2f0ae2079001533b842909018cbe13c4e2c8896c8dea20730034",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 122,
       "hasStructuralAnalysis": true
     },
     "model.pkl": {
@@ -301,127 +906,211 @@
     },
     "models_bundle.pkl": {
       "filePath": "models_bundle.pkl",
-      "contentHash": "8de1fff3de662fe84c42b8ff816d113fafd67acb50a442292564e5a1365e697e",
+      "contentHash": "6bd5258416e3d7296ca0a2c2d8c0b85edc556082ee99550dc86ec89933eb8de5",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 58032,
+      "totalLines": 33874,
       "hasStructuralAnalysis": false
     },
-    "requirements.txt": {
-      "filePath": "requirements.txt",
-      "contentHash": "0782f99f12bd8a7b08ee77d3691b9f727975818e42f7a477d78b15512f938737",
+    "pyproject.toml": {
+      "filePath": "pyproject.toml",
+      "contentHash": "909e37e6e38ad22863a40a914a647a01701fcb593459000a31af0b011e629c26",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 99,
-      "hasStructuralAnalysis": false
+      "totalLines": 134,
+      "hasStructuralAnalysis": true
     },
-    "train.py": {
-      "filePath": "train.py",
-      "contentHash": "62f2eb87f2712ae484582860c7eb56ece18b056c02e78966ac5cb53d81f8e093",
+    "tests/test_pipeline.py": {
+      "filePath": "tests/test_pipeline.py",
+      "contentHash": "cb4114b849e9ac8268079e93b6d22d4c28b0b91e0d79ea466f00ea63a815d40a",
       "functions": [
         {
-          "name": "configure_logging",
+          "name": "test_target_encoding_marks_attrition_as_positive",
           "params": [],
           "returnType": "None",
           "exported": true,
           "lineCount": 5
         },
         {
+          "name": "test_target_encoding_rejects_unknown_labels",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "test_prepare_split_excludes_target_and_identifiers",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "test_metrics_use_positive_churn_class",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "test_raw_feature_validation_reports_missing_columns",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "numpy",
+          "specifiers": [
+            "np"
+          ]
+        },
+        {
+          "source": "pandas",
+          "specifiers": [
+            "pd"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "app",
+          "specifiers": [
+            "raw_features_for_inference"
+          ]
+        },
+        {
+          "source": "train",
+          "specifiers": [
+            "LABEL_MAPPING",
+            "encode_target",
+            "evaluate_predictions",
+            "prepare_split"
+          ]
+        }
+      ],
+      "exports": [
+        "test_target_encoding_marks_attrition_as_positive",
+        "test_target_encoding_rejects_unknown_labels",
+        "test_prepare_split_excludes_target_and_identifiers",
+        "test_metrics_use_positive_churn_class",
+        "test_raw_feature_validation_reports_missing_columns"
+      ],
+      "totalLines": 49,
+      "hasStructuralAnalysis": true
+    },
+    "train.py": {
+      "filePath": "train.py",
+      "contentHash": "53aa372f7aa4de7fde50ca99b87f2af080550554ad43e94545586d20a28f1c01",
+      "functions": [
+        {
           "name": "load_data",
           "params": [
-            "filepath"
+            "path"
           ],
           "returnType": "pd.DataFrame",
           "exported": true,
-          "lineCount": 11
+          "lineCount": 4
         },
         {
-          "name": "preprocess_data",
+          "name": "encode_target",
+          "params": [
+            "target"
+          ],
+          "returnType": "pd.Series",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "prepare_split",
           "params": [
             "df"
           ],
-          "returnType": "tuple[\r\n    np.ndarray,\r\n    np.ndarray,\r\n    np.ndarray,\r\n    np.ndarray,\r\n    StandardScaler,\r\n    list[str],\r\n]",
+          "returnType": "dict[str, Any]",
           "exported": true,
-          "lineCount": 48
+          "lineCount": 36
         },
         {
           "name": "build_model_factory",
           "params": [],
           "returnType": "dict[str, Any]",
           "exported": true,
-          "lineCount": 28
+          "lineCount": 23
         },
         {
           "name": "train_flaml",
           "params": [
             "X_train",
-            "y_train",
-            "time_budget"
+            "y_train"
           ],
           "returnType": "AutoML",
           "exported": true,
-          "lineCount": 24
+          "lineCount": 14
         },
         {
           "name": "run_lazypredict",
           "params": [
-            "X_train",
-            "X_test",
-            "y_train",
-            "y_test"
+            "split"
           ],
           "returnType": "pd.DataFrame",
           "exported": true,
-          "lineCount": 11
+          "lineCount": 9
         },
         {
-          "name": "evaluate_models",
+          "name": "positive_probabilities",
           "params": [
-            "models",
-            "X_test",
-            "y_test"
+            "model",
+            "X"
           ],
-          "returnType": "dict[str, dict[str, float]]",
+          "returnType": "np.ndarray",
           "exported": true,
-          "lineCount": 17
+          "lineCount": 3
         },
         {
-          "name": "log_metrics_table",
+          "name": "evaluate_predictions",
           "params": [
-            "metrics"
+            "y_true",
+            "predictions",
+            "probabilities"
           ],
-          "returnType": "None",
+          "returnType": "dict[str, float]",
           "exported": true,
-          "lineCount": 13
+          "lineCount": 12
         },
         {
-          "name": "save_model_bundle",
-          "params": [
-            "models",
-            "scaler",
-            "feature_names",
-            "metrics",
-            "filepath",
-            "lazypredict_results"
-          ],
-          "returnType": "None",
+          "name": "parse_args",
+          "params": [],
+          "returnType": "argparse.Namespace",
           "exported": true,
-          "lineCount": 18
+          "lineCount": 23
         },
         {
           "name": "main",
           "params": [],
           "returnType": "None",
           "exported": true,
-          "lineCount": 35
+          "lineCount": 139
         }
       ],
       "classes": [],
       "imports": [
+        {
+          "source": "argparse",
+          "specifiers": [
+            "argparse"
+          ]
+        },
         {
           "source": "logging",
           "specifiers": [
@@ -432,6 +1121,12 @@
           "source": "pathlib",
           "specifiers": [
             "Path"
+          ]
+        },
+        {
+          "source": "time",
+          "specifiers": [
+            "perf_counter"
           ]
         },
         {
@@ -459,9 +1154,21 @@
           ]
         },
         {
+          "source": "flaml",
+          "specifiers": [
+            "AutoML"
+          ]
+        },
+        {
           "source": "imblearn.over_sampling",
           "specifiers": [
             "SMOTE"
+          ]
+        },
+        {
+          "source": "lazypredict.Supervised",
+          "specifiers": [
+            "LazyClassifier"
           ]
         },
         {
@@ -476,7 +1183,8 @@
             "accuracy_score",
             "f1_score",
             "precision_score",
-            "recall_score"
+            "recall_score",
+            "roc_auc_score"
           ]
         },
         {
@@ -510,31 +1218,34 @@
           ]
         },
         {
-          "source": "flaml",
+          "source": "foundation_models",
           "specifiers": [
-            "AutoML"
-          ]
-        },
-        {
-          "source": "lazypredict.Supervised",
-          "specifiers": [
-            "LazyClassifier"
+            "MITRA_REPO",
+            "MITRA_REVISION",
+            "TABFM_REPO",
+            "TABFM_REVISION",
+            "fit_and_predict_tabfm",
+            "load_mitra",
+            "predict_mitra",
+            "release_cuda",
+            "save_tabfm_context",
+            "train_mitra"
           ]
         }
       ],
       "exports": [
-        "configure_logging",
         "load_data",
-        "preprocess_data",
+        "encode_target",
+        "prepare_split",
         "build_model_factory",
         "train_flaml",
         "run_lazypredict",
-        "evaluate_models",
-        "log_metrics_table",
-        "save_model_bundle",
+        "positive_probabilities",
+        "evaluate_predictions",
+        "parse_args",
         "main"
       ],
-      "totalLines": 254,
+      "totalLines": 340,
       "hasStructuralAnalysis": true
     }
   }

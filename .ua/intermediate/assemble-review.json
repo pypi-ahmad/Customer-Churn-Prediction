@@ -1,0 +1,14 @@
+{
+  "fixedSectionOk": true,
+  "nodesRecovered": 0,
+  "edgesRestored": 0,
+  "crossBatchEdgesAdded": 0,
+  "typesRemapped": 0,
+  "complexityRemapped": 0,
+  "notes": [
+    "Validated 92 assembled nodes and 116 edges; all node references resolve and required node fields are present.",
+    "Batch evidence contained no missing IDs, unknown node types, unknown complexity values, duplicate IDs, or dangling edges requiring repair.",
+    "The tested-by linker tagged two production nodes but produced no new edges; two existing tested_by edges from batch analysis were retained.",
+    "scan-result.json has no importMap field, so cross-batch import recovery could not be evaluated or performed."
+  ]
+}

@@ -1,83 +1,40 @@
 {
-  "scriptCompleted": true,
-  "filesAnalyzed": 1,
-  "filesSkipped": [
-    ".dockerignore"
-  ],
-  "analysisOutcomes": {
-    "structure": {
-      "succeeded": 1,
-      "failed": 0
-    },
-    "callGraph": {
-      "succeeded": 0,
-      "failed": 0,
-      "skipped": 1
-    }
-  },
-  "results": [
+  "nodes": [
     {
-      "path": "Dockerfile",
-      "language": "dockerfile",
-      "fileCategory": "infra",
-      "totalLines": 12,
-      "nonEmptyLines": 7,
-      "services": [
-        {
-          "name": "python",
-          "image": "python:3.11-slim",
-          "ports": [
-            8501
-          ],
-          "startLine": 1,
-          "endLine": 13
-        }
-      ],
-      "steps": [
-        {
-          "name": "FROM python:3.11-slim",
-          "startLine": 1,
-          "endLine": 1
-        },
-        {
-          "name": "WORKDIR /app",
-          "startLine": 3,
-          "endLine": 3
-        },
-        {
-          "name": "COPY requirements.txt ./",
-          "startLine": 5,
-          "endLine": 5
-        },
-        {
-          "name": "RUN pip install --no-cache-dir -r requirements.txt",
-          "startLine": 6,
-          "endLine": 6
-        },
-        {
-          "name": "COPY app.py train.py models_bundle.pkl .streamlit/config.toml ./",
-          "startLine": 8,
-          "endLine": 8
-        },
-        {
-          "name": "EXPOSE 8501",
-          "startLine": 10,
-          "endLine": 10
-        },
-        {
-          "name": "ENTRYPOINT [\"streamlit\", \"run\", \"app.py\"]",
-          "startLine": 12,
-          "endLine": 12
-        }
-      ],
-      "metrics": {
-        "importCount": 0,
-        "exportCount": 0,
-        "functionCount": 0,
-        "classCount": 0,
-        "serviceCount": 1,
-        "stepCount": 7
-      }
+      "id": "service:.dockerignore",
+      "type": "service",
+      "name": ".dockerignore",
+      "filePath": ".dockerignore",
+      "summary": "Docker build context exclusion rules that omit virtual environments, Git metadata, Python caches, and tabular spreadsheet files from the image context.",
+      "tags": ["containerization", "infrastructure", "build-context", "exclusions"],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:Dockerfile",
+      "type": "service",
+      "name": "Dockerfile",
+      "filePath": "Dockerfile",
+      "summary": "Defines a single-stage container image for the Streamlit churn application using the uv Python 3.13 Bookworm slim image, a locked production environment, bundled application assets, and port 8501.",
+      "tags": ["containerization", "infrastructure", "deployment", "streamlit", "uv"],
+      "complexity": "simple",
+      "languageNotes": "Uses uv sync with --locked, --no-dev, and the mitra extra before launching Streamlit from the project virtual environment."
+    },
+    {
+      "id": "service:Dockerfile:uv",
+      "type": "service",
+      "name": "uv",
+      "summary": "Container build stage based on ghcr.io/astral-sh/uv:python3.13-bookworm-slim and exposing the Streamlit service on port 8501.",
+      "tags": ["container-stage", "python", "streamlit"] ,
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "service:Dockerfile",
+      "target": "service:Dockerfile:uv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
     }
   ]
 }

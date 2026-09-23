@@ -1,0 +1,67 @@
+[
+  {
+    "order": 1,
+    "title": "Project Overview",
+    "description": "Start with README.md to understand the project's purpose: a customer-churn training pipeline paired with a Streamlit dashboard. It introduces the classical model workflow, optional Mitra-v2 and TabFM integrations, reproducibility expectations, deployment options, and the repository map used by the rest of this tour.",
+    "nodeIds": ["document:README.md"]
+  },
+  {
+    "order": 2,
+    "title": "Inference Application",
+    "description": "The Streamlit application is the main user-facing runtime and the most connected code node in the graph. Building on the overview, trace how it accepts uploaded customer data, loads persisted models, prepares inference features, generates churn predictions, and renders evaluation and exploratory views.",
+    "nodeIds": ["file:app.py"],
+    "languageLesson": "Python modules often keep a small main entry point while decomposing work into named functions; this makes the UI flow easier to test and lets preprocessing and prediction logic be reused inside the application."
+  },
+  {
+    "order": 3,
+    "title": "Customer Data",
+    "description": "The BankChurners table is the source dataset behind both training and the dashboard upload path. Its 10,127 records and 23 columns provide demographic, account, credit, transaction, and churn-label fields, so understanding this schema explains what the preprocessing and model artifacts must preserve.",
+    "nodeIds": ["table:BankChurners.csv:BankChurners"]
+  },
+  {
+    "order": 4,
+    "title": "Training Pipeline",
+    "description": "With the data contract in view, train.py shows how the project turns customer records into fitted models and persisted outputs. It owns loading, feature preparation, train/test splitting, classical and automated model fitting, evaluation, and artifact persistence, connecting the dataset layer to the inference application.",
+    "nodeIds": ["file:train.py"],
+    "languageLesson": "The pipeline is a practical sequence of transformations: each stage receives a well-defined intermediate representation, which helps keep training and inference preprocessing aligned and makes failures easier to localize."
+  },
+  {
+    "order": 5,
+    "title": "Foundation Models",
+    "description": "foundation_models.py adds the optional Mitra-v2 and TabFM path without replacing the classical workflow. It centralizes CUDA checks, model lifecycle handling, checkpointing, prediction, and context persistence, clarifying where accelerator-dependent work enters the broader churn pipeline.",
+    "nodeIds": ["file:foundation_models.py"],
+    "languageLesson": "The module uses lifecycle helpers to isolate resource-sensitive setup and cleanup; that pattern is especially important for GPU-backed models because loading, inference, and release must be coordinated explicitly."
+  },
+  {
+    "order": 6,
+    "title": "Persisted Model State",
+    "description": "The serialized model artifacts are the handoff between training and serving. models_bundle.pkl contains the trusted schema-v2 collection of estimators, preprocessing state, foundation descriptors, metrics, and timings, while model.pkl represents a trained-model artifact consumed by the churn workflow.",
+    "nodeIds": ["file:models_bundle.pkl", "file:model.pkl", "document:docs/model-bundle-reference.md"]
+  },
+  {
+    "order": 7,
+    "title": "Architecture Map",
+    "description": "The architecture reference consolidates the relationships introduced in the preceding steps: data preparation branches into classical and foundation-model training, evaluation produces persisted state, and Streamlit serves that state for inference. The generated architecture view provides a visual counterpart for following those boundaries and the project's reproducibility constraints.",
+    "nodeIds": ["document:docs/architecture.md", "file:docs/architecture.html"]
+  },
+  {
+    "order": 8,
+    "title": "Pipeline Tests",
+    "description": "tests/test_pipeline.py defines the deterministic safety net around the workflow. It checks target encoding, feature splitting, positive-class churn metrics, and missing-feature validation, so it protects the contract shared by training, persisted artifacts, and the Streamlit inference path.",
+    "nodeIds": ["file:tests/test_pipeline.py"],
+    "languageLesson": "Small focused tests turn data assumptions into executable contracts; validating both expected transformations and invalid inputs prevents silent schema drift in ML applications."
+  },
+  {
+    "order": 9,
+    "title": "Project Configuration",
+    "description": "pyproject.toml is the dependency and test configuration source for the Python 3.13 application, including optional Mitra and TabFM groups and CUDA-aware package settings. The Python-version pin and Streamlit configuration complete the runtime contract that the training and serving code relies on.",
+    "nodeIds": ["config:pyproject.toml", "file:.python-version", "config:.streamlit/config.toml"]
+  },
+  {
+    "order": 10,
+    "title": "Container Deployment",
+    "description": "The Dockerfile packages the application into a uv-based Python 3.13 Bookworm image, includes the locked environment and application assets, and exposes Streamlit on port 8501. Read it alongside the deployment runbook to connect the local training and inference workflow to health checks, artifact troubleshooting, CUDA considerations, and container operation.",
+    "nodeIds": ["service:Dockerfile", "document:docs/deployment-runbook.md"],
+    "languageLesson": "A single-stage container keeps the runtime recipe straightforward: the image starts from a uv Python base, installs the locked environment, copies the application assets, and launches the Streamlit service on its declared port."
+  }
+]

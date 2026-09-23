@@ -1,0 +1,218 @@
+{
+  "nodes": [
+    {
+      "id": "document:docs/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "docs/README.md",
+      "summary": "Index of the project's technical documentation, directing readers to architecture, development, training, model-bundle, and deployment guidance.",
+      "tags": ["documentation", "entry-point", "overview"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:docs/architecture.archify.json",
+      "type": "config",
+      "name": "architecture.archify.json",
+      "filePath": "docs/architecture.archify.json",
+      "summary": "Archify source configuration for the customer-churn training and serving architecture diagram, including components, connections, evidence links, and boundary cards.",
+      "tags": ["configuration", "architecture", "documentation", "visualization"],
+      "complexity": "simple",
+      "languageNotes": "JSON uses an Archify-specific diagram schema with source-line evidence and positioned visual components."
+    },
+    {
+      "id": "file:docs/architecture.html",
+      "type": "file",
+      "name": "architecture.html",
+      "filePath": "docs/architecture.html",
+      "summary": "Generated interactive HTML architecture diagram showing the churn data split, classical and foundation-model training paths, evaluation, persisted artifacts, and Streamlit serving.",
+      "tags": ["architecture", "visualization", "documentation", "generated"],
+      "complexity": "complex",
+      "languageNotes": "Large generated HTML artifact embeds SVG diagram structure, source evidence, styling, and client-side interaction logic."
+    },
+    {
+      "id": "document:docs/architecture.md",
+      "type": "document",
+      "name": "architecture.md",
+      "filePath": "docs/architecture.md",
+      "summary": "Architecture reference describing the churn training pipeline, optional Mitra-v2 and TabFM integrations, Streamlit application boundary, persisted state, and reproducibility constraints.",
+      "tags": ["documentation", "architecture", "machine-learning", "data-flow"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:docs/architecture.visual-check.html",
+      "type": "file",
+      "name": "architecture.visual-check.html",
+      "filePath": "docs/architecture.visual-check.html",
+      "summary": "Generated visual-review report page for the architecture diagram, presenting captured light and dark viewport images and automated containment-check status.",
+      "tags": ["visualization", "documentation", "quality-check", "generated"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:docs/architecture.visual-check.json",
+      "type": "config",
+      "name": "architecture.visual-check.json",
+      "filePath": "docs/architecture.visual-check.json",
+      "summary": "Machine-readable visual-check result for architecture.html, recording artifact identity, browser state, viewport containment, readability diagnostics, captures, and sidecars.",
+      "tags": ["configuration", "quality-check", "visualization", "validation"],
+      "complexity": "complex",
+      "languageNotes": "JSON records a structured automated visual-review result with per-viewport measurements and diagnostic state."
+    },
+    {
+      "id": "document:docs/deployment-runbook.md",
+      "type": "document",
+      "name": "deployment-runbook.md",
+      "filePath": "docs/deployment-runbook.md",
+      "summary": "Operational runbook for starting and health-checking Streamlit locally or in a Mitra-enabled Docker container, with troubleshooting for artifacts, CUDA, GPU memory, and input schemas.",
+      "tags": ["documentation", "deployment", "operations", "troubleshooting"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:docs/developer-guide.md",
+      "type": "document",
+      "name": "developer-guide.md",
+      "filePath": "docs/developer-guide.md",
+      "summary": "Contributor setup and validation guide covering uv environments, CUDA-aware foundation-model prerequisites, common commands, project conventions, and deterministic test coverage.",
+      "tags": ["documentation", "development", "testing", "configuration"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:docs/model-bundle-reference.md",
+      "type": "document",
+      "name": "model-bundle-reference.md",
+      "filePath": "docs/model-bundle-reference.md",
+      "summary": "Reference for the trusted schema-v2 models_bundle.pkl payload, including classical estimators, foundation descriptors, preprocessing state, metrics, timings, and compatibility rules.",
+      "tags": ["documentation", "model-bundle", "schema-definition", "serialization"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:docs/training-and-evaluation.md",
+      "type": "document",
+      "name": "training-and-evaluation.md",
+      "filePath": "docs/training-and-evaluation.md",
+      "summary": "Training and benchmark guide for classical, Mitra-v2, and TabFM model groups, including command options, artifact reuse, evaluation semantics, and generated outputs.",
+      "tags": ["documentation", "training", "evaluation", "machine-learning"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:docs/README.md",
+      "target": "document:docs/architecture.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/README.md",
+      "target": "document:docs/developer-guide.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/README.md",
+      "target": "document:docs/training-and-evaluation.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/README.md",
+      "target": "document:docs/model-bundle-reference.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/README.md",
+      "target": "document:docs/deployment-runbook.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/architecture.archify.json",
+      "target": "document:docs/architecture.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/architecture.archify.json",
+      "target": "file:docs/architecture.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/architecture.md",
+      "target": "file:docs/architecture.html",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/architecture.visual-check.json",
+      "target": "file:docs/architecture.html",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:docs/architecture.visual-check.json",
+      "target": "file:docs/architecture.visual-check.html",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:docs/architecture.visual-check.html",
+      "target": "file:docs/architecture.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/deployment-runbook.md",
+      "target": "document:docs/architecture.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/deployment-runbook.md",
+      "target": "document:docs/model-bundle-reference.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/developer-guide.md",
+      "target": "document:docs/training-and-evaluation.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/developer-guide.md",
+      "target": "document:docs/model-bundle-reference.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/model-bundle-reference.md",
+      "target": "document:docs/training-and-evaluation.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/training-and-evaluation.md",
+      "target": "document:docs/deployment-runbook.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

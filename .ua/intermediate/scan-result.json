@@ -1,6 +1,6 @@
 {
   "scriptCompleted": true,
-  "contentDigest": "2fb8bc4ee6402f02ef0bd947f94e8f3402682af793b46ea5319778e0b9cdeaf3",
+  "contentDigest": "13d6beb9e927faa320e0975a312a88de99258aaa3195747b39c46dae6fef409b",
   "files": [
     {
       "path": ".dockerignore",
@@ -9,9 +9,99 @@
       "fileCategory": "infra"
     },
     {
+      "path": ".python-version",
+      "language": "unknown",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
       "path": ".streamlit/config.toml",
       "language": "toml",
       "sizeLines": 2,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/.understandignore",
+      "language": "unknown",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".ua/fingerprints.json",
+      "language": "json",
+      "sizeLines": 540,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/intermediate/batch-1.json",
+      "language": "json",
+      "sizeLines": 82,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/intermediate/batch-2.json",
+      "language": "json",
+      "sizeLines": 254,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/intermediate/batch-3.json",
+      "language": "json",
+      "sizeLines": 1440,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/intermediate/batches.json",
+      "language": "json",
+      "sizeLines": 159,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/intermediate/fingerprint-input.json",
+      "language": "json",
+      "sizeLines": 20,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/intermediate/scan-result.json",
+      "language": "json",
+      "sizeLines": 113,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/knowledge-graph.json",
+      "language": "json",
+      "sizeLines": 756,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/meta.json",
+      "language": "json",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/tmp/build-graph.mjs",
+      "language": "javascript",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".ua/tmp/input-1.json",
+      "language": "json",
+      "sizeLines": 21,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/tmp/input-2.json",
+      "language": "json",
+      "sizeLines": 49,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/tmp/input-3.json",
+      "language": "json",
+      "sizeLines": 49,
       "fileCategory": "config"
     },
     {
@@ -23,7 +113,7 @@
     {
       "path": "CHANGELOG.md",
       "language": "markdown",
-      "sizeLines": 20,
+      "sizeLines": 35,
       "fileCategory": "docs"
     },
     {
@@ -41,13 +131,13 @@
     {
       "path": "Dockerfile",
       "language": "dockerfile",
-      "sizeLines": 12,
+      "sizeLines": 13,
       "fileCategory": "infra"
     },
     {
       "path": "README.md",
       "language": "markdown",
-      "sizeLines": 181,
+      "sizeLines": 223,
       "fileCategory": "docs"
     },
     {
@@ -59,8 +149,146 @@
     {
       "path": "app.py",
       "language": "python",
-      "sizeLines": 421,
+      "sizeLines": 464,
       "fileCategory": "code"
+    },
+    {
+      "path": "docs/README.md",
+      "language": "markdown",
+      "sizeLines": 13,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/architecture.archify.json",
+      "language": "json",
+      "sizeLines": 37,
+      "fileCategory": "config"
+    },
+    {
+      "path": "docs/architecture.html",
+      "language": "html",
+      "sizeLines": 14814,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "docs/architecture.md",
+      "language": "markdown",
+      "sizeLines": 77,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/architecture.visual-check.html",
+      "language": "html",
+      "sizeLines": 32,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "docs/architecture.visual-check.json",
+      "language": "json",
+      "sizeLines": 547,
+      "fileCategory": "config"
+    },
+    {
+      "path": "docs/deployment-runbook.md",
+      "language": "markdown",
+      "sizeLines": 146,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/developer-guide.md",
+      "language": "markdown",
+      "sizeLines": 81,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/model-bundle-reference.md",
+      "language": "markdown",
+      "sizeLines": 67,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/training-and-evaluation.md",
+      "language": "markdown",
+      "sizeLines": 93,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "foundation_models.py",
+      "language": "python",
+      "sizeLines": 222,
+      "fileCategory": "code"
+    },
+    {
+      "path": "graphify-out/.graphify_analysis.json",
+      "language": "json",
+      "sizeLines": 272,
+      "fileCategory": "config"
+    },
+    {
+      "path": "graphify-out/.graphify_root",
+      "language": "unknown",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "graphify-out/GRAPH_REPORT.md",
+      "language": "markdown",
+      "sizeLines": 96,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.64-s4/08e2e0e1aa97517036074d8db370c54aa6a25ca85142575d3cc30fa0a78b5f4f.json",
+      "language": "json",
+      "sizeLines": 0,
+      "fileCategory": "config"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.64-s4/137ef02f0bf7b103811db5ae980c6b43ed404e5eb08dae248c1db1b5dc698b98.json",
+      "language": "json",
+      "sizeLines": 0,
+      "fileCategory": "config"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.64-s4/5d8887344de18bb38577f5233e741139ef919d57dd96cb585a04a200b3e57f42.json",
+      "language": "json",
+      "sizeLines": 0,
+      "fileCategory": "config"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.64-s4/93374b704e19d09327aa2f2c280ed24710236ac1bd7a6c9ae40584a0b65c2a36.json",
+      "language": "json",
+      "sizeLines": 0,
+      "fileCategory": "config"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.64-s4/a88a8d4c9d14ccf781818dd592a872151b90bedbbfebec8f8857adddd08f76ee.json",
+      "language": "json",
+      "sizeLines": 0,
+      "fileCategory": "config"
+    },
+    {
+      "path": "graphify-out/cache/stat-index.json",
+      "language": "json",
+      "sizeLines": 0,
+      "fileCategory": "config"
+    },
+    {
+      "path": "graphify-out/graph.html",
+      "language": "html",
+      "sizeLines": 344,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "graphify-out/graph.json",
+      "language": "json",
+      "sizeLines": 3770,
+      "fileCategory": "config"
+    },
+    {
+      "path": "graphify-out/manifest.json",
+      "language": "json",
+      "sizeLines": 121,
+      "fileCategory": "config"
     },
     {
       "path": "model.pkl",
@@ -71,44 +299,53 @@
     {
       "path": "models_bundle.pkl",
       "language": "pkl",
-      "sizeLines": 58031,
+      "sizeLines": 33873,
       "fileCategory": "code"
     },
     {
-      "path": "requirements.txt",
-      "language": "txt",
-      "sizeLines": 98,
-      "fileCategory": "docs"
+      "path": "pyproject.toml",
+      "language": "toml",
+      "sizeLines": 133,
+      "fileCategory": "config"
+    },
+    {
+      "path": "tests/test_pipeline.py",
+      "language": "python",
+      "sizeLines": 48,
+      "fileCategory": "code"
     },
     {
       "path": "train.py",
       "language": "python",
-      "sizeLines": 253,
+      "sizeLines": 339,
       "fileCategory": "code"
     }
   ],
-  "totalFiles": 14,
+  "totalFiles": 53,
   "filteredByIgnore": 0,
-  "estimatedComplexity": "small",
+  "estimatedComplexity": "moderate",
   "stats": {
-    "filesScanned": 14,
+    "filesScanned": 53,
     "byCategory": {
       "infra": 2,
-      "config": 1,
+      "code": 11,
+      "config": 25,
       "data": 1,
-      "docs": 5,
-      "code": 5
+      "docs": 11,
+      "markup": 3
     },
     "byLanguage": {
-      "unknown": 1,
-      "toml": 1,
+      "unknown": 4,
+      "toml": 2,
+      "json": 23,
+      "javascript": 1,
       "csv": 1,
-      "markdown": 4,
+      "markdown": 11,
       "ipynb": 1,
       "dockerfile": 1,
-      "python": 2,
-      "pkl": 2,
-      "txt": 1
+      "python": 4,
+      "html": 3,
+      "pkl": 2
     }
   }
 }

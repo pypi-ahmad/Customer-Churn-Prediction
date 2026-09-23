@@ -1,9 +1,12 @@
 {
   "schemaVersion": 1,
   "algorithm": "louvain",
-  "totalFiles": 14,
-  "totalBatches": 3,
+  "totalFiles": 53,
+  "totalBatches": 9,
   "exportsByPath": {
+    ".python-version": [],
+    ".ua/.understandignore": [],
+    ".ua/tmp/build-graph.mjs": [],
     "Customer Churn Prediction.ipynb": [],
     "app.py": [
       "configure_logging",
@@ -11,6 +14,7 @@
       "load_data",
       "ensure_streamlit_config",
       "preprocess_for_inference",
+      "raw_features_for_inference",
       "generate_predictions",
       "render_eda_section",
       "render_predictions_section",
@@ -18,18 +22,39 @@
       "render_lazypredict_section",
       "main"
     ],
+    "foundation_models.py": [
+      "require_cuda",
+      "release_cuda",
+      "train_mitra",
+      "load_mitra",
+      "predict_mitra",
+      "download_tabfm_checkpoint",
+      "build_tabfm_classifier",
+      "predict_tabfm",
+      "fit_and_predict_tabfm",
+      "save_tabfm_context",
+      "load_tabfm_from_context"
+    ],
+    "graphify-out/.graphify_root": [],
     "model.pkl": [],
     "models_bundle.pkl": [],
+    "tests/test_pipeline.py": [
+      "test_target_encoding_marks_attrition_as_positive",
+      "test_target_encoding_rejects_unknown_labels",
+      "test_prepare_split_excludes_target_and_identifiers",
+      "test_metrics_use_positive_churn_class",
+      "test_raw_feature_validation_reports_missing_columns"
+    ],
     "train.py": [
-      "configure_logging",
       "load_data",
-      "preprocess_data",
+      "encode_target",
+      "prepare_split",
       "build_model_factory",
       "train_flaml",
       "run_lazypredict",
-      "evaluate_models",
-      "log_metrics_table",
-      "save_model_bundle",
+      "positive_probabilities",
+      "evaluate_predictions",
+      "parse_args",
       "main"
     ]
   },
@@ -46,7 +71,7 @@
         {
           "path": "Dockerfile",
           "language": "dockerfile",
-          "sizeLines": 12,
+          "sizeLines": 13,
           "fileCategory": "infra"
         }
       ],
@@ -60,6 +85,114 @@
       "batchIndex": 2,
       "files": [
         {
+          "path": ".ua/fingerprints.json",
+          "language": "json",
+          "sizeLines": 540,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".ua/knowledge-graph.json",
+          "language": "json",
+          "sizeLines": 756,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".ua/meta.json",
+          "language": "json",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        ".ua/fingerprints.json": [],
+        ".ua/knowledge-graph.json": [],
+        ".ua/meta.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 3,
+      "files": [
+        {
+          "path": ".ua/intermediate/batch-1.json",
+          "language": "json",
+          "sizeLines": 82,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".ua/intermediate/batch-2.json",
+          "language": "json",
+          "sizeLines": 254,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".ua/intermediate/batch-3.json",
+          "language": "json",
+          "sizeLines": 1440,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".ua/intermediate/batches.json",
+          "language": "json",
+          "sizeLines": 159,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".ua/intermediate/fingerprint-input.json",
+          "language": "json",
+          "sizeLines": 20,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".ua/intermediate/scan-result.json",
+          "language": "json",
+          "sizeLines": 113,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        ".ua/intermediate/batch-1.json": [],
+        ".ua/intermediate/batch-2.json": [],
+        ".ua/intermediate/batch-3.json": [],
+        ".ua/intermediate/batches.json": [],
+        ".ua/intermediate/fingerprint-input.json": [],
+        ".ua/intermediate/scan-result.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 4,
+      "files": [
+        {
+          "path": ".ua/tmp/input-1.json",
+          "language": "json",
+          "sizeLines": 21,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".ua/tmp/input-2.json",
+          "language": "json",
+          "sizeLines": 49,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".ua/tmp/input-3.json",
+          "language": "json",
+          "sizeLines": 49,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        ".ua/tmp/input-1.json": [],
+        ".ua/tmp/input-2.json": [],
+        ".ua/tmp/input-3.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 5,
+      "files": [
+        {
           "path": "BankChurners.csv",
           "language": "csv",
           "sizeLines": 10128,
@@ -68,7 +201,7 @@
         {
           "path": "CHANGELOG.md",
           "language": "markdown",
-          "sizeLines": 20,
+          "sizeLines": 35,
           "fileCategory": "docs"
         },
         {
@@ -80,7 +213,7 @@
         {
           "path": "README.md",
           "language": "markdown",
-          "sizeLines": 181,
+          "sizeLines": 223,
           "fileCategory": "docs"
         },
         {
@@ -90,10 +223,10 @@
           "fileCategory": "docs"
         },
         {
-          "path": "requirements.txt",
-          "language": "txt",
-          "sizeLines": 98,
-          "fileCategory": "docs"
+          "path": "pyproject.toml",
+          "language": "toml",
+          "sizeLines": 133,
+          "fileCategory": "config"
         }
       ],
       "batchImportData": {
@@ -102,18 +235,200 @@
         "CODE_OF_CONDUCT.md": [],
         "README.md": [],
         "SECURITY.md": [],
-        "requirements.txt": []
+        "pyproject.toml": []
       },
       "neighborMap": {}
     },
     {
-      "batchIndex": 3,
+      "batchIndex": 6,
       "files": [
+        {
+          "path": "docs/README.md",
+          "language": "markdown",
+          "sizeLines": 13,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/architecture.archify.json",
+          "language": "json",
+          "sizeLines": 37,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/architecture.html",
+          "language": "html",
+          "sizeLines": 14814,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "docs/architecture.md",
+          "language": "markdown",
+          "sizeLines": 77,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/architecture.visual-check.html",
+          "language": "html",
+          "sizeLines": 32,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "docs/architecture.visual-check.json",
+          "language": "json",
+          "sizeLines": 547,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/deployment-runbook.md",
+          "language": "markdown",
+          "sizeLines": 146,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/developer-guide.md",
+          "language": "markdown",
+          "sizeLines": 81,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/model-bundle-reference.md",
+          "language": "markdown",
+          "sizeLines": 67,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/training-and-evaluation.md",
+          "language": "markdown",
+          "sizeLines": 93,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "docs/README.md": [],
+        "docs/architecture.archify.json": [],
+        "docs/architecture.html": [],
+        "docs/architecture.md": [],
+        "docs/architecture.visual-check.html": [],
+        "docs/architecture.visual-check.json": [],
+        "docs/deployment-runbook.md": [],
+        "docs/developer-guide.md": [],
+        "docs/model-bundle-reference.md": [],
+        "docs/training-and-evaluation.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 7,
+      "files": [
+        {
+          "path": "graphify-out/.graphify_analysis.json",
+          "language": "json",
+          "sizeLines": 272,
+          "fileCategory": "config"
+        },
+        {
+          "path": "graphify-out/GRAPH_REPORT.md",
+          "language": "markdown",
+          "sizeLines": 96,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "graphify-out/graph.html",
+          "language": "html",
+          "sizeLines": 344,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "graphify-out/graph.json",
+          "language": "json",
+          "sizeLines": 3770,
+          "fileCategory": "config"
+        },
+        {
+          "path": "graphify-out/manifest.json",
+          "language": "json",
+          "sizeLines": 121,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "graphify-out/.graphify_analysis.json": [],
+        "graphify-out/GRAPH_REPORT.md": [],
+        "graphify-out/graph.html": [],
+        "graphify-out/graph.json": [],
+        "graphify-out/manifest.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 8,
+      "files": [
+        {
+          "path": "graphify-out/cache/ast/v0.9.64-s4/08e2e0e1aa97517036074d8db370c54aa6a25ca85142575d3cc30fa0a78b5f4f.json",
+          "language": "json",
+          "sizeLines": 0,
+          "fileCategory": "config"
+        },
+        {
+          "path": "graphify-out/cache/ast/v0.9.64-s4/137ef02f0bf7b103811db5ae980c6b43ed404e5eb08dae248c1db1b5dc698b98.json",
+          "language": "json",
+          "sizeLines": 0,
+          "fileCategory": "config"
+        },
+        {
+          "path": "graphify-out/cache/ast/v0.9.64-s4/5d8887344de18bb38577f5233e741139ef919d57dd96cb585a04a200b3e57f42.json",
+          "language": "json",
+          "sizeLines": 0,
+          "fileCategory": "config"
+        },
+        {
+          "path": "graphify-out/cache/ast/v0.9.64-s4/93374b704e19d09327aa2f2c280ed24710236ac1bd7a6c9ae40584a0b65c2a36.json",
+          "language": "json",
+          "sizeLines": 0,
+          "fileCategory": "config"
+        },
+        {
+          "path": "graphify-out/cache/ast/v0.9.64-s4/a88a8d4c9d14ccf781818dd592a872151b90bedbbfebec8f8857adddd08f76ee.json",
+          "language": "json",
+          "sizeLines": 0,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "graphify-out/cache/ast/v0.9.64-s4/08e2e0e1aa97517036074d8db370c54aa6a25ca85142575d3cc30fa0a78b5f4f.json": [],
+        "graphify-out/cache/ast/v0.9.64-s4/137ef02f0bf7b103811db5ae980c6b43ed404e5eb08dae248c1db1b5dc698b98.json": [],
+        "graphify-out/cache/ast/v0.9.64-s4/5d8887344de18bb38577f5233e741139ef919d57dd96cb585a04a200b3e57f42.json": [],
+        "graphify-out/cache/ast/v0.9.64-s4/93374b704e19d09327aa2f2c280ed24710236ac1bd7a6c9ae40584a0b65c2a36.json": [],
+        "graphify-out/cache/ast/v0.9.64-s4/a88a8d4c9d14ccf781818dd592a872151b90bedbbfebec8f8857adddd08f76ee.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 9,
+      "files": [
+        {
+          "path": ".python-version",
+          "language": "unknown",
+          "sizeLines": 1,
+          "fileCategory": "code"
+        },
         {
           "path": ".streamlit/config.toml",
           "language": "toml",
           "sizeLines": 2,
           "fileCategory": "config"
+        },
+        {
+          "path": ".ua/.understandignore",
+          "language": "unknown",
+          "sizeLines": 59,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".ua/tmp/build-graph.mjs",
+          "language": "javascript",
+          "sizeLines": 17,
+          "fileCategory": "code"
         },
         {
           "path": "Customer Churn Prediction.ipynb",
@@ -124,8 +439,26 @@
         {
           "path": "app.py",
           "language": "python",
-          "sizeLines": 421,
+          "sizeLines": 464,
           "fileCategory": "code"
+        },
+        {
+          "path": "foundation_models.py",
+          "language": "python",
+          "sizeLines": 222,
+          "fileCategory": "code"
+        },
+        {
+          "path": "graphify-out/.graphify_root",
+          "language": "unknown",
+          "sizeLines": 0,
+          "fileCategory": "code"
+        },
+        {
+          "path": "graphify-out/cache/stat-index.json",
+          "language": "json",
+          "sizeLines": 0,
+          "fileCategory": "config"
         },
         {
           "path": "model.pkl",
@@ -136,22 +469,35 @@
         {
           "path": "models_bundle.pkl",
           "language": "pkl",
-          "sizeLines": 58031,
+          "sizeLines": 33873,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_pipeline.py",
+          "language": "python",
+          "sizeLines": 48,
           "fileCategory": "code"
         },
         {
           "path": "train.py",
           "language": "python",
-          "sizeLines": 253,
+          "sizeLines": 339,
           "fileCategory": "code"
         }
       ],
       "batchImportData": {
+        ".python-version": [],
         ".streamlit/config.toml": [],
+        ".ua/.understandignore": [],
+        ".ua/tmp/build-graph.mjs": [],
         "Customer Churn Prediction.ipynb": [],
         "app.py": [],
+        "foundation_models.py": [],
+        "graphify-out/.graphify_root": [],
+        "graphify-out/cache/stat-index.json": [],
         "model.pkl": [],
         "models_bundle.pkl": [],
+        "tests/test_pipeline.py": [],
         "train.py": []
       },
       "neighborMap": {}

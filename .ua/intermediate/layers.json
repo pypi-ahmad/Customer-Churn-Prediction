@@ -1,0 +1,105 @@
+[
+  {
+    "id": "layer:application",
+    "name": "Application Layer",
+    "description": "Streamlit inference, training orchestration, foundation-model adapters, and the project notebook for customer churn prediction.",
+    "nodeIds": [
+      "file:Customer Churn Prediction.ipynb",
+      "file:app.py",
+      "file:foundation_models.py",
+      "file:train.py"
+    ]
+  },
+  {
+    "id": "layer:data-models",
+    "name": "Data and Model Artifacts",
+    "description": "The BankChurners dataset and persisted classical and foundation-model bundles consumed by the churn workflow.",
+    "nodeIds": [
+      "table:BankChurners.csv:BankChurners",
+      "file:model.pkl",
+      "file:models_bundle.pkl"
+    ]
+  },
+  {
+    "id": "layer:testing",
+    "name": "Testing Layer",
+    "description": "Pipeline tests that verify target encoding, feature preparation, and positive-class churn metrics.",
+    "nodeIds": [
+      "file:tests/test_pipeline.py"
+    ]
+  },
+  {
+    "id": "layer:configuration",
+    "name": "Configuration",
+    "description": "Python project metadata, Streamlit settings, and generated graph/configuration JSON used to describe this checkout.",
+    "nodeIds": [
+      "config:pyproject.toml",
+      "file:.python-version",
+      "config:.streamlit/config.toml"
+    ]
+  },
+  {
+    "id": "layer:documentation",
+    "name": "Documentation",
+    "description": "Project guides, architecture references, deployment and training runbooks, governance documents, and generated graph reports.",
+    "nodeIds": [
+      "document:CHANGELOG.md",
+      "document:CODE_OF_CONDUCT.md",
+      "document:README.md",
+      "document:SECURITY.md",
+      "document:docs/README.md",
+      "config:docs/architecture.archify.json",
+      "file:docs/architecture.html",
+      "document:docs/architecture.md",
+      "file:docs/architecture.visual-check.html",
+      "config:docs/architecture.visual-check.json",
+      "document:docs/deployment-runbook.md",
+      "document:docs/developer-guide.md",
+      "document:docs/model-bundle-reference.md",
+      "document:docs/training-and-evaluation.md",
+      "document:graphify-out/GRAPH_REPORT.md"
+    ]
+  },
+  {
+    "id": "layer:infrastructure",
+    "name": "Infrastructure",
+    "description": "The Docker build context and container definition for running the Streamlit churn application.",
+      "nodeIds": [
+        "service:.dockerignore",
+        "service:Dockerfile",
+        "service:Dockerfile:uv"
+      ]
+  },
+  {
+    "id": "layer:analysis-artifacts",
+    "name": "Analysis Artifacts",
+    "description": "Understand-Anything and Graphify working files, graph indexes, caches, and build helpers generated for repository analysis.",
+    "nodeIds": [
+      "config:.ua/fingerprints.json",
+      "config:.ua/knowledge-graph.json",
+      "config:.ua/meta.json",
+      "config:.ua/intermediate/batch-1.json",
+      "config:.ua/intermediate/batch-2.json",
+      "config:.ua/intermediate/batch-3.json",
+      "config:.ua/intermediate/batches.json",
+      "config:.ua/intermediate/fingerprint-input.json",
+      "config:.ua/intermediate/scan-result.json",
+      "config:.ua/tmp/input-1.json",
+      "config:.ua/tmp/input-2.json",
+      "config:.ua/tmp/input-3.json",
+      "config:graphify-out/.graphify_analysis.json",
+      "file:graphify-out/graph.html",
+      "config:graphify-out/graph.json",
+      "config:graphify-out/manifest.json",
+      "config:graphify-out/cache/ast/v0.9.64-s4/08e2e0e1aa97517036074d8db370c54aa6a25ca85142575d3cc30fa0a78b5f4f.json",
+      "config:graphify-out/cache/ast/v0.9.64-s4/137ef02f0bf7b103811db5ae980c6b43ed404e5eb08dae248c1db1b5dc698b98.json",
+      "config:graphify-out/cache/ast/v0.9.64-s4/5d8887344de18bb38577f5233e741139ef919d57dd96cb585a04a200b3e57f42.json",
+      "config:graphify-out/cache/ast/v0.9.64-s4/93374b704e19d09327aa2f2c280ed24710236ac1bd7a6c9ae40584a0b65c2a36.json",
+      "config:graphify-out/cache/ast/v0.9.64-s4/a88a8d4c9d14ccf781818dd592a872151b90bedbbfebec8f8857adddd08f76ee.json",
+      "file:.ua/.understandignore",
+      "file:.ua/tmp/build-graph.mjs",
+      "file:graphify-out/.graphify_root",
+      "config:graphify-out/cache/stat-index.json"
+    ]
+  }
+]

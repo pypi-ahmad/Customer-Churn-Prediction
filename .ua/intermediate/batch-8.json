@@ -1,0 +1,50 @@
+{
+  "nodes": [
+    {
+      "id": "config:graphify-out/cache/ast/v0.9.64-s4/08e2e0e1aa97517036074d8db370c54aa6a25ca85142575d3cc30fa0a78b5f4f.json",
+      "type": "config",
+      "name": "08e2e0e1aa97517036074d8db370c54aa6a25ca85142575d3cc30fa0a78b5f4f.json",
+      "filePath": "graphify-out/cache/ast/v0.9.64-s4/08e2e0e1aa97517036074d8db370c54aa6a25ca85142575d3cc30fa0a78b5f4f.json",
+      "summary": "Graphify AST cache record with top-level nodes, edges, and raw_calls sections for a previously analyzed project artifact.",
+      "tags": ["configuration", "ast-cache", "graphify", "analysis-artifact"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:graphify-out/cache/ast/v0.9.64-s4/137ef02f0bf7b103811db5ae980c6b43ed404e5eb08dae248c1db1b5dc698b98.json",
+      "type": "config",
+      "name": "137ef02f0bf7b103811db5ae980c6b43ed404e5eb08dae248c1db1b5dc698b98.json",
+      "filePath": "graphify-out/cache/ast/v0.9.64-s4/137ef02f0bf7b103811db5ae980c6b43ed404e5eb08dae248c1db1b5dc698b98.json",
+      "summary": "Graphify AST cache record with top-level nodes and edges sections for a previously analyzed project artifact.",
+      "tags": ["configuration", "ast-cache", "graphify", "analysis-artifact"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:graphify-out/cache/ast/v0.9.64-s4/5d8887344de18bb38577f5233e741139ef919d57dd96cb585a04a200b3e57f42.json",
+      "type": "config",
+      "name": "5d8887344de18bb38577f5233e741139ef919d57dd96cb585a04a200b3e57f42.json",
+      "filePath": "graphify-out/cache/ast/v0.9.64-s4/5d8887344de18bb38577f5233e741139ef919d57dd96cb585a04a200b3e57f42.json",
+      "summary": "Graphify AST cache record with top-level nodes, edges, and raw_calls sections for a previously analyzed project artifact.",
+      "tags": ["configuration", "ast-cache", "graphify", "analysis-artifact"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:graphify-out/cache/ast/v0.9.64-s4/93374b704e19d09327aa2f2c280ed24710236ac1bd7a6c9ae40584a0b65c2a36.json",
+      "type": "config",
+      "name": "93374b704e19d09327aa2f2c280ed24710236ac1bd7a6c9ae40584a0b65c2a36.json",
+      "filePath": "graphify-out/cache/ast/v0.9.64-s4/93374b704e19d09327aa2f2c280ed24710236ac1bd7a6c9ae40584a0b65c2a36.json",
+      "summary": "Graphify AST cache record with top-level nodes, edges, and raw_calls sections for a previously analyzed project artifact.",
+      "tags": ["configuration", "ast-cache", "graphify", "analysis-artifact"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:graphify-out/cache/ast/v0.9.64-s4/a88a8d4c9d14ccf781818dd592a872151b90bedbbfebec8f8857adddd08f76ee.json",
+      "type": "config",
+      "name": "a88a8d4c9d14ccf781818dd592a872151b90bedbbfebec8f8857adddd08f76ee.json",
+      "filePath": "graphify-out/cache/ast/v0.9.64-s4/a88a8d4c9d14ccf781818dd592a872151b90bedbbfebec8f8857adddd08f76ee.json",
+      "summary": "Graphify AST cache record with top-level nodes, edges, and raw_calls sections for a previously analyzed project artifact.",
+      "tags": ["configuration", "ast-cache", "graphify", "analysis-artifact"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

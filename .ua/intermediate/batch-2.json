@@ -1,255 +1,69 @@
 {
-  "scriptCompleted": true,
-  "filesAnalyzed": 4,
-  "filesSkipped": [
-    "BankChurners.csv",
-    "requirements.txt"
-  ],
-  "analysisOutcomes": {
-    "structure": {
-      "succeeded": 4,
-      "failed": 0
+  "nodes": [
+    {
+      "id": "config:.ua/fingerprints.json",
+      "type": "config",
+      "name": "fingerprints.json",
+      "filePath": ".ua/fingerprints.json",
+      "summary": "Stores the structural fingerprint baseline for the analyzed project files, including content hashes, structural counts, and the commit metadata used for incremental analysis.",
+      "tags": [
+        "configuration",
+        "analysis-baseline",
+        "fingerprints",
+        "incremental-analysis"
+      ],
+      "complexity": "complex"
     },
-    "callGraph": {
-      "succeeded": 0,
-      "failed": 0,
-      "skipped": 4
+    {
+      "id": "config:.ua/knowledge-graph.json",
+      "type": "config",
+      "name": "knowledge-graph.json",
+      "filePath": ".ua/knowledge-graph.json",
+      "summary": "Contains the generated project knowledge graph: project metadata, analyzed nodes, relationships, architectural layers, and the guided tour used by Understand-Anything.",
+      "tags": [
+        "configuration",
+        "knowledge-graph",
+        "architecture-analysis",
+        "project-metadata"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:.ua/meta.json",
+      "type": "config",
+      "name": "meta.json",
+      "filePath": ".ua/meta.json",
+      "summary": "Records the timestamp, commit hash, schema version, and analyzed-file count for the current Understand-Anything analysis run.",
+      "tags": [
+        "configuration",
+        "analysis-metadata",
+        "provenance",
+        "versioning"
+      ],
+      "complexity": "simple"
     }
-  },
-  "results": [
+  ],
+  "edges": [
     {
-      "path": "CHANGELOG.md",
-      "language": "markdown",
-      "fileCategory": "docs",
-      "totalLines": 20,
-      "nonEmptyLines": 11,
-      "sections": [
-        {
-          "heading": "Changelog",
-          "level": 1,
-          "line": 1
-        },
-        {
-          "heading": "[Unreleased]",
-          "level": 2,
-          "line": 8
-        },
-        {
-          "heading": "Added",
-          "level": 3,
-          "line": 10
-        },
-        {
-          "heading": "Changed",
-          "level": 3,
-          "line": 12
-        },
-        {
-          "heading": "Fixed",
-          "level": 3,
-          "line": 14
-        },
-        {
-          "heading": "[2026-06-13]",
-          "level": 2,
-          "line": 16
-        },
-        {
-          "heading": "Added",
-          "level": 3,
-          "line": 18
-        }
-      ],
-      "metrics": {
-        "importCount": 0,
-        "exportCount": 0,
-        "functionCount": 0,
-        "classCount": 0,
-        "sectionCount": 7
-      }
+      "source": "config:.ua/knowledge-graph.json",
+      "target": "config:.ua/fingerprints.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
     },
     {
-      "path": "CODE_OF_CONDUCT.md",
-      "language": "markdown",
-      "fileCategory": "docs",
-      "totalLines": 38,
-      "nonEmptyLines": 23,
-      "sections": [
-        {
-          "heading": "Code of Conduct",
-          "level": 1,
-          "line": 1
-        },
-        {
-          "heading": "Our Pledge",
-          "level": 2,
-          "line": 3
-        },
-        {
-          "heading": "Our Standards",
-          "level": 2,
-          "line": 7
-        },
-        {
-          "heading": "Enforcement Responsibilities",
-          "level": 2,
-          "line": 21
-        },
-        {
-          "heading": "Scope",
-          "level": 2,
-          "line": 25
-        },
-        {
-          "heading": "Reporting",
-          "level": 2,
-          "line": 30
-        },
-        {
-          "heading": "Enforcement",
-          "level": 2,
-          "line": 35
-        }
-      ],
-      "metrics": {
-        "importCount": 0,
-        "exportCount": 0,
-        "functionCount": 0,
-        "classCount": 0,
-        "sectionCount": 7
-      }
+      "source": "config:.ua/knowledge-graph.json",
+      "target": "config:.ua/meta.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
     },
     {
-      "path": "README.md",
-      "language": "markdown",
-      "fileCategory": "docs",
-      "totalLines": 181,
-      "nonEmptyLines": 137,
-      "sections": [
-        {
-          "heading": "Customer Churn Prediction",
-          "level": 1,
-          "line": 3
-        },
-        {
-          "heading": "Overview",
-          "level": 2,
-          "line": 21
-        },
-        {
-          "heading": "Models",
-          "level": 2,
-          "line": 27
-        },
-        {
-          "heading": "Benchmark Results",
-          "level": 3,
-          "line": 41
-        },
-        {
-          "heading": "Architecture",
-          "level": 2,
-          "line": 51
-        },
-        {
-          "heading": "Dashboard Features",
-          "level": 2,
-          "line": 86
-        },
-        {
-          "heading": "Getting Started",
-          "level": 2,
-          "line": 97
-        },
-        {
-          "heading": "Prerequisites",
-          "level": 3,
-          "line": 99
-        },
-        {
-          "heading": "Installation",
-          "level": 3,
-          "line": 104
-        },
-        {
-          "heading": "Train",
-          "level": 3,
-          "line": 115
-        },
-        {
-          "heading": "Run",
-          "level": 3,
-          "line": 123
-        },
-        {
-          "heading": "Docker Deployment",
-          "level": 2,
-          "line": 131
-        },
-        {
-          "heading": "Tech Stack",
-          "level": 2,
-          "line": 143
-        },
-        {
-          "heading": "Project Structure",
-          "level": 2,
-          "line": 154
-        },
-        {
-          "heading": "Roadmap",
-          "level": 2,
-          "line": 169
-        },
-        {
-          "heading": "License",
-          "level": 2,
-          "line": 177
-        }
-      ],
-      "metrics": {
-        "importCount": 0,
-        "exportCount": 0,
-        "functionCount": 0,
-        "classCount": 0,
-        "sectionCount": 16
-      }
-    },
-    {
-      "path": "SECURITY.md",
-      "language": "markdown",
-      "fileCategory": "docs",
-      "totalLines": 24,
-      "nonEmptyLines": 15,
-      "sections": [
-        {
-          "heading": "Security Policy",
-          "level": 1,
-          "line": 1
-        },
-        {
-          "heading": "Supported Versions",
-          "level": 2,
-          "line": 3
-        },
-        {
-          "heading": "Reporting a Vulnerability",
-          "level": 2,
-          "line": 7
-        },
-        {
-          "heading": "Response Process",
-          "level": 2,
-          "line": 21
-        }
-      ],
-      "metrics": {
-        "importCount": 0,
-        "exportCount": 0,
-        "functionCount": 0,
-        "classCount": 0,
-        "sectionCount": 4
-      }
+      "source": "config:.ua/fingerprints.json",
+      "target": "config:.ua/meta.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
     }
   ]
 }

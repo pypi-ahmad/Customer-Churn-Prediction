@@ -1,0 +1,28 @@
+{
+  "nodes": [
+    {"id":"table:BankChurners.csv:BankChurners","type":"table","name":"BankChurners","filePath":"BankChurners.csv","summary":"Customer churn dataset with 10,127 records and 23 columns covering demographics, account relationships, credit usage, transaction behavior, churn labels, and classifier-derived fields. It supplies the source data for the training pipeline and dashboard upload workflow.","tags":["dataset","customer-churn","tabular-data","training-data"],"complexity":"complex","languageNotes":"CSV rows use quoted categorical values and include both the Attrition_Flag target and two Naive Bayes classifier output columns."},
+    {"id":"document:CHANGELOG.md","type":"document","name":"CHANGELOG.md","filePath":"CHANGELOG.md","summary":"Release history covering foundation-model additions, the uv migration, model-family preprocessing split, sequential GPU serving, and churn-label and CUDA-memory fixes.","tags":["documentation","release-history","migration","modeling"],"complexity":"simple"},
+    {"id":"document:CODE_OF_CONDUCT.md","type":"document","name":"CODE_OF_CONDUCT.md","filePath":"CODE_OF_CONDUCT.md","summary":"Community participation policy defining expected behavior, prohibited conduct, reporting through GitHub Issues, and maintainer enforcement responsibilities.","tags":["documentation","governance","community","reporting"],"complexity":"simple"},
+    {"id":"document:README.md","type":"document","name":"README.md","filePath":"README.md","summary":"Primary project guide for the customer-churn training pipeline and Streamlit dashboard, covering models, benchmark results, architecture, setup, reproducibility, Docker deployment, project structure, and licensing.","tags":["documentation","entry-point","machine-learning","dashboard","deployment"],"complexity":"moderate"},
+    {"id":"document:SECURITY.md","type":"document","name":"SECURITY.md","filePath":"SECURITY.md","summary":"Security policy identifying supported versions and the GitHub Issues process for reporting vulnerabilities, including impact, reproduction details, and maintainer response handling.","tags":["documentation","security","vulnerability-reporting","governance"],"complexity":"simple"},
+    {"id":"config:pyproject.toml","type":"config","name":"pyproject.toml","filePath":"pyproject.toml","summary":"Project metadata and uv-managed dependency configuration for the Python 3.13 churn application, including optional Mitra and TabFM groups, pinned TabFM source metadata, CUDA PyTorch index settings, and pytest configuration.","tags":["configuration","build-system","dependency-management","uv","machine-learning"],"complexity":"moderate","languageNotes":"The TOML separates optional foundation-model dependencies from the core environment and pins the TabFM source revision for reproducibility."}
+  ],
+  "edges": [
+    {"source":"file:train.py","target":"table:BankChurners.csv:BankChurners","type":"depends_on","direction":"forward","weight":0.6},
+    {"source":"config:pyproject.toml","target":"file:train.py","type":"configures","direction":"forward","weight":0.6},
+    {"source":"config:pyproject.toml","target":"file:app.py","type":"configures","direction":"forward","weight":0.6},
+    {"source":"config:pyproject.toml","target":"file:foundation_models.py","type":"configures","direction":"forward","weight":0.6},
+    {"source":"document:README.md","target":"file:train.py","type":"documents","direction":"forward","weight":0.5},
+    {"source":"document:README.md","target":"file:app.py","type":"documents","direction":"forward","weight":0.5},
+    {"source":"document:README.md","target":"file:foundation_models.py","type":"documents","direction":"forward","weight":0.5},
+    {"source":"document:README.md","target":"table:BankChurners.csv:BankChurners","type":"documents","direction":"forward","weight":0.5},
+    {"source":"document:README.md","target":"config:pyproject.toml","type":"documents","direction":"forward","weight":0.5},
+    {"source":"document:README.md","target":"service:Dockerfile","type":"documents","direction":"forward","weight":0.5},
+    {"source":"document:CHANGELOG.md","target":"config:pyproject.toml","type":"documents","direction":"forward","weight":0.5},
+    {"source":"document:CHANGELOG.md","target":"file:train.py","type":"documents","direction":"forward","weight":0.5},
+    {"source":"document:CHANGELOG.md","target":"file:foundation_models.py","type":"documents","direction":"forward","weight":0.5},
+    {"source":"document:CHANGELOG.md","target":"file:app.py","type":"documents","direction":"forward","weight":0.5},
+    {"source":"document:CODE_OF_CONDUCT.md","target":"document:README.md","type":"related","direction":"forward","weight":0.5},
+    {"source":"document:SECURITY.md","target":"document:README.md","type":"related","direction":"forward","weight":0.5}
+  ]
+}

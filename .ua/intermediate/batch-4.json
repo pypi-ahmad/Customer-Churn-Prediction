@@ -1,0 +1,35 @@
+{
+  "nodes": [
+    {
+      "id": "config:.ua/tmp/input-1.json",
+      "type": "config",
+      "name": "input-1.json",
+      "filePath": ".ua/tmp/input-1.json",
+      "summary": "Batch manifest describing the project root and the three configuration files assigned to this analysis batch. Its import map records no project-internal dependencies.",
+      "tags": ["configuration", "batch-manifest", "analysis-input"],
+      "complexity": "simple",
+      "languageNotes": "JSON object organized around projectRoot, batchFiles, and batchImportData sections."
+    },
+    {
+      "id": "config:.ua/tmp/input-2.json",
+      "type": "config",
+      "name": "input-2.json",
+      "filePath": ".ua/tmp/input-2.json",
+      "summary": "Batch manifest listing the project's dataset, documentation files, and requirements file for structural analysis. Its import map contains no project-internal dependencies.",
+      "tags": ["configuration", "batch-manifest", "file-inventory"],
+      "complexity": "simple",
+      "languageNotes": "JSON batch descriptor with project-relative paths, language labels, line counts, and file categories."
+    },
+    {
+      "id": "config:.ua/tmp/input-3.json",
+      "type": "config",
+      "name": "input-3.json",
+      "filePath": ".ua/tmp/input-3.json",
+      "summary": "Batch manifest listing the Streamlit configuration, notebook, application and training sources, and serialized model artifacts for structural analysis. Its import map contains no project-internal dependencies.",
+      "tags": ["configuration", "batch-manifest", "model-analysis"],
+      "complexity": "simple",
+      "languageNotes": "JSON batch descriptor that groups configuration, Python, notebook, and serialized model paths by category."
+    }
+  ],
+  "edges": []
+}

@@ -1,0 +1,53 @@
+{
+  "nodes": [
+    {
+      "id": "config:graphify-out/.graphify_analysis.json",
+      "type": "config",
+      "name": ".graphify_analysis.json",
+      "filePath": "graphify-out/.graphify_analysis.json",
+      "summary": "Graphify analysis metadata describing detected communities, cohesion, highly connected nodes, surprising relationships, and suggested questions for the Customer-Churn-Prediction project.",
+      "tags": ["configuration", "graph-analysis", "communities", "knowledge-graph"],
+      "complexity": "complex",
+      "languageNotes": "JSON report organized around analysis result collections rather than executable configuration settings."
+    },
+    {
+      "id": "document:graphify-out/GRAPH_REPORT.md",
+      "type": "document",
+      "name": "GRAPH_REPORT.md",
+      "filePath": "graphify-out/GRAPH_REPORT.md",
+      "summary": "Generated graph report summarizing the project's 105 nodes, 218 edges, seven communities, graph freshness, central nodes, connection highlights, isolated nodes, and suggested investigation questions.",
+      "tags": ["documentation", "graph-analysis", "project-report", "knowledge-graph"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:graphify-out/graph.html",
+      "type": "file",
+      "name": "graph.html",
+      "filePath": "graphify-out/graph.html",
+      "summary": "Standalone browser visualization for the generated Graphify network, with search, node inspection, community filtering, legend controls, and interactive navigation powered by vis-network.",
+      "tags": ["markup", "visualization", "graph-ui", "interactive"],
+      "complexity": "complex",
+      "languageNotes": "HTML embeds CSS and JavaScript, loads vis-network from a pinned CDN asset, and initializes the graph from embedded node and edge data."
+    },
+    {
+      "id": "config:graphify-out/graph.json",
+      "type": "config",
+      "name": "graph.json",
+      "filePath": "graphify-out/graph.json",
+      "summary": "Generated Graphify graph dataset containing 105 nodes, 218 directed links, graph metadata, hyperedges, and the commit identifier used to build the visualization input.",
+      "tags": ["configuration", "graph-data", "knowledge-graph", "generated-artifact"],
+      "complexity": "complex",
+      "languageNotes": "JSON uses a NetworkX-style directed multigraph structure with nodes, links, and hyperedges."
+    },
+    {
+      "id": "config:graphify-out/manifest.json",
+      "type": "config",
+      "name": "manifest.json",
+      "filePath": "graphify-out/manifest.json",
+      "summary": "Generated manifest listing the project artifacts included in the Graphify output, including graph files, Understand Anything metadata, source modules, documentation artifacts, and tests.",
+      "tags": ["configuration", "manifest", "generated-artifact", "project-inventory"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": []
+}
